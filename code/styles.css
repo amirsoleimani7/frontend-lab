@@ -1,0 +1,17 @@
+body {
+    margin:0; 
+}
+
+.parent {
+    background-color: darkblue;
+    padding: 50px;
+    /* width: 900px; */
+    margin: 0 auto;
+}
+
+.child {
+    background-color: lightblue;
+
+
+    height: 250px;
+}
