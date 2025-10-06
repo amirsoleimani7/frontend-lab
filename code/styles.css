@@ -1,17 +1,56 @@
-body {
-    margin:0; 
+html {
+    font-size:32px;
 }
 
-.parent {
-    background-color: darkblue;
-    padding: 50px;
-    /* width: 900px; */
-    margin: 0 auto;
+body { 
+    padding-top:20px 20% 20px 20%;
+    background-color: lightblue;    
+    text-align: center;
+    
 }
 
-.child {
-    background-color: lightblue;
+@media (min-width:700px){
+    html {
+        font-size:40px ;
+    }
+}
 
+.container {
+    display: flex;
+    padding: 20px;
+}
 
-    height: 250px;
+.col-em {
+    width: 50%;
+    font-size: 32px;
+}
+
+.col-em h1 {
+    font-size: 1rem;
+    margin-bottom: 5rem;
+}
+
+.col-em p {
+    font-size: 1rem;
+}
+
+.col-rem {
+    width: 50%;
+}
+
+.call-action{
+    font-size: 1em;
+    background: linear-gradient(to right  ,blue , red); 
+}
+
+.btn {
+    padding: 1rem 3rem;
+}
+
+.btn-small {
+    font-size: 0.5rem;
+}
+
+.btn-lrg{
+    font-size: 2rem;
 }
