@@ -3,12 +3,47 @@ body{
     display: flex;
     text-align: center;
     justify-content: center;
-    padding: 15em;
+    padding: 50px;
 }
 
 .card {
+    
     width: 50%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+
+
     background-color: white;
+    border-radius: 12px;
+}
+
+#product_image{
+
+    border-radius: 12px 0 0 12px;
+    margin: 0 auto 0 0;
+    width: 50%;
 }
 
 
+.prodcut_detail {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.prodcut_detail .product_category{
+  
+}
+
+.prodcut_detail .buy_btn {
+    display: block;
+    width: 100%;    
+    margin-top: auto;
+}
