@@ -1,0 +1,14 @@
+body{
+    background-color: #F3EAE3;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 15em;
+}
+
+.card {
+    width: 50%;
+    background-color: white;
+}
+
+
