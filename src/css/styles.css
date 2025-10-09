@@ -6,6 +6,14 @@ body{
     margin: 0;
     height: 100vh;
 }
+/* ==========================================================================
+    
+    ==========================================================================
+*/
+
+
+
+
 
 
 /* ==========================================================================
@@ -13,8 +21,8 @@ body{
     ==========================================================================
 */
 .card {
-    width: 50%;
-    max-width: 500px;   
+    width: 50%;   
+    max-width: 500px; 
     display: flex;
     justify-content: center;
     text-align: center;
@@ -26,13 +34,14 @@ body{
 #product_image{
     border-radius: 12px 0 0 12px;
     width: 50%;
-    object-fit: covers;
+    object-fit: cover;
 }
 
 /* ==========================================================================
     product_detail styling 
     ==========================================================================
 */
+
 .prodcut_detail {
     width: 50%;
     display: flex;
@@ -40,7 +49,7 @@ body{
     text-align: center;
     flex-direction: column;
     padding: 1rem 2rem 1rem 2rem;
-    
+    overflow: hidden;
 }
 
 .prodcut_detail .product_category{
@@ -60,6 +69,7 @@ body{
     Description styling    
     ==========================================================================
 */
+
 .product_descripion {
     font-family: sans-serif;
     font-size: 0.875rem;
@@ -67,8 +77,6 @@ body{
     text-align: left;
     line-height: 1.3rem;
 }
-
-
 /* ==========================================================================
     Price Styling
     ==========================================================================
@@ -97,12 +105,10 @@ body{
     color:#6F6F71;
 }
 
-
 /* ==========================================================================
    Buy Button styling 
     ==========================================================================
 */
-
 .prodcut_detail .buy_btn {
     display: flex;
     justify-content: center;
@@ -121,4 +127,3 @@ body{
     color: white;
     font-weight: 700;
 }
-
