@@ -9,7 +9,6 @@
 }
 
 
-
 body{
     background-color: #F3EAE3;
     display: flex;
@@ -18,23 +17,6 @@ body{
     margin: 0;
     height: 100vh;
 }
-
-
-/* ==========================================================================
-    Media Queries for responsiveenss of the page
-    ==========================================================================
-*/
-@media screen and (max-width:800px){
-    .card { 
-        
-        
-    }
-
-}
-
-
-
-
 
 /* ==========================================================================
     main card styling 
@@ -51,11 +33,16 @@ body{
     border-radius: var(--primary-border-radius);
 }
 
-#product_image{
-    display: block;
+#product_image_desktop{
     border-radius: var(--primary-border-radius) 0 0 var(--primary-border-radius);
     width: 50%;
     object-fit: cover;
+}
+
+#product_image_phone{
+    border-radius: var(--primary-border-radius) var(--primary-border-radius) 0 0;
+    object-fit: cover;
+    display: none;
 }
 
 /* ==========================================================================
@@ -90,7 +77,6 @@ body{
     Description styling    
     ==========================================================================
 */
-
 .product_descripion {
     font-family: sans-serif;
     font-size: 0.875rem;
@@ -146,4 +132,28 @@ body{
 .prodcut_detail .buy_btn p{
     color: white;
     font-weight: 700;
+}
+ 
+
+/* ==========================================================================
+    Media Queries for responsiveenss of the page
+    ==========================================================================
+*/
+@media screen and (max-width:800px){
+    .card{
+        flex-direction: column;         
+        width: 50%;
+    }
+
+    #product_image_desktop {
+        display: none;
+    }
+
+    #product_image_phone {
+        display: block;
+    }
+
+    .prodcut_detail{
+        width: 80%;
+    }
 }
