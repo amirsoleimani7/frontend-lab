@@ -1,3 +1,15 @@
+/* ==========================================================================
+    Custom Properties of the web apge
+    ==========================================================================
+*/
+:root { 
+    --primary-grey-font-color:#6F6F71;
+    --primary-green-font-color:#3D8168;
+    --primary-border-radius:0.75rem;
+}
+
+
+
 body{
     background-color: #F3EAE3;
     display: flex;
@@ -6,11 +18,19 @@ body{
     margin: 0;
     height: 100vh;
 }
+
+
 /* ==========================================================================
-    
+    Media Queries for responsiveenss of the page
     ==========================================================================
 */
+@media screen and (max-width:800px){
+    .card { 
+        
+        
+    }
 
+}
 
 
 
@@ -28,11 +48,12 @@ body{
     text-align: center;
     flex-direction: row;
     background-color: white;
-    border-radius: 12px;
+    border-radius: var(--primary-border-radius);
 }
 
 #product_image{
-    border-radius: 12px 0 0 12px;
+    display: block;
+    border-radius: var(--primary-border-radius) 0 0 var(--primary-border-radius);
     width: 50%;
     object-fit: cover;
 }
@@ -56,7 +77,7 @@ body{
     text-align: start;
     font-family: sans-serif;
     font-size: 0.875rem;
-    color:#6F6F71;    
+    color:var(--primary-grey-font-color);    
     letter-spacing: .2rem;
 }
 
@@ -73,7 +94,7 @@ body{
 .product_descripion {
     font-family: sans-serif;
     font-size: 0.875rem;
-    color:#6F6F71;
+    color:var(--primary-grey-font-color);
     text-align: left;
     line-height: 1.3rem;
 }
@@ -88,21 +109,21 @@ body{
 .price {
     display: flex;
     align-items: center;
+    text-align: center ;
     gap: 1rem;
     font-family: 'Lobster';
     margin: 1rem;
-
 }
 
 .price #off_price {
     font-size: 2rem;
-    color: #3D8168;
+    color: var(--primary-green-font-color);
     
 }
 .price #actual_price {
     font-family: sans-serif;
     font-size: 1rem;
-    color:#6F6F71;
+    color:var(--primary-grey-font-color);
 }
 
 /* ==========================================================================
@@ -115,12 +136,11 @@ body{
     align-items: center;
     width: 100%;    
     margin-top: auto;
-    border: 1px solid #3D8168;
-    background-color: #3D8168;
+    border: 1px solid var(--primary-green-font-color);
+    background-color: var(--primary-green-font-color);
     padding: 0.1rem;
-    border-radius: 0.65rem;
+    border-radius: var(--primary-border-radius);
     gap: 0.5rem;
-    
 }
 
 .prodcut_detail .buy_btn p{
