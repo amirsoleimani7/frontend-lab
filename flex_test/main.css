@@ -1,0 +1,29 @@
+.nav-list {
+    border:1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;   
+}
+
+.nav-list li {  
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    border: 1px solid green;
+    background-color: lightgreen;
+}
+
+
+
+@media (min-width:900px){
+    .nav-list {
+        flex-direction: row;
+    }
+}
