@@ -9,12 +9,6 @@ body {
     
 }
 
-@media (min-width:700px){
-    html {
-        font-size:40px ;
-    }
-}
-
 .container {
     display: flex;
     padding: 20px;
@@ -53,4 +47,10 @@ body {
 
 .btn-lrg{
     font-size: 2rem;
+}
+
+@media (min-width:700px){
+    html {
+        font-size:40px ;
+    }
 }
