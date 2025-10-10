@@ -92,7 +92,6 @@ body{
     Price Styling
     ==========================================================================
 */
-
 .price #actual_price {
     text-decoration: line-through;
 }
@@ -145,12 +144,12 @@ body{
 */
 
 @media screen and (max-width:900px){
-
     .card{
         flex-direction: column;         
-        width: 50%;
+        width: 60%;
+        overflow: hidden;
     }
-
+    
     #product_image_desktop {
         display: none;
     }
@@ -160,13 +159,6 @@ body{
     }
 
     .prodcut_detail{
-        width: 80%;
-    }
-
-}
-
-@media screen and (max-width:500px){
-    .card{
         width: 80%;
     }
 }
