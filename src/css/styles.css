@@ -5,3 +5,18 @@ body {
     height: 100vh;
 }
 
+.container{
+    
+}
+
+.container .products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; 
+
+}
+
+.container .products .product{
+    background-color: grey;
+    flex: 1 1 0px;
+}
