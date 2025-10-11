@@ -11,15 +11,17 @@ body {
     main_content styling
 =======================================
 */
+
 .main_content {
-  margin-bottom: 10vw;
+    margin: 0 auto;
+    width: 30vw;
+    margin-bottom: 10vw;
 }
 
 /* =======================================
     headers styling 
     =======================================
 */
-
 .container .header1{
     font-size: 2rem;
     font-weight: 200;
@@ -32,14 +34,9 @@ body {
 }
 
 .container .description{
+    color: grey;
     font-size: .8rem;
 }
-
-.container {
-
-}
-
-
 
 /* =======================================
     main flexbox styling
@@ -92,8 +89,3 @@ body {
     width: 60px;
     align-self:end;
 }
-
-
-
-
-
