@@ -3,7 +3,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    height: 90vh;
+    height: 85vh;
     font-family: 'Montserrat';
 }
 
@@ -12,14 +12,14 @@ body {
 =======================================
 */
 
-
 /* 
     TODO : for the smaller screens the text shifts to the right (it need to the fixed)
 */
-.main_content {
-    margin: 0 auto;
-    width: 30%;
-    margin-bottom: 8vw;
+
+.container .main_content {
+    max-width: 450px;
+    margin:0 auto;
+    margin-bottom: 3vw;
 }
 /* =======================================
     headers styling 
