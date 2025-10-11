@@ -12,15 +12,18 @@ body {
 =======================================
 */
 
+
+/* 
+    TODO : for the smaller screens the text shifts to the right (it need to the fixed)
+*/
 .main_content {
     margin: 0 auto;
-    width: 30vw;
-    margin-bottom: 10vw;
+    width: 30%;
+    margin-bottom: 8vw;
 }
-
 /* =======================================
     headers styling 
-    =======================================
+    ======================================
 */
 .container .header1{
     font-size: 2rem;
@@ -42,11 +45,12 @@ body {
     main flexbox styling
     =======================================
 */
+
 .container .products{
-  
     display: flex;
     flex-wrap: wrap;
     gap: 1rem; 
+    align-items: center;
 }
 
 .container .products .product{
@@ -58,23 +62,26 @@ body {
     text-align: start;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 0.70rem;
-    background-image: linear-gradient(orange 2%, rgba(0,0,0,0) 2%); 
 }
 
-.container .products .product:nth-child(1){
+/*
+nth-child(n) the first one is 1 not 0
+*/
+
+.container .products .product:first-child{
     background-image: linear-gradient(#51CDCB 2%, rgba(0,0,0,0) 2%); 
 }
 
-.container .products .product:nth-child(2){
+.container .products .inner_flex .product:first-child{
     background-image: linear-gradient(#ED5355 2%, rgba(0,0,0,0) 2%); 
 }
 
-.container .products .product:nth-child(3){
+.container .products .inner_flex .product:last-child{
     background-image: linear-gradient(#FBAC49 2%, rgba(0,0,0,0) 2%); 
 }
 
-.container .products .product:nth-child(4){
-    background-image: linear-gradient(#5D9AE2 2%, rgba(0,0,0,0) 2%); 
+.container .products .product:last-child{
+    background-image: linear-gradient(#5C9EE6 2%, rgba(0,0,0,0) 2%); 
 }
 
 .container .products .product h1{
@@ -88,4 +95,22 @@ body {
 .container .products .product img{
     width: 60px;
     align-self:end;
+}
+
+.container .products .inner_flex {
+    display: flex;
+    flex-direction: column;
+    word-wrap: wrap;
+    gap: 1rem;
+    flex: 1 1 0px;
+}
+
+@media screen and (max-width:750px){
+    .container .products .inner_flex {
+        display: contents;
+    }
+    .container .products {
+        align-items: stretch;
+    }
+
 }
