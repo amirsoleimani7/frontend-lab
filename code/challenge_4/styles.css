@@ -1,0 +1,47 @@
+:root {
+    --main_font:'Roboto';
+    --big_font_size:2rem;
+    --mid_font_size:1rem;
+    --kinda_big_font_size:1.75rem;
+    
+    
+    --font_color_1:#87629A;
+    --background_color_1:#23424A;
+    --background_color_2:#38CFD9;
+}
+
+body {
+    font-family: var(--main_font);
+    margin: 0px;
+    height: 100vh;
+}
+
+
+/*  ================================
+    main div styling
+    ================================
+*/
+.main_div {
+    background-color: #23424A;
+    color:white;
+    width: 100%;
+    padding: 4rem;
+}
+.main_div .main_container {
+    width: 50%;
+    
+}
+
+
+.main_div button {
+
+    border:1px solid var(--background_color_2);
+    background-color: var(--background_color_2);
+   
+    padding: 1.25rem;
+    border-radius: 3rem;
+    
+    font-size: var(--mid_font_size);
+    font-weight: 600;
+}
+
