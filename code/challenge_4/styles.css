@@ -1,6 +1,6 @@
 :root {
     --main_font:'Roboto';
-    --big_font_size:2rem;
+    --big_font_size:3rem;
     --mid_font_size:1rem;
     --kinda_big_font_size:1.75rem;
     
@@ -8,12 +8,15 @@
     --font_color_1:#87629A;
     --background_color_1:#23424A;
     --background_color_2:#38CFD9;
+    --background_color_3:#87629A;
+    --background_color_4:#136C72;
 }
+
 
 body {
     font-family: var(--main_font);
     margin: 0px;
-    height: 100vh;
+    height: 100vh;    
 }
 
 
@@ -21,17 +24,21 @@ body {
     main div styling
     ================================
 */
+
 .main_div {
     background-color: #23424A;
     color:white;
-    width: 100%;
-    padding: 4rem;
-}
-.main_div .main_container {
-    width: 50%;
-    
+    padding: 5rem;
+    /* padding: 3rem 0 3rem 3rem ; */
 }
 
+.main_div .main_container {
+    width: 45%;
+}
+
+.main_div .main_container h1 {
+ font-size: var(--big_font_size);   
+}
 
 .main_div button {
 
@@ -43,5 +50,36 @@ body {
     
     font-size: var(--mid_font_size);
     font-weight: 600;
+
+    margin-top: 2rem;
+
 }
+
+
+
+/*  ================================
+    first flex box fixed
+    ================================
+*/
+.box_1 {
+    display: flex;
+    text-align: center;
+    padding: 2rem;
+    font-size: var(--mid_font_size);
+
+    justify-content:space-evenly;
+}
+
+.box_1 .box_1_item {
+    width: 30%;
+}
+
+.box_1 .box_1_item h1 {
+    color:var(--background_color_3)
+}
+
+
+
+
+
 
