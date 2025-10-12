@@ -11,16 +11,12 @@ body {
     main_content styling
 =======================================
 */
-
-/* 
-    TODO : for the smaller screens the text shifts to the right (it need to the fixed)
-*/
-
 .container .main_content {
     max-width: 450px;
     margin:0 auto;
     margin-bottom: 3vw;
 }
+
 /* =======================================
     headers styling 
     ======================================
@@ -46,7 +42,6 @@ body {
     =======================================
 */
 
-
 .container .products{
     display: flex;
     gap: 1rem;
@@ -57,9 +52,10 @@ body {
 .product{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     background-color: white;
     flex: 1 1 0px;
-    padding: 2rem;
+    padding:2rem;
     text-align: start;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 0.70rem;
@@ -68,7 +64,6 @@ body {
 /*
 nth-child(n) the first one is 1 not 0
 */
-
 .container .products .product:first-child{
     background-image: linear-gradient(#51CDCB 2%, rgba(0,0,0,0) 2%); 
 }
@@ -95,7 +90,8 @@ nth-child(n) the first one is 1 not 0
 
 .container .products .product img{
     width: 60px;
-    align-self:end;
+    margin-left: auto;
+    margin-top: auto;
 }
 
 .container .products .inner_flex {
