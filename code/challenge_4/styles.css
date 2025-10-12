@@ -64,9 +64,8 @@ body {
 .box_1 {
     display: flex;
     text-align: center;
-    padding: 2rem;
+    padding: 4rem;
     font-size: var(--mid_font_size);
-
     justify-content:space-evenly;
 }
 
@@ -78,7 +77,22 @@ body {
     color:var(--background_color_3)
 }
 
+/*  ================================
+    second flex box
+    ================================
+*/
+.box_2 {
+    display: flex;
+    text-align: center;
+    background-color: var(--background_color_4);
+    justify-content: space-evenly;
+    color:white;
+    padding:2rem;
+}
 
+.box_2 .box_2_item {
+    width: 30%;
+}
 
 
 
