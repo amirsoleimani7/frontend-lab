@@ -99,3 +99,40 @@ h1 {
 .btn:focus {
     opacity: .75; 
 }
+
+.botom {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding:5rem 10rem ;
+}
+
+.botom .left_side {
+    width: 70%;
+    padding: 1rem;
+}
+
+.botom .right_side {
+    background-color: #136C72;
+    width: 30%;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media screen and (max-width:768px){
+    .botom {
+        flex-direction: column;
+    }
+    .botom .left_side {
+    width: 100%;
+    }
+
+    .botom .right_side {
+        width: 100%;
+    }
+
+}
+
+
+
