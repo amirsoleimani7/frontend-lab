@@ -19,6 +19,15 @@
     /*other stuff is needed  */
 }
 
+img {
+    display: block;
+}
+
+body {
+    padding: 3rem;
+}
+
+
 .container {
     display: grid;
     gap: 1rem ;
@@ -28,9 +37,24 @@
     font-family: var(--main-font-family);    
     border-radius: var(--main-border-radius);
     padding: var(--main-paddings);
-    box-shadow: 2px 2px 50px;
+    box-shadow: 30px 30px 300px grey;
 }
 
 .tesimonial .prof_pic {
     border-radius: 50%;
 }
+
+.tesimonial .info-container {
+    display: flex;
+}
+
+
+/* 
+Todo : add the rest of the inner divs in the html file
+*/
+
+.tesimonial .info-container .inner {
+    display: flex;
+    flex-direction: column;
+}
+
