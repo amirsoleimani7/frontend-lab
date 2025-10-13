@@ -1,0 +1,36 @@
+:root  {
+    
+    /* background colors used */
+    --background-color-1:#733FC8;
+    --background-color-2:#49556B;
+    --background-color-3:#191F2D;
+
+    /* fonts */
+    --main-font-family:'Roboto';
+    --font-size-big:2rem;
+    --font-size-mid:1rem;
+    --font-size-small:.75rem;
+
+
+    /* main paddings , border radius*/
+    --main-border-radius:0.5rem;
+    --main-paddings:2rem;
+
+    /*other stuff is needed  */
+}
+
+.container {
+    display: grid;
+    gap: 1rem ;
+}
+
+.tesimonial {
+    font-family: var(--main-font-family);    
+    border-radius: var(--main-border-radius);
+    padding: var(--main-paddings);
+    box-shadow: 2px 2px 50px;
+}
+
+.tesimonial .prof_pic {
+    border-radius: 50%;
+}
