@@ -19,14 +19,13 @@
     /*other stuff is needed  */
 }
 
-img {
+img{
     display: block;
 }
 
 body {
     padding: 3rem;
 }
-
 
 .container {
     display: grid;
@@ -52,7 +51,6 @@ body {
 /* 
 Todo : add the rest of the inner divs in the html file
 */
-
 .tesimonial .info-container .inner {
     display: flex;
     flex-direction: column;
