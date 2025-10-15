@@ -24,7 +24,7 @@ img{
 }
 
 body {
-    padding: 3rem;
+    padding: 1rem;
 }
 
 .container {
@@ -41,18 +41,31 @@ body {
 
 .tesimonial .prof_pic {
     border-radius: 50%;
+    aspect-ratio: 1 / 1;
 }
 
 .tesimonial .info-container {
-    display: flex;
+    display: flex;    
+    gap: 1rem;
+
 }
 
-
-/* 
-Todo : add the rest of the inner divs in the html file
-*/
 .tesimonial .info-container .inner {
     display: flex;
     flex-direction: column;
+    gap: 0.4rem;
+    justify-content: center;
+
 }
 
+
+.tesimonial .info-container .inner .name {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+
+.tesimonial .first_comment {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
