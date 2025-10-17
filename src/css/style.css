@@ -30,8 +30,34 @@ body {
 .container {
     display: grid;
     gap: 1rem ;
-    grid-template-columns: 2fr 1fr 1fr ;
+    grid-template-columns: repeat(4 ,1fr);
+    /* grid-auto-columns: minmax(0, 1fr); */
+    grid-template-areas: "a a b c"
+                        "d e e c";
+    /* grid-template-columns: repeat(4, 1fr); */
 }
+
+.tesimonial:nth-child(1){
+    grid-area: a;
+
+}
+.tesimonial:nth-child(2){
+    grid-area: b;
+}
+
+.tesimonial:nth-child(3){
+  grid-area: d;
+}
+
+.tesimonial:nth-child(4){
+    grid-area: e;
+}
+
+.tesimonial:nth-child(5){
+    grid-area: c;
+}
+
+
 
 .tesimonial {
     font-family: var(--main-font-family);    
@@ -43,6 +69,8 @@ body {
 .tesimonial .prof_pic {
     border-radius: 50%;
     aspect-ratio: 1 / 1;
+    width: 60px ;
+    height: 60px;
 }
 
 .tesimonial .back {
@@ -60,7 +88,6 @@ body {
 .tesimonial .info-container {
     display: flex;    
     gap: 1rem;
-
     padding: var(--main-paddings) 0px 0px 0px;
 }
 
@@ -79,4 +106,29 @@ body {
 .tesimonial .first_comment {
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+
+@media screen and (max-width: 1024px){
+    .container {
+        display: grid;
+        gap: 1rem ;
+        grid-template-columns: repeat(3 ,1fr);
+        grid-template-areas: "a a c"
+                            "b d c"
+                            "e e e";
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .container {
+        display: grid;
+        gap: 1rem ;
+        grid-template-columns: repeat(3 ,1fr);
+        grid-template-areas: "a a a"
+                            "b b b"
+                            " c c c"
+                            "d d d"
+                            "e e e";
+    }
 }
