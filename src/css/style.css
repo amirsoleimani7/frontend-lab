@@ -63,7 +63,7 @@ body {
     font-family: var(--main-font-family);    
     border-radius: var(--main-border-radius);
     padding: var(--main-paddings);
-    box-shadow: 30px 30px 300px grey;
+    box-shadow: 50px 50px 400px grey;
 }
 
 .tesimonial .prof_pic {
@@ -104,10 +104,9 @@ body {
 }
 
 .tesimonial .first_comment {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
-
 
 @media screen and (max-width: 1024px){
     .container {
