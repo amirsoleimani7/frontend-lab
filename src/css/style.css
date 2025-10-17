@@ -6,7 +6,7 @@
     --background-color-3:#191F2D;
 
     /* fonts */
-    --main-font-family:'Roboto';
+    --main-font-family:'Hanken Grotesk';
     --font-size-big:2rem;
     --font-size-mid:1rem;
     --font-size-small:.75rem;
@@ -104,11 +104,14 @@ body {
 }
 
 .tesimonial .first_comment {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
 @media screen and (max-width: 1024px){
+    :root {
+        font-size: 14px;
+    }
     .container {
         display: grid;
         gap: 1rem ;
@@ -120,6 +123,11 @@ body {
 }
 
 @media screen and (max-width: 1024px){
+    
+    body {
+        padding: 1rem;
+    }
+
     .container {
         display: grid;
         gap: 1rem ;
