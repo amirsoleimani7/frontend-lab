@@ -24,12 +24,13 @@ img{
 }
 
 body {
-    padding: 1rem;
+    padding: 5rem;
 }
 
 .container {
     display: grid;
     gap: 1rem ;
+    grid-template-columns: 2fr 1fr 1fr ;
 }
 
 .tesimonial {
@@ -44,10 +45,23 @@ body {
     aspect-ratio: 1 / 1;
 }
 
+.tesimonial .back {
+    z-index: -1;
+    position: absolute;
+    justify-self:end;
+    margin-right: 8%;
+    width: 10vw;
+}
+
+.tesimonial:first-child{
+    padding:var(--main-paddings)
+}
+
 .tesimonial .info-container {
     display: flex;    
     gap: 1rem;
 
+    padding: var(--main-paddings) 0px 0px 0px;
 }
 
 .tesimonial .info-container .inner {
@@ -55,15 +69,12 @@ body {
     flex-direction: column;
     gap: 0.4rem;
     justify-content: center;
-
 }
-
 
 .tesimonial .info-container .inner .name {
     font-size: 1.125rem;
     font-weight: 600;
 }
-
 
 .tesimonial .first_comment {
     font-size: 1.5rem;
