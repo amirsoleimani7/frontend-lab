@@ -8,7 +8,7 @@
 // const pi = 3.14;
 
 var b = "strings and stuff like that";
-var x = "some other \"test\" other than this";
+// var x = "some other \"test\" other than this";
 
 //  using `` for string that contain both ' and "
 var my_str = `<a href=""></a> this asdasd 'some other things' sdasd`;
@@ -122,8 +122,8 @@ function is_true_or_false(thing){
     }
 }
 
-var  x = is_true_or_false(2);
-console.log(x);
+// var  x = is_true_or_false(2);
+// console.log(x);
 
 function test_equl(val){
     if(val == 12){
@@ -251,8 +251,8 @@ for (var i = 9; i > 0; i -= 2){
 
 var i = 0;
 while(i < 5){
-    var x = "this is the test : " + i;
-    my_array.push(x);
+    // var x = "this is the test : " + i;
+    // my_array.push(x);
     i ++;
 }
 
@@ -273,10 +273,38 @@ function multipy_(arr){
             prodcut *= arr[i][j]
         }
     }
-
+    
     return prodcut
 }
 
 var product = multipy_([[1,2] , [3 ,4] , [5 ,6,7 ]])
 console.log(product)
+
+function get_random(min , max){
+    return Math.floor(Math.random() * (max - min) + min)
+}
+
+console.log(get_random(100 , 400))
+
+function convert_to_int(str){
+    return parseInt(str, 8)
+}
+
+function check(a ,b ){
+    return a == b ? true : false
+}
+
+function check_sign(num){
+    return num > 0 ? "posative" : num < 0 ? "negetive" : "zero"
+}
+
+
+function catTalk(){
+    var x = "test"
+}
+
+catTalk();
+console.log(x)
+
+
 
