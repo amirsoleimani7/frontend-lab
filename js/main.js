@@ -142,10 +142,23 @@ function test_equl_list(val){
 console.log(test_equl('12')) // converts to a common type
 console.log(test_equl_list('12')) // doesnt convert shit
 
-
-function test_(value1 , value2){
+function test_(val){
+    var awnser = "";
+    switch(val){
+        case 1:
+            awnser = "alpha";
+            break;
+        case 2:
+            awnser = "beta";
+            break;
+        default: // like else for if's 
+            awnser ="something else";    
+    }
     
+    return awnser    
 }
+
+console.log(test_(1))
 
 
 
