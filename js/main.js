@@ -144,6 +144,7 @@ console.log(test_equl_list('12')) // doesnt convert shit
 
 function test_(val){
     var awnser = "";
+    console.log("default type is : %s" ,typeof awnser);
     switch(val){
         case 1:
             awnser = "alpha";
@@ -154,13 +155,128 @@ function test_(val){
         default: // like else for if's 
             awnser ="something else";    
     }
-    
+
     return awnser    
 }
 
-console.log(test_(1))
+
+function ab_test(a ,b){
+    if (a < 0 || b < 0){
+        return undefined
+    }
+    
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b) , 2))
+}
+
+
+var count = 0;
+
+function cc(card){
+
+    var test_ = ["K" , "Q" , "J" , "A"]
+    switch(card){
+        case (2 <= card && card <= 6):
+            count ++;
+            break;
+        case test_.includes(card) && test_.indexOf(card) != -1:
+            console("we are here and the card is : %s " , card)
+            count --;    
+            break;     
+    }
+
+    var holdbet = "hold";
+    if (count > 0){
+        holdbet = "bet";
+    }
+    
+    return count + " " + holdbet;    
+}
 
 
 
+cc(2); cc(3) ;cc(7);cc('K');cc('A')
+console.log(cc(4))
 
+
+// ------------------------------------ objects
+
+var Dog = {
+    "name" : "campe ",
+    "legs" : 4,
+    "tail" : 1,
+    "friends" : ["everything"]
+};
+
+var myDog = {
+    "first name" : "quincy",
+    "legs" : 3,
+    "trail" : 2,
+}
+
+var mymusic = [
+    {
+                
+
+    }
+]
+
+myDog["first name"] = "happy coder";
+delete myDog["bark"]
+delete myDog.trail
+
+
+function update_record(id, prop , value){
+    
+    if (typeof value == undefined){
+        delete collection.id.prop;
+    }
+    if (prop == "tracks" && value != undefined){
+        collection.id.prop.push(value);
+    }
+    else {
+        collection.id.prop = value;
+    }
+    
+    return true;
+
+}
+
+console.log(myDog)
+
+var my_array = []
+
+for (var i = 9; i > 0; i -= 2){
+    my_array.push(i)
+}
+
+var i = 0;
+while(i < 5){
+    var x = "this is the test : " + i;
+    my_array.push(x);
+    i ++;
+}
+
+var our_array = [9 , 10, 11, 12];
+var tot = 0;
+
+for (var i = 0; i < our_array.length; ++i){
+    tot += our_array[i];
+}
+
+console.log("myarr : %d" , tot)
+console.log("%d , %s" , 12, "amir")
+
+function multipy_(arr){
+    var prodcut = 1;
+    for (var i = 0; i < arr.length ; ++i){
+        for (var j = 0 ; j < arr[i].length ; ++j){
+            prodcut *= arr[i][j]
+        }
+    }
+
+    return prodcut
+}
+
+var product = multipy_([[1,2] , [3 ,4] , [5 ,6,7 ]])
+console.log(product)
 
