@@ -74,5 +74,31 @@
 
 // ==================== DOM navigation ====================
 
+// parent node treversal
+// let ul = document.querySelector('ul')
 
+// console.log(ul.parentNode.parentNode);
+// console.log(ul.parentElement.parentElement);
+
+// const html = document.documentElement;
+
+// console.log(html.parentNode)
+// console.log(html.parentElement)
+
+//child node treversal
+// let ul = document.querySelector('ul');
+
+// console.log(ul.firstElementChild);
+// console.log(ul.lastElementChild);
+
+// console.log(ul.children)
+
+// siblings
+// let ul = document.querySelector('ul');
+// const div = document.querySelector('div');
+// console.log(div.childNodes)
+
+// console.log(ul.previousElementSibling);
+// console.log(ul.nextElementSibling);
+// ==================== event listener ====================
 
