@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.container {
+    background-color: lightcyan ;
+    border: 2px solid black;
+    border-radius: 2rem;
+    padding: 2rem;
+    
+    display: flex;
+    flex-direction: column;       
+}
+
+h1 {
+    font-weight: 800;
+}
+
+ul  {
+    list-style: none ;
+    padding: 0px;
+    text-align: center;
+}
+
+li {  
+    border-radius: 1rem;
+    margin: .5rem;
+    padding: 1rem;
+    background-color: grey;
+}
