@@ -100,5 +100,25 @@
 
 // console.log(ul.previousElementSibling);
 // console.log(ul.nextElementSibling);
+
 // ==================== event listener ====================
 
+// add event listner
+const button_2 = document.querySelector('.btn-2')
+
+function test(){
+    return alert('i love other things')
+}
+
+button_2.addEventListener('click' ,test )
+
+// mouse over event
+const box_3 = document.querySelector('.box-3');
+console.log(box_3)
+
+function change_bg_color(){
+    box_3.style.backgroundColor = 'red';
+
+}
+
+box_3.addEventListener('mouseover' ,hover_color)
