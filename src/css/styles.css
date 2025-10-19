@@ -41,7 +41,7 @@ body {
     padding: 1.5rem;
     background-color: var(--card-background-color);
     border-radius: 1rem;
-    max-width: 20vw;
+    max-width: 18vw;
 }
 
 
@@ -79,6 +79,8 @@ body {
     align-items: center;
     gap: .5rem;
     color: var(--ether-color);
+    font-size: var(--small-font-size);
+    font-weight: 600;
 }
 
 .extra-info .timing-info {
@@ -86,6 +88,8 @@ body {
     align-items: center;
     color: var(--grey-text-color);
     gap: .5rem;
+    font-size: var(--small-font-size);
+    font-weight: 600;
 }
 
 
