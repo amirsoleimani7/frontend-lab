@@ -41,16 +41,14 @@ body {
     padding: 1.5rem;
     background-color: var(--card-background-color);
     border-radius: 1rem;
-    max-width: 18vw;
+    max-width: 275px;
 }
-
 
 
 /*  ===========================
     header and description
     ===========================
 */
-
 .header {
     color: white ;
     font-size: var(--big-font-size);
@@ -68,10 +66,10 @@ body {
 ===========================
 */
 .extra-info { 
-    padding: 2rem 0;
     display: flex;
     justify-content: space-between;
-    
+    flex-wrap: wrap ;
+    gap: 1rem;
 }
 
 .extra-info .price-info {
@@ -92,6 +90,12 @@ body {
     font-weight: 600;
 }
 
+
+.devider { 
+    height: 1px;
+    background-color: grey;
+    margin: 1rem 0;
+}
 
 /*  ===========================
     user info styling
