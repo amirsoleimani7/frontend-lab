@@ -41,4 +41,38 @@
 
 
 // ==================== creating elements ====================
+// const ul = document.querySelector('ul');
+// const li = document.createElement('li');
+
+// li.innerText = 'blade runner';
+
+// // adding the ul
+// ul.append(li);
+
+// // modifing the content
+// const first_list_item = document.querySelector('.list-item');
+// console.log(first_list_item.innerText);
+// console.log(first_list_item.textContent);
+// console.log(first_list_item.innerHTML)
+
+
+// // modifiing attr and classes ;
+// // li.setAttribute('id' , 'main-heading')
+// // li.removeAttribute('id')
+
+// // 
+// // const title = document.querySelector('#main-heading');
+// // console.log("id of thing is : " + title.getAttribute('id'))
+
+
+// li.classList.add('list-item');
+// console.log(li.classList.contains('item-list'));
+
+
+// // remove an element 
+// li.remove();
+
+// ==================== DOM navigation ====================
+
+
 
