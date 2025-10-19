@@ -298,13 +298,30 @@ function check_sign(num){
     return num > 0 ? "posative" : num < 0 ? "negetive" : "zero"
 }
 
-
+const arr = [4 ,2 ,2];
 function catTalk(){
-    var x = "test"
+    arr[0] = 2
 }
 
-catTalk();
-console.log(x)
+const test_var =  (arr_1 , arr_2) => arr_1.concat(arr_2)
+
+console.log(test_var([1 ,2] , [4 ,5]))
 
 
 
+const real_numbers = [4 ,-5 , 2 , 1 , -5.6];
+
+const square_list = (arr) => {
+    const square_integers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+    return square_integers;
+}
+
+const increament = (function(){
+    return function increament(number , value){
+        return number + value;
+    };
+})();
+
+
+console.log(increament(5 ,2));
+console.log(increament(5))
