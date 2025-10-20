@@ -123,23 +123,55 @@
 // box_3.addEventListener('mouseover' ,hover_color)
 
 // ==================== reavel event ====================
-const reavelbtn = document.querySelector('.reavel-btn')
-console.log("reavelbutton is : " , reavelbtn)
+// const reavelbtn = document.querySelector('.reavel-btn')
+// console.log("reavelbutton is : " , reavelbtn)
 
-const hiddenconent = document.querySelector('.hidden-content')
-console.log("hidden content is : " , hiddenconent)
+// const hiddenconent = document.querySelector('.hidden-content')
+// console.log("hidden content is : " , hiddenconent)
 
-function reveal_content(){
+// function reveal_content(){
 
-    if(hiddenconent.classList.contains('reavel-btn'))
-    {
-        hiddenconent.classList.remove('reavel-btn')
-    }
-    else {
-        hiddenconent.classList.add('reavel-btn')
-    }
-}
+//     if(hiddenconent.classList.contains('reavel-btn'))
+//     {
+//         hiddenconent.classList.remove('reavel-btn')
+//     }
+//     else {
+//         hiddenconent.classList.add('reavel-btn')
+//     }
+// }
 
-reavelbtn.addEventListener('click' , reveal_content)
+// reavelbtn.addEventListener('click' , reveal_content)
 
-// ==================== event propagartion ====================
+// ==================== event propagartion  ====================
+
+// window.addEventListener('click', function(){console.log('window');}, false);
+// document.addEventListener('click' , function() {console.log('Document');} , false);
+
+// document.querySelector(".div2").addEventListener(
+// "click" , function(e) {
+//     e.stopPropagation();
+//     console.log("div2");
+// } ,{once:true}
+// );
+
+// document.querySelector(".div1").addEventListener(
+// "click" , function() {
+//     console.log("div1");
+// } , false
+// );
+
+// document.querySelector(".button").addEventListener(
+// "click" , function(e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     if(e.target.innerText == 'clicked') {
+//         e.target.innerText = 'uncliked';
+//     }
+//     else{
+//         e.target.innerText ='clicked';
+//     }   
+//     console.log(e)
+// } , false 
+// );
+
+// ==================== event delegation  ====================
