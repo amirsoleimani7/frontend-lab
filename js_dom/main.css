@@ -25,6 +25,14 @@ body {
     border-radius: 2rem;
 }
 
+.hidden-content {
+    display: none;
+}
+
+/*  the thing below added using the js that we have*/
+.hidden-content.reavel-btn {  
+    display: block;
+}
 
 button {
     border: 0px;

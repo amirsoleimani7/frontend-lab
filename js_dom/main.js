@@ -104,21 +104,42 @@
 // ==================== event listener ====================
 
 // add event listner
-const button_2 = document.querySelector('.btn-2')
+// const button_2 = document.querySelector('.btn-2')
 
-function test(){
-    return alert('i love other things')
+// function test(){
+//     return alert('i love other things')
+// }
+
+// button_2.addEventListener('click' ,test )
+
+// // mouse over event
+// const box_3 = document.querySelector('.box-3');
+// console.log(box_3)
+
+// function change_bg_color(){
+//     box_3.style.backgroundColor = 'red';
+// }
+
+// box_3.addEventListener('mouseover' ,hover_color)
+
+// ==================== reavel event ====================
+const reavelbtn = document.querySelector('.reavel-btn')
+console.log("reavelbutton is : " , reavelbtn)
+
+const hiddenconent = document.querySelector('.hidden-content')
+console.log("hidden content is : " , hiddenconent)
+
+function reveal_content(){
+
+    if(hiddenconent.classList.contains('reavel-btn'))
+    {
+        hiddenconent.classList.remove('reavel-btn')
+    }
+    else {
+        hiddenconent.classList.add('reavel-btn')
+    }
 }
 
-button_2.addEventListener('click' ,test )
+reavelbtn.addEventListener('click' , reveal_content)
 
-// mouse over event
-const box_3 = document.querySelector('.box-3');
-console.log(box_3)
-
-function change_bg_color(){
-    box_3.style.backgroundColor = 'red';
-
-}
-
-box_3.addEventListener('mouseover' ,hover_color)
+// ==================== event propagartion ====================
