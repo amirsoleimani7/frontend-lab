@@ -5,14 +5,14 @@ body {
     background-attachment: scroll;
     height: 100vh;
     margin:auto;
-    padding:0;
-
+    padding:2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .main-container {
+    
     width: 30%;
     background-color: lightgray;
     padding: 1rem;
