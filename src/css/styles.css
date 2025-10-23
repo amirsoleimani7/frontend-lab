@@ -1,0 +1,27 @@
+:root {
+   --background-color: #EDF2F8;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    background-color: var(--background-color);
+}
+
+.main-container {
+    background-color: white;
+    border-radius: 0.5rem;
+    max-width: 870px;
+    height: 30vh;
+    display: flex;
+    
+}
+
+.main-container .main-image {
+    border:none;
+    border-radius: .5rem 0 0 .5rem;
+    object-fit: cover;
+}
