@@ -54,6 +54,7 @@ body {
 }
 
 .task {
+    margin-bottom: .5rem;
     background-color: lightgoldenrodyellow;
     border-radius: 1rem;
     display: flex;
