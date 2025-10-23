@@ -58,14 +58,25 @@ body {
     background-color: lightgoldenrodyellow;
     border-radius: 1rem;
     display: flex;
-    padding: 0 1rem;
+    padding: .5rem 1rem;
 }
 
 .task button {
+    border-radius:1rem  ;
     cursor: pointer;
     border: none;
     background: transparent;
 }
+
+.task #done:hover{
+    background-color: greenyellow;
+}
+
+
+.task #delete:hover{
+   background-color: red;
+}
+
 
 .task .task-name {
     margin-right: auto;    

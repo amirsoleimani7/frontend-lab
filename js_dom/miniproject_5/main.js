@@ -17,7 +17,7 @@ function making_task(task_name){
     let Done = document.createElement('button');
     let Delete = document.createElement('button');
     Done.className = 'fa-solid fa-check';
-    Delete.classList = 'fa-solid fa-trash';
+   Delete.classList  = 'fa-solid fa-trash';
     Done.setAttribute('id',  'done');
     Delete.setAttribute('id' , 'delete');
 
