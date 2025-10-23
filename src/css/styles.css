@@ -1,0 +1,63 @@
+:root {
+    --main-background-color: #D6E1FF;
+    --container-background-color : #ffffff;
+    --sub-background-color:#F8F9FE;
+
+}
+
+body{
+    background-color: var(--main-background-color);
+    background-image: url('imagespattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container {    
+
+    border-radius: 1rem;
+    background-color: var(--container-background-color);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.container .inner-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.container .inner-container .pan .type , .price {
+    font-size: .875rem;
+}
+
+.container .inner-container .pan {
+    background-color: var(--sub-background-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container .inner-container .pan a{
+    margin-left: auto;
+
+}
+.container .inner-container .pan .inner{
+    display: flex;
+    flex-direction: column;
+}
+.container .inner-container button{
+    width: 100%;
+}
