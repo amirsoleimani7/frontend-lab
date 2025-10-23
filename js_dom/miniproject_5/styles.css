@@ -14,13 +14,13 @@ body {
 
 .main-container {
     width: 30%;
-    height: 100px;
     background-color: lightgray;
-
+    padding: 1rem;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;       
+    flex-direction:column ;
 }
 
 .main-container .add-task {
@@ -49,3 +49,23 @@ body {
     height: 40px;
 }
 
+.task-list{
+    width: 100%;    
+}
+
+.task {
+    background-color: lightgoldenrodyellow;
+    border-radius: 1rem;
+    display: flex;
+    padding: 0 1rem;
+}
+
+.task button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.task .task-name {
+    margin-right: auto;    
+}

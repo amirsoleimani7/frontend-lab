@@ -6,6 +6,10 @@ const submit_button = document.querySelector('.submit')
 
 
 submit_button.addEventListener('click' , function(){
-    console.log(current_tasks.value);
-    current_tasks.value = '';
+    console.log('User Task is : ' , current_tasks.value);
+    
+    // clearing the value .. 
+    current_tasks.value = ' ';
 })
+
+
