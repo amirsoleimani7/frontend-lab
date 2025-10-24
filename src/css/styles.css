@@ -38,6 +38,7 @@ body {
 }
 
 
+
 /*  ========================================
     article image styling
     ========================================
@@ -103,6 +104,7 @@ body {
 }
 
 .main-container .inner-container .user_info  .share-info{
+    
     margin-left: auto;
     display: flex;
     flex-direction: column;
@@ -112,7 +114,9 @@ body {
     position: relative;
 }
 
+
 .main-container .inner-container .user_info  .share-info .share-details{
+
     display: none;
     position: absolute;
     bottom: 150%; /* places it above the button */
@@ -145,12 +149,18 @@ body {
 }
 
 .main-container .inner-container .user_info  button{
+    /* background-color: var(--color-3); */
     border-radius: 50%;
     border: none;
     width: 40px;    
     height: 40px;
 }
 
+.main-container .inner-container .user_info .share-info .mobile-share-details {
+    /* background-color: red; */
+    /* width: 100%; */
+    display: none;
+}
 
 .main-container .inner-container .user_info  button:hover {
     cursor: pointer;
@@ -161,16 +171,8 @@ body {
     ========================================
 */
 @media screen and (max-width : 620px){
-
     body {
-        padding: 5rem 5rem;
-    }
-    
-    .main-container .inner-container .user_info  .share-info .share-details{
-        display: none;
-    }
-    .share-details {
-        display: none;
+        padding: 5rem 2rem;
     }
 
     .main-container {
@@ -183,23 +185,19 @@ body {
         border-radius: .5rem .5rem 0 0;
         object-fit: cover;
     }
-
-    .user_info {
+    
+    .main-container .inner-container .user_info {
         border-radius: 0 0 .5rem .5rem;
         margin: 0 -3rem -3rem -3rem;
         padding: 1rem 3rem;
-        background-color: var(--color-1);    
+        /* background-color: var(--color-1);     */
     }
+
     .main-container .inner-container .user_info .inner-user .date{    
-        color: white;
+        /* color: white; */
     }
-
+    
     .main-container .inner-container .user_info .inner-user .person{    
-        color: white;
+        /* color: white; */
     }
-
 }
-
-
-
-

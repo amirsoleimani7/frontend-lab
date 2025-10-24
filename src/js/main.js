@@ -3,7 +3,6 @@ const share_button = document.getElementById('share-button');
 let share_info = document.querySelector('.share-details');
 var current_screen_width;
 
-
 window.addEventListener("resize", function(event) {
     current_screen_width = window.screen.width;
     console.log(current_screen_width);
@@ -11,7 +10,6 @@ window.addEventListener("resize", function(event) {
         share_info.style.display = 'none';
     }
 })
-
 
 function toggle_dispaly(curernt_style){
     return curernt_style =='none' ? 'flex' : 'none';
