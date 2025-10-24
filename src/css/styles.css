@@ -1,27 +1,77 @@
 :root {
    --background-color: #EDF2F8;
+   --main-font-family: 'Manrope';
+
+    --color-1 : hsl(217, 19%, 35%);
+    --color-2 : hsl(214, 17%, 51%);
+    --color-3 : hsl(212, 23%, 69%);
+    --color-4 : hsl(210, 46%, 95%);
 }
 
+/*  ========================================
+    general stuff
+    ========================================
+*/
 body {
+    
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     
+    font-family: var(--main-font-family);
     background-color: var(--background-color);
 }
 
+
+/*  ========================================
+    overall maincotainer styling (flex , borders)
+    ========================================
+*/
 .main-container {
     background-color: white;
     border-radius: 0.5rem;
     max-width: 870px;
-    height: 30vh;
     display: flex;
-    
+    border-radius: .5rem;
+    box-shadow: 5px 5px 30px grey;
 }
 
+
+/*  ========================================
+    article image styling
+    ========================================
+*/
 .main-container .main-image {
-    border:none;
+    aspect-ratio: 1;
+    width: 30%;
+    border: none;
     border-radius: .5rem 0 0 .5rem;
     object-fit: cover;
+}
+
+.main-container .inner-container {
+    padding: 3rem;
+}
+
+
+/*  ========================================
+    header styling
+    ========================================
+*/
+.main-container .inner-container .header{
+    color: var(--color-1);
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.main-container .inner-container .description {
+    color: var(--color-2);
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+
+.main-container .inner-container .user_info {
+    
 }
