@@ -71,7 +71,6 @@ body {
     font-size: 1.125rem;
 }
 
-
 .main-container .inner-container .user_info {
     display: flex;
     align-items: center;
@@ -84,21 +83,69 @@ body {
     margin-right: 1rem;
 }
 
+.main-container .inner-container .user_info .inner-user {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
 .main-container .inner-container .user_info .inner-user .person{    
     color: var(--color-1);
     font-weight: 700;
     font-size: 1.125rem;
+    margin: 0px;
 }
-
 
 .main-container .inner-container .user_info .inner-user .date{    
     color: var(--color-2);
-    /* font-weight: ; */
     font-size: 1.125rem;
 }
 
-.main-container .inner-container .user_info  button{
+.main-container .inner-container .user_info  .share-info{
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 0px;
+    position: relative;
+}
+
+.main-container .inner-container .user_info  .share-info .share-details{
+    display: none;
+    position: absolute;
+    bottom: 150%; /* places it above the button */
+    left: 50%;    /* horizontally center relative to button */
+    transform: translateX(-50%) translateY(-10px); /* small gap above */
+    z-index: 10;
+    background-color: var(--color-1);
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+}
+
+.main-container .inner-container .user_info  .share-info .share-details span{
+    letter-spacing: .5rem;
+    color: var(--color-3);
+}   
+
+.main-container .inner-container .user_info  .share-info .share-details .square{
+    background-color: var(--color-1);
+    width: 40px;
+    height: 40px;
+    position:absolute;
+    transform: rotate(45deg);
+    left: 40%;
+    top: 50%;
+    z-index: -1;
+    
+}
+
+.main-container .inner-container .user_info  .share-info .share-details > *{
+    margin: 0 .5rem;
+}
+
+.main-container .inner-container .user_info  button{
     border-radius: 50%;
     border: none;
     width: 40px;
