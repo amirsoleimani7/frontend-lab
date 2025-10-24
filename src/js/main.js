@@ -1,8 +1,17 @@
 
 const share_button = document.getElementById('share-button');
 let share_info = document.querySelector('.share-details');
-console.log('sahre info is ; ' , share_info);
-console.log(share_button);
+var current_screen_width;
+
+
+window.addEventListener("resize", function(event) {
+    current_screen_width = window.screen.width;
+    console.log(current_screen_width);
+    if(current_screen_width < 620){
+        share_info.style.display = 'none';
+    }
+})
+
 
 function toggle_dispaly(curernt_style){
     return curernt_style =='none' ? 'flex' : 'none';
@@ -10,16 +19,24 @@ function toggle_dispaly(curernt_style){
 
 share_button.addEventListener('click' , function(){
     
-    let computed_style = window.getComputedStyle(share_info).display;
-    share_info.style.display = toggle_dispaly(computed_style);
+    if (current_screen_width > 620){
+        let computed_style = window.getComputedStyle(share_info).display;
+        share_info.style.display = toggle_dispaly(computed_style);
+    }
+
 });
 
+
 window.addEventListener('click' , function(e){
-    if (e.target.id == 'share-button'){
-        return;
-    }
-    else {
-        let computed_style = window.getComputedStyle(share_info).display;
-        share_info.style.display = computed_style == 'flex' ? 'none' : 'none';
-    }
+    
+    
+    if (current_screen_width > 620){
+        if (e.target.id == 'share-button'){
+            return;
+        }
+        else {
+            let computed_style = window.getComputedStyle(share_info).display;
+            share_info.style.display = computed_style == 'flex' ? 'none' : 'none';
+        }
+    }    
 })

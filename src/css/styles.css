@@ -156,26 +156,26 @@ body {
     cursor: pointer;
 }
 
-
-
 /*  ========================================
     media max-width : 620px
     ========================================
 */
-
 @media screen and (max-width : 620px){
 
     body {
         padding: 5rem 5rem;
     }
-
-    .main-container .inner-container {
-        padding: 0;
+    
+    .main-container .inner-container .user_info  .share-info .share-details{
+        display: none;
+    }
+    .share-details {
+        display: none;
     }
 
-    
     .main-container {
         flex-direction: column;
+        border-radius: .5rem;
     }
 
     .main-container .main-image {
@@ -185,8 +185,17 @@ body {
     }
 
     .user_info {
-        
+        border-radius: 0 0 .5rem .5rem;
+        margin: 0 -3rem -3rem -3rem;
+        padding: 1rem 3rem;
         background-color: var(--color-1);    
+    }
+    .main-container .inner-container .user_info .inner-user .date{    
+        color: white;
+    }
+
+    .main-container .inner-container .user_info .inner-user .person{    
+        color: white;
     }
 
 }
