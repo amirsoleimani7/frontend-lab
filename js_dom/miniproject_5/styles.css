@@ -50,6 +50,8 @@ body {
 }
 
 .task-list{
+    overflow-y: scroll;
+    max-height: 400px;
     width: 100%;    
 }
 
