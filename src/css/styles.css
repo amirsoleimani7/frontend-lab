@@ -1,4 +1,4 @@
-:root {
+:root { 
    --background-color: #EDF2F8;
    --main-font-family: 'Manrope';
 
@@ -7,6 +7,7 @@
     --color-3 : hsl(212, 23%, 69%);
     --color-4 : hsl(210, 46%, 95%);
 }
+
 
 /*  ========================================
     general stuff
@@ -38,7 +39,6 @@ body {
 }
 
 
-
 /*  ========================================
     article image styling
     ========================================
@@ -54,7 +54,6 @@ body {
 .main-container .inner-container {
     padding: 3rem;
 }
-
 
 /*  ========================================
     header styling
@@ -184,36 +183,46 @@ body {
         border-radius: 0 0 .5rem .5rem;
         margin: 0 -3rem -3rem -3rem;
         padding: 1rem 3rem;
-        /* background-color: var(--color-1);     */
-        flex-direction: column;
+        flex-direction: row;
+    }
+       
+    .main-container .inner-container .user_info .inner-user , .profile-image{ /*all these should be block*/
+        display: flex; /* this should change*/
     }
     
-    .main-container .inner-container .user_info .inner-user , .profile-image{
-        display: none;
-    }
-    
-
     .main-container .inner-container .user_info .share-info .share-details .square {
-        display: none;
+        display: none; /* this should change*/ 
     }
 
-    .main-container .inner-container .user_info .share-info{
+    .main-container .inner-container .user_info .share-info {
+        display:none;
+    }    
+    .main-container .inner-container .user_info .share-info {
+        display: flex ; /*this should change  , flex for the other side*/ 
+        flex-direction: row;
+    }
+
+    .main-container .inner-container .user_info .share-info.active {
+        display: flex ; /*this should change  , flex for the other side*/ 
+        flex-direction: row;
         width: 100%;
-        flex-direction: row;        
-        background-color: var(--color-1);                
+        background-color: var(--color-1);    
         border-radius: 0 0 .5rem .5rem;
         margin: 0 -3rem -3rem -3rem;
         padding: 1rem 3rem;
         justify-content: space-between;
     }
-    
+
     .main-container .inner-container .user_info .share-info .share-details{
+        
         position: static;
         padding-left : 0px;
-        display: flex;
+        width: 100%;
+        display: none ; /* this should change*/
         bottom: none; /* places it above the button */
         left: none;    /* horizontally center relative to button */
         transform: none; /* small gap above */
-        z-index: none;
+        z-index: 1;
     }
+    
 }
