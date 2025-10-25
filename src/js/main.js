@@ -6,9 +6,9 @@ var current_screen_width;
 window.addEventListener("resize", function(event) {
     current_screen_width = window.screen.width;
     console.log(current_screen_width);
-    if(current_screen_width < 620){
-        share_info.style.display = 'none';
-    }
+    // if(current_screen_width < 620){
+    //     share_info.style.display = 'none';
+    // }
 })
 
 function toggle_dispaly(curernt_style){
