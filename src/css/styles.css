@@ -1,0 +1,21 @@
+:root{
+    --main-bg-color:hsl(234, 29%, 20%);        
+    --color-1:hsl(235, 18%, 26%);
+    --color-2:hsl(0, 0%,58%);
+    --color-3:hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--main-bg-color);    
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up {
+    display: flex;
+    background-color: var(--color-3);
+    padding: 1rem;
+    border-radius: .5rem;
+}

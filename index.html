@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/css/styles.css">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+<body>
+
+  <!-- Sign-up form start -->  
+  <div class="sign-up">
+    
+    <div class="main-sign-uo">
+      <h1 class="header">Stay updated!</h1>
+      <p class="description">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul class="bullets">
+        <li>Product discovery and building what matters</li>
+        <li >Measuring to ensure updates are a success</li>
+        <li>And much more!</li>
+      </ul>
+      
+      <form action="">
+        <span class="input-header">Email address</span>
+        <span class="input-value">email@company.com</span>
+      
+        <!-- there should be an error here ,'Valid email required' -->
+        <button class="submit">
+          Subscribe to monthly newsletter
+        </button>
+      </form>
+    </div>
+    <img src="assets/images/illustration-sign-up-desktop.svg" alt="">
+  </div>
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <div class="success-state" style="display: none;">
+    <h1 class="header">Thanks for subscribing!</h1>
+    <p class="success-description">
+      A confirmation email has been sent to ash@loremcompany.com.
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button class="dismiss">Dismiss message</button>
+  </div>
+    
+  <!-- Success message end -->
+  <script src="src/js/main.js"></script>
+  
+</body>
+</html>
