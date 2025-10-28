@@ -33,7 +33,6 @@ body{
     border-radius: 1.5rem;
     gap: 2rem;
     width: 700px;    
-        
 }
 
 .sign-up .main-sign-up {
@@ -58,7 +57,6 @@ body{
     padding-left: 0;
 }
 
-
 .sign-up .main-sign-up .bullets li{
     font-size: .9rem;
     display: flex;
@@ -69,7 +67,6 @@ body{
 .sign-up .main-sign-up .bullets li::before{
     content: url('../../assets/images/icon-list.svg');
     margin-right: .5rem;
-    
 }
 
 
@@ -102,10 +99,17 @@ body{
     form styling 
     ========================================
 */
-.sign-up .main-sign-up .subscription-form .input-header {
+.sign-up .main-sign-up .subscription-form .info {
     font-weight: 700;
     font-size: .75rem;
     margin-bottom: .25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-up .main-sign-up .subscription-form .info .input-error{
+    color: var(--color-li );
+    display: none;
 }
 
 .sign-up .main-sign-up .subscription-form #form-input{
@@ -135,9 +139,49 @@ body{
 }
 
 
+/*  ========================================
+    success card styling
+    ========================================
+*/
 
+.sucesss-card {    
+    display: none;
+    width:340px;
+    padding: 3rem;
+    border-radius: 2rem;
+    background-color: white;    
+    transition: .5s;
+}
+
+.sucesss-card .success-header {    
+    color: var(--color-1);
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.sucesss-card .dismiss{
+    margin-top: 1.5rem ;
+    width: 100%;
+    padding: 1rem;
+    font-weight: 700;
+    border-radius: .5rem;                                                   
+    border: none;
+    color:white;
+    background-color: var(--color-1);
+    transition: .5s;
+}
+
+.sucesss-card .dismiss:hover{
+    background: HSL(4, 100%, 67%);
+    background: linear-gradient(90deg, rgba(255, 98, 87, 1) 49%, rgba(237, 198, 83, 1) 100%);
+    cursor: pointer;
+    box-shadow: 10px 10px 30px var(--color-li);   
+}
 
 /*  ========================================
     add media query at 540px 
     ========================================
 */
+@media screen and (max-width:540px){
+
+}
