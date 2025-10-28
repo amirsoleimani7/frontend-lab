@@ -35,10 +35,9 @@ form.addEventListener("submit" , function(e){
         submit_text.style.backgroundColor = '#FFE8E6';
         submit_text.style.color = 'hsl(4, 100%, 67%)';
         submit_text.style.border = '1px solid red';
-    }
-    
-    
+    }    
 })
+
 
 dismiss_button.addEventListener('click' , function(){
     sign_up_page.style.display = 'flex';

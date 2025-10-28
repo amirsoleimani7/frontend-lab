@@ -145,7 +145,7 @@ body{
 */
 .sucesss-card {    
     display: none;
-    width:340px;
+    max-width:340px;
     padding: 3rem;
     border-radius: 2rem;
     background-color: white;    
@@ -181,6 +181,55 @@ body{
     add media query at 540px 
     ========================================
 */
-@media screen and (max-width:540px){
+.sign-up .backimage_tabalet{
+    display: none ;
+    background-image: url('../../assets/images/illustration-sign-up-tablet.svg');
+    flex: 1 ;
+    border-radius: .5rem;
+    background-size: cover;   
+}
 
+.sign-up .backimage_mobile{
+    display: none ;
+    background-image: url('../../assets/images/illustration-sign-up-mobile.svg');
+    flex: 1 ;
+    border-radius: .5rem;
+    background-size: cover;   
+}
+
+@media screen and (max-width:650px){
+    html {
+        font-size: 15px;
+    }
+    body {
+        padding: .5rem;
+    }
+    .sign-up {
+        flex-direction: column;
+        height: 100%;
+    }
+    .sign-up .backimage {
+        display: none;
+    }
+    .sign-up .backimage_tabalet {
+        display: block;
+        background-color: red;
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:425px){
+    html {
+        font-size: 14px;
+    }
+    body {
+        padding: .25rem;
+    }
+    .sign-up .backimage_tabalet {
+        display: none;
+    }
+    .sign-up .backimage_mobile{
+        display: block;
+    }    
 }
