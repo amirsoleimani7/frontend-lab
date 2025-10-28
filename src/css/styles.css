@@ -30,13 +30,14 @@ body{
     display: flex;
     background-color: var(--color-3);
     padding: 1rem;
-    border-radius: .5rem;
+    border-radius: 1.5rem;
     gap: 2rem;
-    width: 35vw;        
+    width: 700px;    
+        
 }
 
 .sign-up .main-sign-up {
-    width: 50%;
+    flex:1;
     display: flex;
     flex-direction: column;
     padding: 3rem 1rem;
@@ -45,24 +46,32 @@ body{
 .sign-up .main-sign-up .subscription-form {
     display: flex;
     flex-direction: column;
-
 }
-
 /*  ========================================
     bullets styling
     ========================================
 */
 .sign-up .main-sign-up .bullets{
-   padding-left: 2rem;
     list-style: none ;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding-left: 0;
 }
 
 
 .sign-up .main-sign-up .bullets li{
-    list-style: url('../../assets/images/icon-list.svg');
     font-size: .9rem;
-    margin-top: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
 }
+
+.sign-up .main-sign-up .bullets li::before{
+    content: url('../../assets/images/icon-list.svg');
+    margin-right: .5rem;
+    
+}
+
 
 /*  ========================================
     bakground right side image
@@ -70,19 +79,22 @@ body{
 */
 .sign-up .backimage{
     background-image: url('../../assets/images/illustration-sign-up-desktop.svg');
-    width: 50%;
+    flex: 1 ;
     border-radius: .5rem;
     background-size: cover;   
 }
 
 .sign-up .main-sign-up .header {
     font-weight: 700;
-    font-size:2rem;
-    text-align: center;
+    font-size:2.75rem;
+    margin-top: 0;
 }
 
 .sign-up .main-sign-up .description{
     font-weight: 400;
+    font-size:1rem;
+    margin-top: 0;
+    
     
 }
 
@@ -102,7 +114,9 @@ body{
     border:1px solid grey;
     margin-bottom: 1rem;
 }
-
+.sign-up .main-sign-up .subscription-form #form-input:hover { 
+    cursor: pointer;
+}
 .sign-up .main-sign-up .subscription-form .submit{
     padding: 1rem;
     font-weight: 700;
@@ -120,3 +134,10 @@ body{
     box-shadow: 10px 10px 30px var(--color-li);           
 }
 
+
+
+
+/*  ========================================
+    add media query at 540px 
+    ========================================
+*/
