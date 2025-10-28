@@ -3,19 +3,112 @@
     --color-1:hsl(235, 18%, 26%);
     --color-2:hsl(0, 0%,58%);
     --color-3:hsl(0, 0%, 100%);
+
+    --color-li:hsl(4, 100%, 67%);
 }
 
+/*  ========================================
+    main body styling
+    ========================================
+*/
 body{
     background-color: var(--main-bg-color);    
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+
+    font-family: 'Roboto';
 }
 
+/*  ========================================
+    sign-up container styling
+    ========================================
+*/
 .sign-up {
     display: flex;
     background-color: var(--color-3);
     padding: 1rem;
     border-radius: .5rem;
+    gap: 2rem;
+    width: 35vw;        
 }
+
+.sign-up .main-sign-up {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1rem;
+}
+
+.sign-up .main-sign-up .subscription-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*  ========================================
+    bullets styling
+    ========================================
+*/
+.sign-up .main-sign-up .bullets{
+   padding-left: 2rem;
+    list-style: none ;
+}
+
+
+.sign-up .main-sign-up .bullets li{
+    list-style: url('../../assets/images/icon-list.svg');
+    font-size: .9rem;
+    margin-top: 0;
+}
+
+/*  ========================================
+    bakground right side image
+    ========================================
+*/
+.sign-up .backimage{
+    background-image: url('../../assets/images/illustration-sign-up-desktop.svg');
+    width: 100%;
+    border-radius: .5rem;
+    background-size: cover;   
+}
+
+.sign-up .main-sign-up .header {
+    font-weight: 700;
+    font-size:2rem;
+    text-align: center;
+}
+
+.sign-up .main-sign-up .description{
+    font-weight: 400;
+    
+}
+
+/*  ========================================
+    form styling 
+    ========================================
+*/
+.sign-up .main-sign-up .subscription-form .input-header {
+    font-weight: 700;
+    font-size: .75rem;
+    margin-bottom: .25rem;
+}
+
+.sign-up .main-sign-up .subscription-form #form-input{
+    padding: 1rem;
+    border-radius: .5rem;
+    border:1px solid grey;
+    margin-bottom: 1rem;
+}
+
+.sign-up .main-sign-up .subscription-form .submit{
+    padding: 1rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    border: none;
+    color:white;
+    background-color: var(--color-1);
+}
+
