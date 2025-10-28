@@ -13,10 +13,14 @@ let submit_button = document.querySelector('.submit');
 let dismiss_button = document.querySelector('.dismiss') 
 
 
+// sounds
+let submit_sound = new Audio('../../assets/audio/submit.wav')
+let close_sound = new Audio('../../assets/audio/close.mp3')
+
 form.addEventListener("submit" , function(e){
     e.preventDefault();
     let user_query_email = submit_text.value;
-    
+    submit_sound.play();
     if (
         user_query_email.includes('@') && 
         user_query_email.slice(-4) == '.com' && 
@@ -38,8 +42,8 @@ form.addEventListener("submit" , function(e){
     }    
 })
 
-
 dismiss_button.addEventListener('click' , function(){
+    close_sound.play();
     sign_up_page.style.display = 'flex';
     success_page.style.display = 'none';
 })
