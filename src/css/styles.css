@@ -36,7 +36,7 @@ body{
 }
 
 .sign-up .main-sign-up {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     padding: 3rem 1rem;
@@ -70,7 +70,7 @@ body{
 */
 .sign-up .backimage{
     background-image: url('../../assets/images/illustration-sign-up-desktop.svg');
-    width: 100%;
+    width: 50%;
     border-radius: .5rem;
     background-size: cover;   
 }
@@ -110,5 +110,13 @@ body{
     border: none;
     color:white;
     background-color: var(--color-1);
+    transition: .5s;
+}
+
+.sign-up .main-sign-up .subscription-form .submit:hover { 
+    background: HSL(4, 100%, 67%);
+    background: linear-gradient(90deg, rgba(255, 98, 87, 1) 49%, rgba(237, 198, 83, 1) 100%);
+    cursor: pointer;
+    box-shadow: 10px 10px 30px var(--color-li);           
 }
 
