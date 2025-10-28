@@ -1,4 +1,6 @@
 // vars 
+import submit_sound from '../../assets/audio/submit.wav'
+import close_sound from '../../assets/audio/close.mp3'
 
 let user_email_ = document.getElementById('user-email');
 let form = document.querySelector('.subscription-form');
@@ -14,8 +16,9 @@ let dismiss_button = document.querySelector('.dismiss')
 
 
 // sounds
-let submit_sound = new Audio('../../assets/audio/submit.wav')
-let close_sound = new Audio('../../assets/audio/close.mp3')
+let submit_sound = new Audio(submit_sound);
+let close_sound = new Audio(close_sound);
+
 
 form.addEventListener("submit" , function(e){
     e.preventDefault();
