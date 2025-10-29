@@ -1,43 +1,89 @@
 :root {
     --user-background-color:#5746EA;
     --all-card-background-color:#1D204B;
+
+    /* neutral colors */
+    --color-navy-200:hsl(236, 100%, 87%);
+    
+    
+    /* font family */
+    --main-font-family:'Rubik' , sans;
+    
+
 }
 
 body { 
     display: flex;
+    font-family: var(--main-font-family);
     justify-content: center;
     align-items: center;
     height: 90vh;
 }
 
 .user-control{ 
-    /* background-color: var(--user-background-color); */
     border-radius: 1rem;
     border: 1px solid ;
+    max-width: 240px;
+    padding: 2rem;
+    /* box-sizing: border-box; */
+}
+
+/*  
+    ========================
+    user info
+    ========================
+*/
+.user-control .user-info {
+    background-color: var(--user-background-color);
+    display: flex;
+    flex-direction: column;                                                             
+    box-sizing: border-box;
+    border-radius: 0 0 1rem 1rem;
 }
 
 
-.user-control .user-info {
-    margin: 2rem;
+.user-control .user-info #profile-image{ 
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid white;   
+    width: 64px;
+    height: 64px;
+    margin-bottom: 2rem;
+}
+
+.user-control .user-info span{
+    color: var(--color-navy-200);
+}
+
+.user-control .user-info .user-name{
+    margin-top: .2rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
 }
 
 .user-control .user-input {
-    /* background-color: var(--all-card-background-color); */
+    background-color: var(--all-card-background-color);
+    color: var(--color-navy-200);
+    font-weight: 400;
+}
+
+.user-control .user-input .item{
+    margin-bottom: .7rem;
 }
 
 .user-control .user-input form{
     display: flex;
     flex-direction: column;
-    margin: 2rem;
 }
 
-input[type="radio"]{
-    background-color: red;
+input[type="radio"] {
+    appearance: none;
+    accent-color: blue;    
 }
 
-.user-control .user-input input[type="radio"]:checked {
-    background-color: hsl(172, 67%, 45%);
-    background-color: red;
-}
 
+input[type="radio"]:checked {
+    background-color: blue;
+}
 
