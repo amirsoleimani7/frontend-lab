@@ -1,0 +1,43 @@
+:root {
+    --user-background-color:#5746EA;
+    --all-card-background-color:#1D204B;
+}
+
+body { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.user-control{ 
+    /* background-color: var(--user-background-color); */
+    border-radius: 1rem;
+    border: 1px solid ;
+}
+
+
+.user-control .user-info {
+    margin: 2rem;
+}
+
+.user-control .user-input {
+    /* background-color: var(--all-card-background-color); */
+}
+
+.user-control .user-input form{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+input[type="radio"]{
+    background-color: red;
+}
+
+.user-control .user-input input[type="radio"]:checked {
+    background-color: hsl(172, 67%, 45%);
+    background-color: red;
+}
+
+
