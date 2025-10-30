@@ -1,7 +1,7 @@
 :root {
     --user-background-color:#5746EA;
     --all-card-background-color:#1D204B;
-
+    --main-background-color:#0D1323;
     /* neutral colors */
     --color-navy-200:hsl(236, 100%, 87%);
     
@@ -16,10 +16,12 @@
 body { 
     display: flex;
     font-family: var(--main-font-family);
+    /* background-color: var(--main-background-color); */
     justify-content: center;
     align-items: center;
     height: 90vh;
     padding: 3rem;
+    
 }
 
 .user-control{ 
@@ -61,7 +63,6 @@ body {
     font-weight: 300;
     color: white;
 }
-
 
 /*
     ========================
@@ -111,18 +112,14 @@ input[type="radio"]:checked + label {
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
     grid-auto-rows: 1fr ;    
-    grid-template-areas: 'user-main b b b'
-                        'user-main b b b';
-                        
+    grid-template-areas: 'user-main . . .'
+                        'user-main . . .';
+
+    gap: 1rem;
 }
 
 .user-control {
     grid-area: user-main;
-}
-
-.card:nth-child(1){
-    grid-area: b;
-
 }
 
 
