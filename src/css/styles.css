@@ -145,11 +145,8 @@ input[type="radio"]:checked + label {
     flex-direction: column;
     justify-content: space-between;    
     position: relative;  
-}
+    transition: all 2s;
 
-.card-1{
-    background-color: var(--color-work);
-    z-index: 1;       
 }
 
 .card .detail{   
@@ -167,11 +164,11 @@ input[type="radio"]:checked + label {
     font-weight: 500;
 }
 
-.card .detail .current-weekly-time {
+.card .detail .current {
     font-size: 3rem;
     font-weight: 300;
 }
 
-.card .detail .prev-weekly-time {
+.card .detail .prev {
     color: var(--color-navy-200);
 }
