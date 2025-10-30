@@ -19,6 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 90vh;
+    padding: 3rem;
 }
 
 .user-control{ 
@@ -100,3 +101,29 @@ label {
 input[type="radio"]:checked + label {
     color: white;
 }
+
+
+/*
+    grid items ... 
+*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-auto-rows: 1fr ;    
+    grid-template-areas: 'user-main b b b'
+                        'user-main b b b';
+                        
+}
+
+.user-control {
+    grid-area: user-main;
+}
+
+.card:nth-child(1){
+    grid-area: b;
+
+}
+
+
+
