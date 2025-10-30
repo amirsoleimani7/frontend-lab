@@ -21,11 +21,9 @@ body {
 }
 
 .user-control{ 
+    background-color: var(--all-card-background-color);
     border-radius: 1rem;
-    border: 1px solid ;
     max-width: 240px;
-    padding: 2rem;
-    /* box-sizing: border-box; */
 }
 
 /*  
@@ -38,7 +36,8 @@ body {
     display: flex;
     flex-direction: column;                                                             
     box-sizing: border-box;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 1rem;
+    padding: 2rem;
 }
 
 
@@ -63,9 +62,9 @@ body {
 }
 
 .user-control .user-input {
-    background-color: var(--all-card-background-color);
     color: var(--color-navy-200);
     font-weight: 400;
+    padding: 2rem;
 }
 
 .user-control .user-input .item{
