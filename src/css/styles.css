@@ -41,7 +41,6 @@ body {
     padding: 2rem;
 }
 
-
 .user-control .user-info #profile-image{ 
     display: inline-block;
     border-radius: 50%;
@@ -62,6 +61,12 @@ body {
     color: white;
 }
 
+
+/*
+    ========================
+    user-input styling
+    ========================
+*/
 .user-control .user-input {
     color: var(--color-navy-200);
     font-weight: 400;
@@ -85,6 +90,7 @@ input[type="radio"]:hover + label {
     cursor: pointer;
 }
 
+/* making the radio buttons lables unselectable .. */
 label {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
@@ -94,4 +100,3 @@ label {
 input[type="radio"]:checked + label {
     color: white;
 }
-
