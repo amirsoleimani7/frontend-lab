@@ -12,6 +12,7 @@
 
 }
 
+
 body { 
     display: flex;
     font-family: var(--main-font-family);
@@ -77,12 +78,20 @@ body {
 }
 
 input[type="radio"] {
-    appearance: none;
-    accent-color: blue;    
+    display: none;
 }
 
+input[type="radio"]:hover + label {
+    cursor: pointer;
+}
 
-input[type="radio"]:checked {
-    background-color: blue;
+label {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+input[type="radio"]:checked + label {
+    color: white;
 }
 
