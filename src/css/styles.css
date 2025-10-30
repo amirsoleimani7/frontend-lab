@@ -104,17 +104,16 @@ input[type="radio"]:checked + label {
 }
 
 
-/*
-    grid items ... 
+/*  ========================
+    grid container styling
+    ========================
 */
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
-    grid-auto-rows: 1fr ;    
+    /* grid-auto-rows: 1fr;     */
     grid-template-areas: 'user-main . . .'
                         'user-main . . .';
-
     gap: 1rem;
 }
 
@@ -122,5 +121,25 @@ input[type="radio"]:checked + label {
     grid-area: user-main;
 }
 
+
+/*  ========================
+    card styling
+    ========================
+*/
+.card img {
+    width: 64px;
+}
+
+.card { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.card .detail{
+    background-color: var(--all-card-background-color);
+        
+}
 
 
