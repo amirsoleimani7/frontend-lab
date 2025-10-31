@@ -30,6 +30,8 @@ function update_card(info_json){
     // making the html .card and adding to the grid
     console.log(grid_container.children);
     
+    // TODO : add animation for removing and adding grid-items ... 
+    
     for (let i = grid_container.childElementCount -1 ; i>= 0; i-- ){
         if (grid_container.children[i].className == 'card'){
             grid_container.removeChild(grid_container.children[i]);
@@ -37,13 +39,24 @@ function update_card(info_json){
     }
 
     
+
     console.log(grid_container.children);
     
     for (let i = 0 ; i < info_json.length ;++i){
         
         let title = info_json[i].title;
+        
         let current_time = info_json[i].current_time;
         let prev_time = info_json[i].previous_time;
+
+        let img_container = document.createElement('div');
+        img_container.classList.add('image-container');
+        
+        let img = document.createElement('img');
+        let excpected_src = title.toLowerCase().replace(' ' ,'-');
+        img.src = `../../images/icon-${excpected_src}.svg`
+        img_container.appendChild(img);
+                
         
         let card_div = document.createElement('div');
         card_div.classList.add('card');
@@ -74,16 +87,15 @@ function update_card(info_json){
         }
         
         second_span.classList.add('prev');
-        
         detail_div.appendChild(header);
         detail_div.appendChild(first_span);
         detail_div.appendChild(second_span);
         
+        card_div.appendChild(img_container);
         card_div.appendChild(detail_div);
         grid_container.appendChild(card_div);
     }
 }
-
 
 
 async function update_html_category(){
