@@ -36,18 +36,11 @@ for (let i = 0; i < radio_button_form.length ; ++i){
 // making the html .card and adding to the grid
 function update_card(info_json){
     
-
-    
-    
     for (let i = grid_container.childElementCount -1 ; i>= 0; i-- ){
         if (grid_container.children[i].className == 'card'){
             grid_container.removeChild(grid_container.children[i]);
         }
     }
-
-    
-
-    console.log(grid_container.children);
     
     for (let i = 0 ; i < info_json.length ;++i){
         
@@ -116,8 +109,7 @@ async function update_html_category(){
             }
                     
         const result = await response.json();
-        console.log(`json before filtering is : ${result}`);
-        
+            
         let selection_cat = current_category_type.toLowerCase();
         let current_json =  [];
         
@@ -130,7 +122,6 @@ async function update_html_category(){
             }
             current_json.push(current_item);
         }
-        console.log(`current category type is : ${current_category_type}`);
         update_card(current_json);
     } 
     
