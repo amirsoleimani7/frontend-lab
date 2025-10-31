@@ -5,14 +5,22 @@ let grid_container = document.querySelector('.grid-container');
 let current_category_type = 'Daily';
 
 
-// ```
-//     - Orange 300 (work): hsl(15, 100%, 70%)
-//     - Blue 300 (play): hsl(195, 74%, 62%)
-//     - Pink 400 (study): hsl(348, 100%, 68%)
-//     - Green 400 (exercise): hsl(145, 58%, 55%)
-//     - Purple 700 (social): hsl(264, 64%, 52%)
-//     - Yellow 300 (self care): hsl(43, 84%, 65%)
-// ```
+
+
+// TODO : add animation for removing and adding grid-items ... 
+
+
+
+
+
+let card_colors = {
+    "work"      : "hsl(15, 100%, 70%)"  ,
+    "play"      : "hsl(195, 74%, 62%)"  ,
+    "study"     : "hsl(348, 100%, 68%)" ,
+    "exercise"  : "hsl(145, 58%, 55%)"  ,
+    "social"    : "hsl(264, 64%, 52%)"  ,
+    "self-care" : "hsl(43, 84%, 65%)"   
+}
 
 
 for (let i = 0; i < radio_button_form.length ; ++i){
@@ -25,12 +33,11 @@ for (let i = 0; i < radio_button_form.length ; ++i){
 }
 
 
-
+// making the html .card and adding to the grid
 function update_card(info_json){
-    // making the html .card and adding to the grid
-    console.log(grid_container.children);
     
-    // TODO : add animation for removing and adding grid-items ... 
+
+    
     
     for (let i = grid_container.childElementCount -1 ; i>= 0; i-- ){
         if (grid_container.children[i].className == 'card'){
@@ -91,6 +98,8 @@ function update_card(info_json){
         detail_div.appendChild(first_span);
         detail_div.appendChild(second_span);
         
+
+        card_div.style.backgroundColor = card_colors[title.toLowerCase().replace(' ' ,'-')];
         card_div.appendChild(img_container);
         card_div.appendChild(detail_div);
         grid_container.appendChild(card_div);
