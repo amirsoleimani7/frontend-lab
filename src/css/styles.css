@@ -147,9 +147,15 @@ input[type="radio"]:checked + label {
     flex-direction: column;
     justify-content: space-between;    
     position: relative;
-    transition: all 1s;
+    transition: all ;
     overflow: hidden;
     min-width: 159px;
+}
+
+.card .detail .upper-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .card .detail{   
@@ -163,9 +169,9 @@ input[type="radio"]:checked + label {
 }
 
 .card .detail .item-title {
-    margin-top: 0;
     font-size: 1.25rem;
     font-weight: 500;
+    
 }
 
 .card .detail .current {

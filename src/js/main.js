@@ -60,17 +60,29 @@ function update_card(info_json){
         let excpected_src = title.toLowerCase().replace(' ' ,'-');
         img.src = `../../images/icon-${excpected_src}.svg`
         img_container.appendChild(img);
-                
+
         
         let card_div = document.createElement('div');
         card_div.classList.add('card');
+
+        let upper_div = document.createElement('div');
+        upper_div.classList.add('upper-div');
         
+        let img_1 = document.createElement('img');
+        img_1.src = '../../images/icon-ellipsis.svg';
+        
+        // add some event listener for this as well
+
         let detail_div = document.createElement('div');
         detail_div.classList.add('detail');
+
         
         let header = document.createElement('h1');
         header.innerText = title;
         header.classList.add('item-title');
+
+        upper_div.appendChild(header);
+        upper_div.appendChild(img_1);
 
         let first_span = document.createElement('span');
         first_span.innerText = `${current_time}hrs`;
@@ -91,7 +103,7 @@ function update_card(info_json){
         }
         
         second_span.classList.add('prev');
-        detail_div.appendChild(header);
+        detail_div.appendChild(upper_div);
         detail_div.appendChild(first_span);
         detail_div.appendChild(second_span);
         
