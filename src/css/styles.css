@@ -237,3 +237,30 @@ input[type="radio"]:checked + label {
             width: 100%;
     }
 }
+
+@media screen and (max-width:350px){
+    
+    
+    body {
+        height: 100%;   
+    }
+    .user-control .user-input {
+        padding: 2rem 1rem;
+    }
+    .user-control .user-input form{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'user-main'
+                            '.' 
+                            '.'
+                            '.'
+                            '.'
+                            '.'
+                            '.';
+        width: 100%;
+    }
+}
