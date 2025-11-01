@@ -55,11 +55,11 @@ body {
     margin-bottom: 2rem;
 }
 
-.user-control .user-info span{
+.user-control .user-info .info-container span{
     color: var(--color-navy-200);
 }
 
-.user-control .user-info .user-name{
+.user-control .user-info .info-container .user-name{
     margin-top: .2rem;
     font-size: 2.5rem;
     font-weight: 300;
@@ -239,14 +239,15 @@ input[type="radio"]:checked + label {
 }
 
 @media screen and (max-width:350px){
-    
-    
+
     body {
         height: 100%;   
     }
+    
     .user-control .user-input {
         padding: 2rem 1rem;
     }
+
     .user-control .user-input form{
         width: 100%;
         flex-direction: row;
@@ -254,6 +255,7 @@ input[type="radio"]:checked + label {
     }
     .grid-container {
         grid-template-columns: 1fr;
+        grid-auto-rows: .7fr;    
         grid-template-areas: 'user-main'
                             '.' 
                             '.'
@@ -263,4 +265,16 @@ input[type="radio"]:checked + label {
                             '.';
         width: 100%;
     }
+    
+    .user-control .user-info {
+        flex-direction: row;
+        padding: 1rem;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .user-control .user-info .info-container .user-name{
+        font-size: 1.25rem;        
+    }
+
 }
