@@ -32,11 +32,6 @@ for (let i = 0; i < radio_button_form.length ; ++i){
     })
 }
 
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 // making the html .card and adding to the grid
 function update_card(info_json){
     
@@ -58,7 +53,7 @@ function update_card(info_json){
         
         let img = document.createElement('img');
         let excpected_src = title.toLowerCase().replace(' ' ,'-');
-        img.src = `../../images/icon-${excpected_src}.svg`
+        img.src = `../../images/icon-${excpected_src}.svg`;
         img_container.appendChild(img);
 
         
@@ -68,21 +63,28 @@ function update_card(info_json){
         let upper_div = document.createElement('div');
         upper_div.classList.add('upper-div');
         
+        let button_swicht_cat = document.createElement('button');
+        button_swicht_cat.classList.add('switch-cat');
+        
+        button_swicht_cat.addEventListener('click' , function(e){
+            e.target.style.display = 'none';
+        });
+        
         let img_1 = document.createElement('img');
         img_1.src = '../../images/icon-ellipsis.svg';
-        
+        button_swicht_cat.appendChild(img_1);
         // add some event listener for this as well
 
         let detail_div = document.createElement('div');
         detail_div.classList.add('detail');
-
         
+
         let header = document.createElement('h1');
         header.innerText = title;
         header.classList.add('item-title');
 
         upper_div.appendChild(header);
-        upper_div.appendChild(img_1);
+        upper_div.appendChild(button_swicht_cat);
 
         let first_span = document.createElement('span');
         first_span.innerText = `${current_time}hrs`;
