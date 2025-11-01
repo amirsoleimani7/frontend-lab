@@ -1,16 +1,13 @@
 let radio_button_form = document.querySelectorAll('input[type="radio"][name="time"]');
 let grid_container = document.querySelector('.grid-container');
 
-
+document.querySelector('.upper-div')
 let current_category_type = 'Daily';
 
 
 
 
 // TODO : add animation for removing and adding grid-items ... 
-
-
-
 
 
 let card_colors = {
@@ -30,6 +27,11 @@ for (let i = 0; i < radio_button_form.length ; ++i){
         console.log(`current category value is : ${current_category_type}`);
         update_html_category();
     })
+}
+
+
+function Update_single_card(query_cat){
+    
 }
 
 // making the html .card and adding to the grid
@@ -66,14 +68,41 @@ function update_card(info_json){
         let button_swicht_cat = document.createElement('button');
         button_swicht_cat.classList.add('switch-cat');
         
-        button_swicht_cat.addEventListener('click' , function(e){
-            e.target.style.display = 'none';
-        });
-        
         let img_1 = document.createElement('img');
         img_1.src = '../../images/icon-ellipsis.svg';
         button_swicht_cat.appendChild(img_1);
         // add some event listener for this as well
+
+
+        button_swicht_cat.addEventListener('click' , function(e){
+            
+            let card_title = e.target.parentElement.parentElement.querySelector('.item-title').innerText            
+            console.log(`current attribut of this card is : ${e.target.parentElement.parentElement.parentElement.getAttribute('current_cat')}`);                
+            
+            let curr = e.target.parentElement.parentElement.parentElement.getAttribute('current_cat');
+            let this_current_time = e.target.parentElement.parentElement.parentElement.querySelector('.current').innerText;
+            let this_prev_time = e.target.parentElement.parentElement.parentElement.querySelector('.prev').innerText;
+            
+            
+            console.log(`this item's current time is : ${this_current_time}`);
+            console.log(`this item's prev time is : ${this_prev_time}`);
+            
+            
+            if (curr == 'Daily'){
+                e.target.parentElement.parentElement.parentElement.setAttribute('current_cat' , 'week');
+                
+            }
+
+            if (curr == 'week'){
+                e.target.parentElement.parentElement.parentElement.setAttribute('current_cat' , 'month');
+            }
+
+            if (curr == 'month'){
+                e.target.parentElement.parentElement.parentElement.setAttribute('current_cat' , 'Daily');
+            }
+
+        });
+        
 
         let detail_div = document.createElement('div');
         detail_div.classList.add('detail');
@@ -108,11 +137,12 @@ function update_card(info_json){
         detail_div.appendChild(upper_div);
         detail_div.appendChild(first_span);
         detail_div.appendChild(second_span);
+        detail_div.setAttribute('current_cat' , 'Daily');        
         
-
         card_div.style.backgroundColor = card_colors[title.toLowerCase().replace(' ' ,'-')];
         card_div.appendChild(img_container);
         card_div.appendChild(detail_div);
+        
         
         grid_container.appendChild(card_div);
 

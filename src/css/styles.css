@@ -42,6 +42,9 @@ body {
     border-radius: 1rem;
     padding: 2rem;
 }
+.user-control .user-info:hover {
+    background-color: hsl(235, 45%, 61%);    
+}
 
 .user-control .user-info #profile-image{ 
     display: inline-block;
@@ -146,7 +149,8 @@ input[type="radio"]:checked + label {
     flex-direction: column;
     justify-content: end;
     position: relative;
-    transition: all ;
+    transition: all;
+    
     overflow: hidden;
     /* min-width: 159px; */
 }
@@ -160,7 +164,21 @@ input[type="radio"]:checked + label {
 .card .detail .switch-cat {
     background-color: transparent;
     border: none;
+    position: relative;
 }
+.card .detail .switch-cat:hover{
+    cursor: pointer;
+}
+
+.card .detail .change-cat{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    top: -3rem;
+    right: -1rem;
+}
+
 
 .card .detail{   
     /* flex */
@@ -171,7 +189,7 @@ input[type="radio"]:checked + label {
     color: white;
     z-index: 1;
     height: 65%;
-    border-radius: inherit  ;
+    border-radius: inherit;
 }
 
 .card .detail:hover{
