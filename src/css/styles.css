@@ -16,7 +16,7 @@
 body { 
     display: flex;
     font-family: var(--main-font-family);
-    /* background-color: var(--main-background-color); */
+    background-color: var(--main-background-color);
     justify-content: center;
     align-items: center;
     height: 90vh;
@@ -137,15 +137,18 @@ input[type="radio"]:checked + label {
     position: relative;
 }
 
+/* 
+    todo : fix border leacking ... 
+*/
 .card {    
     background-color: lightblue;
     border-radius: 1rem;
-    border: 1px  solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;    
     position: relative;
     transition: all 2s;
+    overflow: hidden;
 }
 
 .card .detail{   
@@ -153,9 +156,9 @@ input[type="radio"]:checked + label {
     flex-direction: column;
     padding: 1rem;
     background-color: var(--all-card-background-color);
-    border-radius: 1rem;
     color: white;
-    z-index: 1
+    border-radius: inherit;
+    z-index: 1;
 }
 
 .card .detail .item-title {
@@ -171,4 +174,17 @@ input[type="radio"]:checked + label {
 
 .card .detail .prev {
     color: var(--color-navy-200);
+}
+
+
+@media screen and (max-width:725px){
+    .user-control {
+        max-width: none;
+    }
+    .grid-container {
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-areas: 'user-main user-main user-main'
+                                '. . .' 
+                                '. . .';            
+    }
 }

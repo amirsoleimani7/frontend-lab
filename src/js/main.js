@@ -33,12 +33,16 @@ for (let i = 0; i < radio_button_form.length ; ++i){
 }
 
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 // making the html .card and adding to the grid
 function update_card(info_json){
     
     for (let i = grid_container.childElementCount -1 ; i>= 0; i-- ){
         if (grid_container.children[i].className == 'card'){
-            grid_container.removeChild(grid_container.children[i]);
+            grid_container.removeChild(grid_container.children[i]);                
         }
     }
     
@@ -95,7 +99,9 @@ function update_card(info_json){
         card_div.style.backgroundColor = card_colors[title.toLowerCase().replace(' ' ,'-')];
         card_div.appendChild(img_container);
         card_div.appendChild(detail_div);
+        
         grid_container.appendChild(card_div);
+
     }
 }
 
