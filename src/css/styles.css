@@ -147,8 +147,9 @@ input[type="radio"]:checked + label {
     flex-direction: column;
     justify-content: space-between;    
     position: relative;
-    transition: all 2s;
+    transition: all 1s;
     overflow: hidden;
+    min-width: 159px;
 }
 
 .card .detail{   
@@ -178,6 +179,10 @@ input[type="radio"]:checked + label {
 
 
 @media screen and (max-width:725px){
+    /* kidna a responsive font-size */
+    :root {
+        font-size: 14px;
+    }
     .user-control {
         max-width: none;
     }
