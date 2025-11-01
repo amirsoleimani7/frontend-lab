@@ -219,14 +219,21 @@ input[type="radio"]:checked + label {
     :root {
         font-size: 14px;
     }
+    
+    body {
+        padding: 1rem;
+    }
+    
     .user-control {
         max-width: none;
     }
+
     .grid-container {
             grid-template-columns: repeat(3 , 1fr);
+            grid-auto-rows: .5fr;    
             grid-template-areas: 'user-main user-main user-main'
                                 '. . .' 
-                                '. . .';            
+                                '. . .';
+            width: 100%;
     }
-    
 }

@@ -93,8 +93,6 @@ function update_card(info_json){
         let img_1 = document.createElement('img');
         img_1.src = '../../images/icon-ellipsis.svg';
         button_swicht_cat.appendChild(img_1);
-        // add some event listener for this as well
-
 
         button_swicht_cat.addEventListener('click' , function(e){
             
