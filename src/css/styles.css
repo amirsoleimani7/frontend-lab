@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 90vh;
-    padding: 3rem;
+    padding: 2rem;
     
 }
 
@@ -29,7 +29,6 @@ body {
     border-radius: 1rem;
     max-width: 240px;
 }
-
 /*  
     ========================
     user info
@@ -167,6 +166,12 @@ input[type="radio"]:checked + label {
     border-radius: inherit;
     z-index: 1;
 }
+
+.card .detail:hover{
+    cursor: pointer;
+    background-color: hsl(235, 45%, 61%);    
+}
+
 
 .card .detail .item-title {
     font-size: 1.25rem;
