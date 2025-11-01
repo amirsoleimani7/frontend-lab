@@ -1,6 +1,6 @@
 let radio_button_form = document.querySelectorAll('input[type="radio"][name="time"]');
 let grid_container = document.querySelector('.grid-container');
-
+update_html_category();
 document.querySelector('.upper-div')
 let current_category_type = 'Daily';
 
@@ -29,9 +29,31 @@ for (let i = 0; i < radio_button_form.length ; ++i){
     })
 }
 
-
-function Update_single_card(query_cat){
-    
+async function read_curr_prev_title(title, cat){
+    const url = "../../data.json";
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+            }
+                    
+        const result = await response.json();
+        
+        console.log(`cat is : ${cat}`);
+        if (cat){
+            const item = result.find(obj => obj.title == title);
+            if(item){
+                return {
+                    first : item.timeframes[cat].current ,
+                    second : item.timeframes[cat].previous ,
+                }
+            }
+        }
+    }
+      
+    catch (error) {
+        console.error(error.message);
+    }
 }
 
 // making the html .card and adding to the grid
@@ -79,27 +101,36 @@ function update_card(info_json){
             let card_title = e.target.parentElement.parentElement.querySelector('.item-title').innerText            
             console.log(`current attribut of this card is : ${e.target.parentElement.parentElement.parentElement.getAttribute('current_cat')}`);                
             
-            let curr = e.target.parentElement.parentElement.parentElement.getAttribute('current_cat');
-            let this_current_time = e.target.parentElement.parentElement.parentElement.querySelector('.current').innerText;
-            let this_prev_time = e.target.parentElement.parentElement.parentElement.querySelector('.prev').innerText;
+            let curr = e.target.parentElement.parentElement.parentElement.getAttribute('current_cat').toLowerCase();
+            let main_div = e.target.parentElement.parentElement.parentElement;
             
+            if (curr == 'daily'){
+                e.target.parentElement.parentElement.parentElement.setAttribute('current_cat' , 'weekly');
+                read_curr_prev_title(card_title , 'weekly')
+                    .then( x => {
+                        main_div.querySelector('.current').innerText = `${x.first}hrs`;
+                        main_div.querySelector('.prev').innerText = `Last Week : ${x.second}hrs`;
+                    });
+            }
             
-            console.log(`this item's current time is : ${this_current_time}`);
-            console.log(`this item's prev time is : ${this_prev_time}`);
-            
-            
-            if (curr == 'Daily'){
-                e.target.parentElement.parentElement.parentElement.setAttribute('current_cat' , 'week');
-                
+            if (curr == 'weekly'){
+                e.target.parentElement.parentElement.parentElement.setAttribute('current_cat' , 'monthly');
+                read_curr_prev_title(card_title , 'monthly')
+                    .then( x => {
+                        main_div.querySelector('.current').innerText = `${x.first}hrs`;
+                        main_div.querySelector('.prev').innerText = `Last Month : ${x.second}hrs`;
+                    });
             }
 
-            if (curr == 'week'){
-                e.target.parentElement.parentElement.parentElement.setAttribute('current_cat' , 'month');
+            if (curr == 'monthly'){
+                e.target.parentElement.parentElement.parentElement.setAttribute('current_cat' , 'daily');
+                read_curr_prev_title(card_title , 'weekly')
+                    .then( x => {
+                        main_div.querySelector('.current').innerText = `${x.first}hrs`;
+                        main_div.querySelector('.prev').innerText = `Last Day : ${x.second}hrs`;
+                    });
             }
-
-            if (curr == 'month'){
-                e.target.parentElement.parentElement.parentElement.setAttribute('current_cat' , 'Daily');
-            }
+            read_curr_prev_title(title, curr);
 
         });
         
@@ -174,7 +205,6 @@ async function update_html_category(){
         }
         update_card(current_json);
     } 
-    
     
     catch (error) {
         console.error(error.message);
