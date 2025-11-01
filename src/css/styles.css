@@ -104,7 +104,6 @@ input[type="radio"]:checked + label {
     color: white;
 }
 
-
 /*  ========================
     grid container styling
     ========================
@@ -122,7 +121,6 @@ input[type="radio"]:checked + label {
     grid-area: user-main;
 }
 
-
 /*  ========================
     card styling
     ========================
@@ -130,21 +128,23 @@ input[type="radio"]:checked + label {
 .card .image-container {
     position: absolute;
     padding: 1rem;
-    width: 64px;
-    height: 64px;
+    width: 40px;
+    height: 40px;
     align-self: end;
-    position: relative;
+    top: 0px;
+    right: 40px;
+    padding-top: 0px ;
 }
 
 /* 
-    todo : fix border leacking ... 
+    todo : fix border leacking ... [saw it , not fixed yet]
 */
 .card {    
     background-color: lightblue;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;    
+    justify-content: end;
     position: relative;
     transition: all ;
     overflow: hidden;
@@ -158,13 +158,17 @@ input[type="radio"]:checked + label {
 }
 
 .card .detail{   
-    display: flex;
+
+    /* flex */
+    display: flex; 
     flex-direction: column;
     padding: 1rem;
     background-color: var(--all-card-background-color);
     color: white;
     border-radius: inherit;
     z-index: 1;
+    height: 65%;
+    
 }
 
 .card .detail:hover{
