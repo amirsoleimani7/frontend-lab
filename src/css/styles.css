@@ -210,7 +210,6 @@ input[type="radio"]:checked + label {
 }
 
 .card .detail:hover{
-    animation-play-state: running;
     scale: 1.05;
     cursor: pointer;
     background-color: hsl(235, 45%, 61%);    
