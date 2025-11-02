@@ -190,9 +190,28 @@ input[type="radio"]:checked + label {
     z-index: 1;
     height: 65%;
     border-radius: inherit; 
+    
+    transition: .5s;
+
+    animation-iteration-count:1;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+    animation-name : fill-the-background;           
+}
+
+@keyframes fill-the-background {
+    0%{
+        height: 0%;
+
+    }   
+    100%{
+        height: 65%;
+    }
 }
 
 .card .detail:hover{
+    animation-play-state: running;
+    scale: 1.05;
     cursor: pointer;
     background-color: hsl(235, 45%, 61%);    
 }

@@ -8,8 +8,6 @@ let current_category_type = 'Daily';
 
 
 // TODO : add animation for removing and adding grid-items ... 
-
-
 let card_colors = {
     "work"      : "hsl(15, 100%, 70%)"  ,
     "play"      : "hsl(195, 74%, 62%)"  ,
@@ -22,6 +20,7 @@ let card_colors = {
 
 for (let i = 0; i < radio_button_form.length ; ++i){
     radio_button_form[i].addEventListener('click' , function(e){
+       
         // setting the current category ... 
         current_category_type = e.target.value; 
         console.log(`current category value is : ${current_category_type}`);
@@ -177,7 +176,6 @@ function update_card(info_json){
 
     }
 }
-
 
 async function update_html_category(){
     const url = "../../data.json";
