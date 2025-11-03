@@ -90,12 +90,31 @@ body {
 
 input[type="radio"] {
     display: none;
+
+
+ 
 }
+
+
 
 input[type="radio"]:hover + label {
     cursor: pointer;
+    animation-name: font-var;
+    animation-timing-function: ease-in-out;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
 }
 
+@keyframes font-var {
+
+    100% {
+        font-size: 1.5rem;
+    }
+    
+    
+}
 /* making the radio buttons lables unselectable .. */
 label {
     -webkit-user-select: none; /* Safari */
@@ -166,6 +185,7 @@ input[type="radio"]:checked + label {
     border: none;
     position: relative;
 }
+
 .card .detail .switch-cat:hover{
     cursor: pointer;
 }
@@ -191,7 +211,7 @@ input[type="radio"]:checked + label {
     height: 65%;
     border-radius: inherit; 
     
-    transition: .5s;
+    transition: .2s;
 
     animation-iteration-count:1;
     animation-timing-function: ease-in-out;
@@ -210,7 +230,7 @@ input[type="radio"]:checked + label {
 }
 
 .card .detail:hover{
-    scale: 1.05;
+    scale: 1.01;
     cursor: pointer;
     background-color: hsl(235, 45%, 61%);    
 }
