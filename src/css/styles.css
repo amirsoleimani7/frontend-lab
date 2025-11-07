@@ -30,12 +30,11 @@ body {
 .main-div .input-div {
     border: 1px solid black;
     width: 100%;
-
 }
 
 .main-div .info-div {
     background-color: var(--inner-background);
-    padding: 2rem 1rem;
+    padding: 3rem 2rem;
     border-radius: 1rem ;
     display: flex;
     flex-direction: column;
@@ -46,25 +45,50 @@ body {
     color: var(--main-background);
 }
 
-.main-div .info-div *> .inner {
-    display: flex;    
+.main-div .info-div .amounts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    
 }
 
-.main-div .info-div * .inner .first {
-    color: white;
+.main-div .info-div .amounts .inner{
+    width: 10rem;    
 }
-.main-div .info-div * .inner .second {
+
+.main-div .info-div .amounts .inner .first {
+    color: white;
+    font-weight: 700;
+    font-size: .875rem;
+}
+
+.main-div .info-div .amounts .inner .second {
     color: hsl(184, 14%, 56%);
+    font-size: .75rem;
+}
+
+.main-div .info-div .amounts .price{
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 .main-div .info-div #reset-button {
     width: 100%;
     margin-top: 50% ;
+    font-weight: 700;
+    color: white;
     background-color: var(--main-background);
     border: none;
-    padding: .7rem .5rem;
+    padding: 1rem .5rem;
     border-radius: .5rem;
 }
+
+.main-div .info-div #reset-button:hover {
+    cursor: pointer;
+    
+}
+
 
 
 
