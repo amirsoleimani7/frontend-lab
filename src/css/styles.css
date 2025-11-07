@@ -1,12 +1,18 @@
 :root {    
     --main-background : hsl(172, 67%, 45%);
     --inner-background : hsl(183, 100%, 15%);
+    --reset-button-background-color : hsl(186, 14%, 43%);
+    
+
+    --main-font-family : "Space Mono"
     
 
 }
 
 body {
+
     background-color: var(--main-background);
+    font-family: var(--main-font-family);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +29,7 @@ body {
 
 .main-div .input-div {
     border: 1px solid black;
+    width: 100%;
 
 }
 
@@ -32,15 +39,31 @@ body {
     border-radius: 1rem ;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-.
+.main-div .info-div span {
+    color: var(--main-background);
+}
 
+.main-div .info-div *> .inner {
+    display: flex;    
+}
+
+.main-div .info-div * .inner .first {
+    color: white;
+}
+.main-div .info-div * .inner .second {
+    color: hsl(184, 14%, 56%);
+}
 
 .main-div .info-div #reset-button {
     width: 100%;
     margin-top: 50% ;
-       
+    background-color: var(--main-background);
+    border: none;
+    padding: .7rem .5rem;
+    border-radius: .5rem;
 }
 
 
