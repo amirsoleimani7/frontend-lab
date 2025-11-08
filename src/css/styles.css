@@ -1,5 +1,5 @@
 :root {    
-    --main-background : hsl(172, 67%, 45%);
+    --main-background :hsl(185, 41%, 84%);
     --inner-background : hsl(183, 100%, 15%);
     --reset-button-background-color : hsl(186, 14%, 43%);
     --input-background-color : hsl(189, 47%, 97%);
@@ -36,10 +36,6 @@ input{
     gap: 1rem;
 }
 
-.main-div .input-div {
-    border: 1px solid black;
-    width: 100%;
-}
 
 
 
@@ -54,7 +50,7 @@ input{
     border-radius: 1rem ;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    flex: 1 1 0px ;
 }
 
 .main-div .info-div span {
@@ -116,6 +112,10 @@ input{
     input div main styling
    =============================
 */
+.main-div .input-div {
+    flex: 1 1 0px;
+
+}
 
 .main-div .input-div .main-grid {
     display: grid;
@@ -136,19 +136,26 @@ input{
     input bill amout styling
     =============================
 */
-.main-div .input-div #input-bill-amount {
+.main-div .input-div input {
     padding: .75rem .5rem;
     width: 100%;
     text-align: end;
     font-size: 1.5rem;
     font-weight: 700;
     border: none;
+    background-color: var(--input-background-color);
     color: var(--inner-background);
     border-radius: .5rem;
 }
 
-.main-div .input-div #input-bill-amount:focus {
-    border: 5px solid var(--main-background);
+.main-div .input-div .input-text-bill-amount , .input-text-number-of-people {
+    color: var(--inner-background);
+    font-weight: 600;
+}
+
+.main-div .input-div input:focus {
+    outline: none;
+    border: 3px solid var(--main-background);
 }
 
 
