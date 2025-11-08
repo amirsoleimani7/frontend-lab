@@ -111,9 +111,15 @@ input{
 */
 .main-div .input-div {
     flex: 1 1 0px;
-
+    /* padding: 3rem 2rem; */
 }
 
+
+
+/* =============================
+    grid items fix
+    =============================
+*/
 .main-div .input-div .main-grid {
     display: grid;
     gap: .7rem;
@@ -148,7 +154,6 @@ input{
     justify-content: space-between;
 }
 
-
 .main-div .input-div input {
     padding: .75rem .5rem;
     width: 100%;
@@ -162,20 +167,16 @@ input{
 }
 
 .main-div .input-div .input-text-bill-amount , .input-text-number-of-people, .select-tip {
+    display: block;
     color: var(--inner-background);
     font-weight: 600;
+    margin-bottom:.5rem ;
 }
 
 .main-div .input-div input:focus {
-    outline: none;
-    border: 3px solid var(--main-background);
+    outline: 3px solid var(--main-background);
 }
 
-
-/* =============================
-    grid items fix
-    =============================
-*/
 
 
 
