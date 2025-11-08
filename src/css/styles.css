@@ -9,8 +9,8 @@
 
 }
 
-body {
 
+body {
     background-color: var(--main-background);
     font-family: var(--main-font-family);
     display: flex;
@@ -19,6 +19,10 @@ body {
     height: 90vh;
 }
 
+/* =============================
+    main layout of the container
+   =============================
+*/
 .main-div {
     padding: 2rem;
     border-radius: 1.5rem;
@@ -32,6 +36,13 @@ body {
     width: 100%;
 }
 
+
+
+
+/* =============================
+   the info div main layout
+   =============================
+*/
 .main-div .info-div {
     background-color: var(--inner-background);
     padding: 3rem 2rem;
@@ -73,7 +84,12 @@ body {
     font-weight: 700;
 }
 
-.main-div .info-div #reset-button {
+
+
+/* =============================
+    the reset button styling
+   =============================
+*/.main-div .info-div #reset-button {
     width: 100%;
     margin-top: 50% ;
     font-weight: 700;
@@ -86,8 +102,9 @@ body {
 
 .main-div .info-div #reset-button:hover {
     cursor: pointer;
-    
 }
+
+
 
 
 
