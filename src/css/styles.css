@@ -2,7 +2,8 @@
     --main-background : hsl(172, 67%, 45%);
     --inner-background : hsl(183, 100%, 15%);
     --reset-button-background-color : hsl(186, 14%, 43%);
-    
+    --input-background-color : hsl(189, 47%, 97%);
+
 
     --main-font-family : "Space Mono"
     
@@ -17,6 +18,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 90vh;
+}
+
+input{
+    font-family: var(--main-font-family);    
 }
 
 /* =============================
@@ -60,12 +65,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5rem;
+    /* gap: 5rem; */
     
 }
 
 .main-div .info-div .amounts .inner{
-    width: 10rem;    
+    /* width: 10rem;     */
 }
 
 .main-div .info-div .amounts .inner .first {
@@ -105,6 +110,46 @@ body {
 }
 
 
+
+
+/* =============================
+    input div main styling
+   =============================
+*/
+
+.main-div .input-div .main-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3 ,1fr);
+}
+
+.main-div .input-div .main-grid .item{
+    background-color: red;
+}
+
+.main-div .input-div .main-grid .item input{
+    opacity: 0;
+}
+
+
+/* =============================
+    input bill amout styling
+    =============================
+*/
+.main-div .input-div #input-bill-amount {
+    padding: .75rem .5rem;
+    width: 100%;
+    text-align: end;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    color: var(--inner-background);
+    border-radius: .5rem;
+}
+
+.main-div .input-div #input-bill-amount:focus {
+    border: 5px solid var(--main-background);
+}
 
 
 

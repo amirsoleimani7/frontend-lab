@@ -14,22 +14,44 @@
   <div class="main-div">
     <div class="input-div">
       
-      Bill
+      <span class="input-text-bill-amount">Bill</span> <br>
+      <input id="input-bill-amount" type="text" placeholder="0.00">
       
-      Select Tip %
+      Select Tip % 
       <div class="main-grid">
-        5%
-        10%
-        15%
-        25%
-        50%
-        Custom
-      </div>
-      Number of People
-      <div class="number-of-people">
+        <div class="item">
+          <input type="radio" name="tip" id="five-percent" value="five-percent">
+          <label for="five-percent">5%</label>          
+        </div>
+        
+        <div class="item">
+          <input type="radio" name="tip" id="ten-percent" value="ten-percent">
+          <label for="ten-percent">10%</label>          
+        </div>
+        
+        <div class="item">
+          <input type="radio" name="tip" id="fifteen-percent" value="fifteen-percent">
+          <label for="fifteen-percent">15%</label>          
+        </div>
+        
+        <div class="item">
+          <input type="radio" name="tip" id="twenyfive-percent" value="twenyfive-percent">
+          <label for="twenyfive-percent">25%</label>          
+        </div>
+        
+        <div class="item">
+          <input type="radio" name="tip" id="fifty-percent" value="fifty-percent">
+          <label for="fifty-percent">50%</label>          
+        </div>
+
+        <div class="item">
+          <input type="radio" name="tip" id="custom" value="custom">
+          <label for="fifty-percent">Custom</label>          
+        </div>
         
       </div>
-      
+      <span class="input-text-number-of-people">Number of People</span> <br>
+      <input id="input-number-of-people" type="text">
     </div>
     <div class="info-div">
       <div class="amounts">
@@ -37,7 +59,7 @@
             <span class="first">Tip Amount</span> <br>
             <span class="second">/ person</span>
         </div>
-        <span class="price" id="calc-tip">$0.00</span>
+        <span class="price" id="calc-tip">$4.27</span>
       </div>
       
       <div class="amounts">
@@ -45,7 +67,7 @@
             <span class="first">Total</span> <br>
             <span class="second">/ person</span>
           </div>
-        <span class="price" id="calc-total">$0.00</span>
+        <span class="price" id="calc-total">$32.79</span>
       </div>
       <button id="reset-button">RESET</button>
     </div>
