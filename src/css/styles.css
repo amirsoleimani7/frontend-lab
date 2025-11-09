@@ -8,8 +8,6 @@
 
     --off-reset-button : #0D686D;
     --main-font-family : "Space Mono"
-    
-
 }
 
 
@@ -42,6 +40,7 @@ input{
     background-color: white;
     display: flex;
     gap: 3rem;
+    width: 748px;
 }
 
 

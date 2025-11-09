@@ -2,13 +2,14 @@ let bill_amount = document.getElementById('input-bill-amount');
 let people_amount = document.getElementById('input-number-of-people');
 
 
-
 let tip_amount_info = document.getElementById('calc-tip')
 let people_amount_info = document.getElementById('calc-total')
 
+people_amount_info.textContent = "$0"
+tip_amount_info.textContent = "$0";
 
-console.log(`tip amount is : ${tip_amount_info}`)
-console.log(`people amount is : ${people_amount_info}`)
+const MAX_LEN = 9;
+
 
 let current_bill_amount;
 let current_people_amount;
@@ -19,24 +20,44 @@ const len_of_number = function(number){
 }
 
 bill_amount.addEventListener("input",(e) => {
-    
     current_bill_amount = e.target.value;
-    if (len_of_number(current_bill_amount) <= 8) {   
-        tip_amount_info.textContent = current_bill_amount
-        people_amount_info.textContent = current_people_amount
+    
+    if(len_of_number(e.target.value) == "" || e.target.value < 0){
+        tip_amount_info.textContent = "$0";
+
+        //Todo:  we should throw an error here for being negetive number
+
     }
 
+    else if (len_of_number(current_bill_amount) <= 8) {   
+        tip_amount_info.textContent = `$${current_bill_amount}`;     
+    }
+    
+    // handling the len of more than 8
+    else  {
+                
+        e.target.value = current_bill_amount.toString().slice(0,MAX_LEN);
+    }
+    
     console.log(`bill amount is : ${current_bill_amount}`)
 
 })
 
 
 people_amount.addEventListener("input",(e) => {
-    if(len_of_number(current_people_amount) <= 8){
-        current_people_amount = e.target.value;
-        people_amount_info.textContent = current_people_amount;
+    current_people_amount = e.target.value;
+
+    if(len_of_number(e.target.value) == ""){
+        //Todo:  we should throw an error here for being negetive number
+        people_amount_info.textContent = "$0"
     }
-    console.log(`bill amount is : ${current_people_amount}`)
+
+    else if(len_of_number(current_people_amount) <= 8){
+        people_amount_info.textContent = `$${current_people_amount}`;
+    }
+
+    else {
+        e.target.value = current_people_amount.toString().slice(0 , MAX_LEN);
+    }
+
 })
-
-
