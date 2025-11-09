@@ -1,5 +1,7 @@
 let bill_amount = document.getElementById('input-bill-amount');
 let people_amount = document.getElementById('input-number-of-people');
+let reset_button = document.getElementById('reset-button')
+
 
 
 let tip_amount_info = document.getElementById('calc-tip')
@@ -18,6 +20,16 @@ let current_people_amount;
 const len_of_number = function(number){
     return number.toString().length;
 }
+
+reset_button.addEventListener('click' , () =>{
+
+    bill_amount.value = "";
+    people_amount.value = "";
+    tip_amount_info.textContent = "$0";
+    people_amount_info.textContent = "$0";
+})
+
+
 
 bill_amount.addEventListener("input",(e) => {
     current_bill_amount = e.target.value;
