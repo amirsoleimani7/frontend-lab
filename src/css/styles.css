@@ -43,7 +43,6 @@ input{
     width: 748px;
 }
 
-
 /* =============================
    the info div main layout
    =============================
@@ -64,13 +63,10 @@ input{
 .main-div .info-div .amounts {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    /* gap: 5rem; */
-    
+    align-items: center;    
 }
 
 .main-div .info-div .amounts .inner{
-    /* width: 10rem;     */
 }
 
 .main-div .info-div .amounts .inner .first {
@@ -192,7 +188,6 @@ input{
     top: 35%;
     left: 5%;
 }
-
 
 .main-div .input-div input:focus {
     outline: 3px solid var(--main-background);
