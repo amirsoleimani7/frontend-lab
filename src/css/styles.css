@@ -22,6 +22,10 @@ body {
     flex-direction: column;
     gap: 5rem;
     height: 90vh;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 input{
@@ -101,12 +105,13 @@ input{
     border: none;
     padding: 1rem .5rem;
     border-radius: .5rem;
-    
-
 }
 
 .main-div .info-div #reset-button:hover {
     cursor: pointer;
+    background-color: var(--text-color-1);
+    transition: .5s all;
+
 }
 
 
@@ -120,9 +125,6 @@ input{
     flex: 1 1 0px;
     /* padding: 3rem 2rem; */
 }
-
-
-
 /* =============================
     grid items fix
     =============================
