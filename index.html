@@ -11,11 +11,15 @@
 </head>
 <body>
 
+  <img src="images/logo.svg" alt="the spliter logo">
   <div class="main-div">
     <div class="input-div">
       <div>
         <span class="input-text-bill-amount">Bill</span> 
-        <input id="input-bill-amount input" type="text" placeholder="0.00">
+        <div style="position: relative;">
+          <img id="dollor-sign" src="images/icon-dollar.svg" alt="dollor sign">
+          <input id="input-bill-amount input" type="number" placeholder="0">
+        </div>
       </div>
       <div>
         <span class="select-tip">Select Tip %</span>
@@ -45,15 +49,18 @@
             <label for="fifty-percent">50%</label>
           </div>
           <div class="item">
-            <input type="radio" name="tip" id="custom" value="custom">
-            <label for="fifty-percent">Custom</label>
+            <input type="radio" name="tip" id="custom" value="custom" checked>
+            <label for="custom">Custom</label>
           </div>
         
         </div>
       </div>
       <div>
         <span class="input-text-number-of-people">Number of People</span> 
-        <input id="input-number-of-people input" type="text">
+        <div style="position: relative;">
+          <img id="people-sign" src="images/icon-person.svg" alt="person icons">
+          <input id="input-number-of-people input" type="number" placeholder="0">
+        </div>
       </div>
     </div>
     <div class="info-div">

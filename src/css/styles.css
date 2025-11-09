@@ -1,10 +1,12 @@
 :root {    
     --main-background :hsl(185, 41%, 84%);
+    --text-color-1:hsl(172, 67%, 45%);
     --inner-background : hsl(183, 100%, 15%);
     --reset-button-background-color : hsl(186, 14%, 43%);
     --input-background-color : hsl(189, 47%, 97%);
 
 
+    --off-reset-button : #0D686D;
     --main-font-family : "Space Mono"
     
 
@@ -17,6 +19,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 5rem;
     height: 90vh;
 }
 
@@ -43,7 +47,7 @@ input{
 */
 .main-div .info-div {
     background-color: var(--inner-background);
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
     border-radius: 1rem ;
     display: flex;
     flex-direction: column;
@@ -51,7 +55,7 @@ input{
 }
 
 .main-div .info-div span {
-    color: var(--main-background);
+    color: var(--text-color-1);
 }
 
 .main-div .info-div .amounts {
@@ -92,10 +96,13 @@ input{
     margin-top: 50% ;
     font-weight: 700;
     color: white;
-    background-color: var(--main-background);
+    background-color: var(--off-reset-button);
+    color: var(--inner-background);
     border: none;
     padding: 1rem .5rem;
     border-radius: .5rem;
+    
+
 }
 
 .main-div .info-div #reset-button:hover {
@@ -136,6 +143,10 @@ input{
     color: white;
     font-weight: 700;
 }
+.main-div .input-div .main-grid .item input[type="radio"]:checked + label{
+    background-color: green;   
+}
+
 
 
 .main-div .input-div .main-grid .item input{
@@ -155,7 +166,7 @@ input{
 }
 
 .main-div .input-div input {
-    padding: .75rem .5rem;
+    padding: .6rem .5rem;
     width: 100%;
     text-align: end;
     font-size: 1.5rem;
@@ -167,11 +178,20 @@ input{
 }
 
 .main-div .input-div .input-text-bill-amount , .input-text-number-of-people, .select-tip {
+    position: relative;
     display: block;
-    color: var(--inner-background);
+    color: var(--reset-button-background-color);
     font-weight: 600;
     margin-bottom:.5rem ;
+    
 }
+
+#dollor-sign, #people-sign{
+    position: absolute;
+    top: 35%;
+    left: 5%;
+}
+
 
 .main-div .input-div input:focus {
     outline: 3px solid var(--main-background);
