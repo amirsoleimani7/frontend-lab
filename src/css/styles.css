@@ -156,7 +156,7 @@ input{
     font-weight: 700;
 }
 .main-div .input-div .main-grid .item input[type="radio"]:checked + label{
-    background-color: green;   
+    /* background-color: green;    */
 }
 
 

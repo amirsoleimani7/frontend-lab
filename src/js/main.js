@@ -52,13 +52,16 @@ reset_button.addEventListener('click' , () =>{
 var radios = document.querySelectorAll("input[name='tip']");
 
 
+let current_selected = 'custom';
+
 for (let i = 0; i <= radios.length ; ++i){
-    
     try { 
         radios[i].addEventListener('click' , (e) => {
-            console.log(`this radio is clicked : ${e.target.value}`);
-            // add some stuff there as well
             
+            e.target.parentElement.style.backgroundColor = "hsl(172, 67%, 45%)";
+            e.target.parentElement.style.color = "hsl(183, 100%, 15%)";
+            current_selected = e.target.value;
+            console.log(`this radio is clicked : ${e.target.value}`);
         })
     }
 
