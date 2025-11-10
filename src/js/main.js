@@ -12,7 +12,6 @@ tip_amount_info.textContent = "$0";
 
 const MAX_LEN = 5;
 
-
 let current_bill_amount;
 let current_people_amount;
 
@@ -25,10 +24,8 @@ const len_of_number = function(number){
 // make persiction function 
 function prec(number , to_fix , digits){
     let x = Math.floor(number / (digits * 10));
-    return x.toFixed(to_fix);
+    return number.toFixed(to_fix);
 }
-
-
 
 // calc tip/p total/p
 function calc_tip_total(bill , people , tip=10) {
@@ -42,8 +39,6 @@ function calc_tip_total(bill , people , tip=10) {
     }
 }
 
-
-
 // reset buttons clears everyfield
 reset_button.addEventListener('click' , () =>{
     bill_amount.value = "";
@@ -51,6 +46,27 @@ reset_button.addEventListener('click' , () =>{
     tip_amount_info.textContent = "$0";
     people_amount_info.textContent = "$0";
 })
+
+
+
+var radios = document.querySelectorAll("input[name='tip']");
+
+
+for (let i = 0; i <= radios.length ; ++i){
+    
+    try { 
+        radios[i].addEventListener('click' , (e) => {
+            console.log(`this radio is clicked : ${e.target.value}`);
+            // add some stuff there as well
+            
+        })
+    }
+
+
+    catch (error){
+        console.log(`this error is there ${error}`);
+    }
+}
 
 
 
@@ -103,3 +119,4 @@ people_amount.addEventListener("input",(e) => {
     }
 
 })
+
