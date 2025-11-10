@@ -10,7 +10,7 @@ let people_amount_info = document.getElementById('calc-total')
 people_amount_info.textContent = "$0"
 tip_amount_info.textContent = "$0";
 
-const MAX_LEN = 9;
+const MAX_LEN = 5;
 
 
 let current_bill_amount;
@@ -23,6 +23,11 @@ const len_of_number = function(number){
 
 
 // make persiction function 
+function prec(number , to_fix , digits){
+    let x = Math.floor(number / (digits * 10));
+    return x.toFixed(to_fix);
+}
+
 
 
 // calc tip/p total/p
@@ -41,7 +46,6 @@ function calc_tip_total(bill , people , tip=10) {
 
 // reset buttons clears everyfield
 reset_button.addEventListener('click' , () =>{
-
     bill_amount.value = "";
     people_amount.value = "";
     tip_amount_info.textContent = "$0";
@@ -56,16 +60,16 @@ bill_amount.addEventListener("input",(e) => {
     if(len_of_number(e.target.value) == "" || e.target.value < 0){
         tip_amount_info.textContent = "$0";
         
+        
 
         //Todo:  we should throw an error here for being negetive number
 
     }
 
-    else if (len_of_number(current_bill_amount) <= 8) {   
+    else if (len_of_number(current_bill_amount) <= 5) {   
         res = calc_tip_total(current_bill_amount , current_people_amount);
-        tip_amount_info.textContent = `$${res["tip_per_person"].toFixed(2)}`
-        people_amount_info.textContent = `$${res["total_per_person"].toFixed(5)}`
-
+        tip_amount_info.textContent = `$${prec(res["tip_per_person"],2 ,5)}`
+        people_amount_info.textContent = `$${prec(res["total_per_person"],2 ,5)}`
     }
 
     
@@ -88,10 +92,10 @@ people_amount.addEventListener("input",(e) => {
         people_amount_info.textContent = "$0"
     }
 
-    else if(len_of_number(current_people_amount) <= 8){
+    else if(len_of_number(current_people_amount) <= 5){
         res = calc_tip_total(current_bill_amount , current_people_amount);
-        tip_amount_info.textContent = `$${res["tip_per_person"].toFixed(2)}`
-        people_amount_info.textContent = `$${res["total_per_person"].toFixed(2)}`
+        tip_amount_info.textContent = `$1${prec(res["tip_per_person"] ,2 ,5)}`
+        people_amount_info.textContent = `$${prec(res["total_per_person"],2 ,5)}`
     }
 
     else {
