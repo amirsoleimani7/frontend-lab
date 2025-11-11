@@ -9,12 +9,15 @@ let reset_button = document.getElementById('reset-button')
 let tip_amount_info = document.getElementById('calc-tip')
 let people_amount_info = document.getElementById('calc-total')
 
+
 people_amount_info.textContent = "$0"
 tip_amount_info.textContent = "$0";
 
 let current_bill_amount;
 let current_people_amount;
 let curent_tip_percent;
+
+
 
 const len_of_number = function(number){
     return number.toString().length;
@@ -24,7 +27,7 @@ const len_of_number = function(number){
 // make persiction function 
 function prec(number , to_fix , digits){
     // let x = Math.floor(number / (digits * 10));
-    return number.toFixed(to_fix);    
+    return number.toFixed(to_fix);
 }
 
 // calc tip/p total/p
@@ -53,9 +56,43 @@ reset_button.addEventListener('click' , () =>{
 
 var radios = document.querySelectorAll("input[name='tip']");
 
-
 // we should set some custom events here for the input fields to update ... 
 var event_1 = new CustomEvent('input');
+
+
+
+
+// fixing the custom radio button 
+let custom_button = document.querySelector("input[id=input-radio]");
+console.log(custom_button);
+
+custom_button.addEventListener('focus' , (e)=>{
+    for (let i = 0;i < radios.length ;++i){
+        radios[i].parentElement.style.backgroundColor = '';
+        radios[i].parentElement.style.color = '';
+    }
+})
+
+
+custom_button.addEventListener('input' , (e)=>{
+    
+    curent_tip_percent = e.target.value;
+    bill_amount.dispatchEvent(event_1);
+    people_amount.dispatchEvent(event_1);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 for (let i = 0; i <= radios.length ; ++i){

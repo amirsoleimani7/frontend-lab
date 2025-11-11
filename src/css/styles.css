@@ -143,6 +143,7 @@ input{
     display: grid;
     gap: .7rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
 }
 
 .main-div .input-div .main-grid .item{
@@ -155,17 +156,33 @@ input{
     color: white;
     font-weight: 700;
 }
+
+
 .main-div .input-div .main-grid .item input[type="radio"]:checked + label{
     /* background-color: green;    */
 }
 
 
-
-.main-div .input-div .main-grid .item input{
+.main-div .input-div .main-grid .item:not(.input-radio)  input{
     opacity: 0;
     display: none;
 }
 
+
+.main-div .input-div .main-grid .input-radio input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--inner-background);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    color: white;
+    font-weight: 700;
+}
+
+.main-div .input-div .main-grid .input-radio input:focus {
+    outline: none;
+}
 
 /* =============================
     input bill amout styling
