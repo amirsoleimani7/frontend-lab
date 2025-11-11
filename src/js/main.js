@@ -1,8 +1,10 @@
+
+// defines ...
+const MAX_LEN = 5;
+
 let bill_amount = document.getElementById('input-bill-amount');
 let people_amount = document.getElementById('input-number-of-people');
 let reset_button = document.getElementById('reset-button')
-
-
 
 let tip_amount_info = document.getElementById('calc-tip')
 let people_amount_info = document.getElementById('calc-total')
@@ -10,11 +12,9 @@ let people_amount_info = document.getElementById('calc-total')
 people_amount_info.textContent = "$0"
 tip_amount_info.textContent = "$0";
 
-const MAX_LEN = 5;
-
 let current_bill_amount;
 let current_people_amount;
-
+let curent_tip_percent;
 
 const len_of_number = function(number){
     return number.toString().length;
@@ -23,16 +23,20 @@ const len_of_number = function(number){
 
 // make persiction function 
 function prec(number , to_fix , digits){
-    let x = Math.floor(number / (digits * 10));
-    return number.toFixed(to_fix);
+    // let x = Math.floor(number / (digits * 10));
+    return number.toFixed(to_fix);    
 }
 
 // calc tip/p total/p
-function calc_tip_total(bill , people , tip=10) {
+function calc_tip_total(bill , people , tip=curent_tip_percent) {
     
+    bill = parseFloat(bill);
+    people = parseFloat(people);
+    tip = parseFloat(tip);
+
     let tip_per_person = (bill * (tip / 100)) / people;
-    let total_per_person = ((bill * (tip / 100)) + bill) / people;
-    
+    let total_per_person = ((bill + (tip * bill / 100)) / people);
+        
     return {
         "tip_per_person" : tip_per_person,
         "total_per_person" : total_per_person
@@ -47,18 +51,21 @@ reset_button.addEventListener('click' , () =>{
     people_amount_info.textContent = "$0";
 })
 
-
-
 var radios = document.querySelectorAll("input[name='tip']");
 
 
-let current_selected = 'custom';
+// we should set some custom events here for the input fields to update ... 
+var event_1 = new CustomEvent('input');
+
 
 for (let i = 0; i <= radios.length ; ++i){
     try { 
         radios[i].addEventListener('click' , (e) => {
             
-
+            curent_tip_percent = e.target.value;
+            bill_amount.dispatchEvent(event_1);
+            people_amount.dispatchEvent(event_1);
+            
             // TODO : this is pretty slow ... 
             for (let i = 0;i < radios.length ;++i){
                 if (radios[i].checked){
@@ -71,7 +78,6 @@ for (let i = 0; i <= radios.length ; ++i){
                 }
             }
             current_selected = e.target.value;
-            console.log(`this radio is clicked : ${e.target.value}`);
         })
     }
 
@@ -87,17 +93,13 @@ bill_amount.addEventListener("input",(e) => {
     
     if(len_of_number(e.target.value) == "" || e.target.value < 0){
         tip_amount_info.textContent = "$0";
-        
-        
-
         //Todo:  we should throw an error here for being negetive number
-
     }
 
     else if (len_of_number(current_bill_amount) <= 5) {   
         res = calc_tip_total(current_bill_amount , current_people_amount);
-        tip_amount_info.textContent = `$${prec(res["tip_per_person"],2 ,5)}`
-        people_amount_info.textContent = `$${prec(res["total_per_person"],2 ,5)}`
+        tip_amount_info.textContent = `$${prec(res["tip_per_person"] ,2 ,5)}`;
+        people_amount_info.textContent = `$${prec(res["total_per_person"] ,2, 5)}`;
     }
 
     
@@ -106,8 +108,6 @@ bill_amount.addEventListener("input",(e) => {
                 
         e.target.value = current_bill_amount.toString().slice(0,MAX_LEN);
     }
-    
-    console.log(`bill amount is : ${current_bill_amount}`)
 
 })
 
@@ -122,8 +122,8 @@ people_amount.addEventListener("input",(e) => {
 
     else if(len_of_number(current_people_amount) <= 5){
         res = calc_tip_total(current_bill_amount , current_people_amount);
-        tip_amount_info.textContent = `$1${prec(res["tip_per_person"] ,2 ,5)}`
-        people_amount_info.textContent = `$${prec(res["total_per_person"],2 ,5)}`
+        tip_amount_info.textContent = `$${prec(res["tip_per_person"] ,2 , 5)}`;
+        people_amount_info.textContent = `$${prec(res["total_per_person"] ,2 , 5)}`;
     }
 
     else {
