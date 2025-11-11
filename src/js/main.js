@@ -67,18 +67,43 @@ let custom_button = document.querySelector("input[id=input-radio]");
 console.log(custom_button);
 
 custom_button.addEventListener('focus' , (e)=>{
+    e.target.parentElement.style.backgroundColor = "hsl(172, 67%, 45%)";
+    e.target.parentElement.style.color = "hsl(183, 100%, 15%)";    
+    e.target.style.backgroundColor = "hsl(172, 67%, 45%)";
+    e.target.style.color = "hsl(183, 100%, 15%)";    
+
     for (let i = 0;i < radios.length ;++i){
         radios[i].parentElement.style.backgroundColor = '';
         radios[i].parentElement.style.color = '';
     }
 })
 
-
 custom_button.addEventListener('input' , (e)=>{
-    
+        
     curent_tip_percent = e.target.value;
+
+    e.target.parentElement.style.backgroundColor = "hsl(172, 67%, 45%)";
+    e.target.parentElement.style.color = "hsl(183, 100%, 15%)";    
+    e.target.style.backgroundColor = "hsl(172, 67%, 45%)";
+    e.target.style.color = "hsl(183, 100%, 15%)";    
+
     bill_amount.dispatchEvent(event_1);
     people_amount.dispatchEvent(event_1);
+
+
+    if(len_of_number(e.target.value) == "" || e.target.value < 0){
+            tip_amount_info.textContent = "$0";
+            //Todo:  we should throw an error here for being negetive number
+    }
+
+    else if (len_of_number(curent_tip_percent) <= 2) {   
+    }
+
+    // handling the len of more than 8
+    else  {                
+        e.target.value = curent_tip_percent.toString().slice(0,2);
+    }
+    
 })
 
 
