@@ -58,13 +58,22 @@ for (let i = 0; i <= radios.length ; ++i){
     try { 
         radios[i].addEventListener('click' , (e) => {
             
-            e.target.parentElement.style.backgroundColor = "hsl(172, 67%, 45%)";
-            e.target.parentElement.style.color = "hsl(183, 100%, 15%)";
+
+            // TODO : this is pretty slow ... 
+            for (let i = 0;i < radios.length ;++i){
+                if (radios[i].checked){
+                    radios[i].parentElement.style.backgroundColor = "hsl(172, 67%, 45%)";
+                    radios[i].parentElement.style.color = "hsl(183, 100%, 15%)";    
+                }
+                else{
+                    radios[i].parentElement.style.backgroundColor = '';
+                    radios[i].parentElement.style.color = '';
+                }
+            }
             current_selected = e.target.value;
             console.log(`this radio is clicked : ${e.target.value}`);
         })
     }
-
 
     catch (error){
         console.log(`this error is there ${error}`);
