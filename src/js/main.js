@@ -66,11 +66,28 @@ var event_1 = new CustomEvent('input');
 let custom_button = document.querySelector("input[id=input-radio]");
 console.log(custom_button);
 
+function clear_custom_button(button,option){
+    if (option){
+        button.parentElement.style.backgroundColor = "hsl(172, 67%, 45%)";
+        button.parentElement.style.color = "hsl(183, 100%, 15%)";    
+        button.style.backgroundColor = "hsl(172, 67%, 45%)";
+        button.style.color = "hsl(183, 100%, 15%)";            
+    }
+    else{
+        button.parentElement.style.backgroundColor = "";
+        button.parentElement.style.color = "";    
+        button.style.backgroundColor = "";
+        button.style.color = "";            
+    }
+}
+
 custom_button.addEventListener('focus' , (e)=>{
-    e.target.parentElement.style.backgroundColor = "hsl(172, 67%, 45%)";
-    e.target.parentElement.style.color = "hsl(183, 100%, 15%)";    
-    e.target.style.backgroundColor = "hsl(172, 67%, 45%)";
-    e.target.style.color = "hsl(183, 100%, 15%)";    
+    
+        
+    curent_tip_percent = e.target.value;
+    clear_custom_button(custom_button,1)
+    bill_amount.dispatchEvent(event_1);
+    people_amount.dispatchEvent(event_1);
 
     for (let i = 0;i < radios.length ;++i){
         radios[i].parentElement.style.backgroundColor = '';
@@ -81,12 +98,7 @@ custom_button.addEventListener('focus' , (e)=>{
 custom_button.addEventListener('input' , (e)=>{
         
     curent_tip_percent = e.target.value;
-
-    e.target.parentElement.style.backgroundColor = "hsl(172, 67%, 45%)";
-    e.target.parentElement.style.color = "hsl(183, 100%, 15%)";    
-    e.target.style.backgroundColor = "hsl(172, 67%, 45%)";
-    e.target.style.color = "hsl(183, 100%, 15%)";    
-
+    clear_custom_button(custom_button,1)
     bill_amount.dispatchEvent(event_1);
     people_amount.dispatchEvent(event_1);
 
@@ -123,7 +135,8 @@ custom_button.addEventListener('input' , (e)=>{
 for (let i = 0; i <= radios.length ; ++i){
     try { 
         radios[i].addEventListener('click' , (e) => {
-            
+            clear_custom_button(custom_button,0)
+
             curent_tip_percent = e.target.value;
             bill_amount.dispatchEvent(event_1);
             people_amount.dispatchEvent(event_1);
