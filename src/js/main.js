@@ -81,9 +81,7 @@ function clear_custom_button(button,option){
     }
 }
 
-custom_button.addEventListener('focus' , (e)=>{
-    
-        
+custom_button.addEventListener('focus' , (e)=>{    
     curent_tip_percent = e.target.value;
     clear_custom_button(custom_button,1)
     bill_amount.dispatchEvent(event_1);
@@ -97,18 +95,21 @@ custom_button.addEventListener('focus' , (e)=>{
 
 custom_button.addEventListener('input' , (e)=>{
         
-    curent_tip_percent = e.target.value;
+
+    
+
     clear_custom_button(custom_button,1)
     bill_amount.dispatchEvent(event_1);
     people_amount.dispatchEvent(event_1);
-
-
+        
     if(len_of_number(e.target.value) == "" || e.target.value < 0){
-            tip_amount_info.textContent = "$0";
-            //Todo:  we should throw an error here for being negetive number
+        tip_amount_info.textContent = "$0";
+        //Todo:  we should throw an error here for being negetive number
+        
     }
-
-    else if (len_of_number(curent_tip_percent) <= 2) {   
+    
+    if (len_of_number(e.target.value) <= 2) {   
+        curent_tip_percent = e.target.value;
     }
 
     // handling the len of more than 8
@@ -180,7 +181,6 @@ bill_amount.addEventListener("input",(e) => {
     
     // handling the len of more than 8
     else  {
-                
         e.target.value = current_bill_amount.toString().slice(0,MAX_LEN);
     }
 

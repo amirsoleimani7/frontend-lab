@@ -168,7 +168,6 @@ input{
     display: none;
 }
 
-
 .main-div .input-div .main-grid .input-radio input {
     display: flex;
     justify-content: center;
@@ -178,6 +177,8 @@ input{
     border-radius: .5rem;
     color: white;
     font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .main-div .input-div .main-grid .input-radio input:focus {
