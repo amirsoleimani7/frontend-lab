@@ -38,7 +38,7 @@ body {
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    user-select: none; /*Standard syntax*/
 }
 
 input{
@@ -55,9 +55,8 @@ input{
     background-color: white;
     display: flex;
     gap: 3rem;
-    width: 748px;
+    max-width: 850px;
 }
-
 /* =============================
    the info div main layout
    =============================
@@ -68,7 +67,7 @@ input{
     border-radius: 1rem ;
     display: flex;
     flex-direction: column;
-    flex: 1 1 0px ;
+    flex: 1 1 0px;
 }
 
 .main-div .info-div span {
@@ -125,16 +124,11 @@ input{
 }
 
 
-
-
 /* =============================
     input div main styling
    =============================
 */
-.main-div .input-div {
-    flex: 1 1 0px;
-    /* padding: 3rem 2rem; */
-}
+
 /* =============================
     grid items fix
     =============================
@@ -180,7 +174,6 @@ input{
     font-weight: 700;
     font-size: 1rem;
     text-align: center;
-
     font-size: 1.25rem;
     font-weight: 700;
 }
@@ -197,6 +190,8 @@ input{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 2rem 1.5rem;
+    flex: 1 1 0px;
 }
 
 .main-div .input-div input {
@@ -209,7 +204,6 @@ input{
     background-color: var(--input-background-color);
     color: var(--inner-background);
     border-radius: .5rem;
-    
 }
 
 .main-div .input-div .input-text-bill-amount , .input-text-number-of-people, .select-tip {
@@ -218,7 +212,6 @@ input{
     color: var(--reset-button-background-color);
     font-weight: 600;
     margin-bottom:.5rem ;
-    
 }
 
 #dollor-sign, #people-sign{
@@ -246,4 +239,14 @@ input{
 
 
 
+@media screen and (max-width:830px){
+    
+    body {
+        height: 100%;
+    }
+    
+    .main-div {
+        flex-direction: column;
+    }
+}
 
