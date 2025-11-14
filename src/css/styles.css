@@ -151,10 +151,11 @@ input{
     justify-content: center;
     align-items: center;
     background-color: var(--inner-background);
-    padding: .5rem 1rem;
+    padding: .25rem .5rem;
     border-radius: .5rem;
     color: white;
     font-weight: 700;
+    font-size: 1.25rem;
 }
 
 
@@ -179,6 +180,9 @@ input{
     font-weight: 700;
     font-size: 1rem;
     text-align: center;
+
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 .main-div .input-div .main-grid .input-radio input:focus {
@@ -205,6 +209,7 @@ input{
     background-color: var(--input-background-color);
     color: var(--inner-background);
     border-radius: .5rem;
+    
 }
 
 .main-div .input-div .input-text-bill-amount , .input-text-number-of-people, .select-tip {
@@ -226,7 +231,18 @@ input{
     outline: 3px solid var(--main-background);
 }
 
+.inner  {
+    display: flex;
+    justify-content: space-between;
+    color: var(--reset-button-background-color);
+    font-weight: 600;
+    margin-bottom:.5rem ;
+}
 
+.inner .error-text-number-of-people {
+    color: rgb(218, 83, 83);
+    display: none;
+}
 
 
 
