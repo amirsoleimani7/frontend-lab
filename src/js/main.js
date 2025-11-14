@@ -96,23 +96,23 @@ custom_button.addEventListener('focus' , (e)=>{
 })
 
 custom_button.addEventListener('input' , (e)=>{
-
     clear_custom_button(custom_button,1)
-    bill_amount.dispatchEvent(event_1);
-    people_amount.dispatchEvent(event_1);
-        
+    
     if(len_of_number(e.target.value) == "" || e.target.value < 0){
-        tip_amount_info.textContent = "$0";
-        //Todo:  we should throw an error here for being negetive number
-        
+        // do something here , not sure what tho ... 
+            
     }
     
-    if (len_of_number(e.target.value) <= 2) {   
-        curent_tip_percent = e.target.value;
+    if (len_of_number(e.target.value) <= 2) {
+
+        curent_tip_percent = e.target.value;        
+        bill_amount.dispatchEvent(event_1);
+        people_amount.dispatchEvent(event_1);
+
     }
 
-    // handling the len of more than 8
-    else  {                
+    // handling the number bigger than 2 digits
+    else  {
         e.target.value = curent_tip_percent.toString().slice(0,2);
     }
     
