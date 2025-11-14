@@ -46,12 +46,20 @@ function calc_tip_total(bill , people , tip=curent_tip_percent) {
     }
 }
 
+
+
+// fixing the custom radio button 
+let custom_button = document.querySelector("input[id=input-radio]");
+console.log(custom_button);
+
+
 // reset buttons clears everyfield
 reset_button.addEventListener('click' , () =>{
     bill_amount.value = "";
     people_amount.value = "";
     tip_amount_info.textContent = "$0";
     people_amount_info.textContent = "$0";
+    custom_button.value = '';    
 })
 
 var radios = document.querySelectorAll("input[name='tip']");
@@ -59,12 +67,6 @@ var radios = document.querySelectorAll("input[name='tip']");
 // we should set some custom events here for the input fields to update ... 
 var event_1 = new CustomEvent('input');
 
-
-
-
-// fixing the custom radio button 
-let custom_button = document.querySelector("input[id=input-radio]");
-console.log(custom_button);
 
 function clear_custom_button(button,option){
     if (option){
@@ -94,9 +96,6 @@ custom_button.addEventListener('focus' , (e)=>{
 })
 
 custom_button.addEventListener('input' , (e)=>{
-        
-
-    
 
     clear_custom_button(custom_button,1)
     bill_amount.dispatchEvent(event_1);
@@ -118,19 +117,6 @@ custom_button.addEventListener('input' , (e)=>{
     }
     
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 for (let i = 0; i <= radios.length ; ++i){
