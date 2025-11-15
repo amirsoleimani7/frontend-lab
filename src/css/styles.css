@@ -45,6 +45,7 @@ input{
     font-family: var(--main-font-family);    
 }
 
+
 /* =============================
     main layout of the container
    =============================
@@ -242,6 +243,7 @@ input{
 @media screen and (max-width:830px){
     
     body {
+        padding: 4rem 0rem;
         height: 100%;
     }
     
