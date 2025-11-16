@@ -22,19 +22,19 @@
       to help us improve our offering!
     </p>
     <form action="" method="post" id="input-form">
-      <input type="radio" id="1" name="rating">
+      <input type="radio" id="1" name="rating" value="1">
       <label for="1">1</label>
 
-      <input type="radio" id="2" name="rating">
+      <input type="radio" id="2" name="rating" value="2">
       <label for="2">2</label>
 
-      <input type="radio" id="3" name="rating">
+      <input type="radio" id="3" name="rating" value="3">
       <label for="3">3</label>
 
-      <input type="radio" id="4" name="rating">
+      <input type="radio" id="4" name="rating" value="4">
       <label for="4">4</label>
 
-      <input type="radio" id="5" name="rating">
+      <input type="radio" id="5" name="rating" value="5">
       <label for="5">5</label>
     </form>
     <button class="submit">SUBMIT</button>
@@ -43,14 +43,16 @@
 
   <div class="tnq-card"> 
     <img src="images/illustration-thank-you.svg" alt="tnq">
-    <span class="res">You selected <span id="user-rating">3</span>out of 5</span>
+    <span class="res">You selected <span id="user-rating"></span> out of 5</span>
     <h1 class="tnq-header title">Thank you!</h1>
     <p class="tnq-description description">
       We appreciate you taking the time to give a rating. If you ever need more support,
       don’t hesitate to get in touch!
     </p>
   </div>
+  
 
+  <script src="source/js/main.js"></script>
 
 </body>
 </html>
