@@ -132,10 +132,19 @@ tnq card component styling
     text-align: center;
 }
 
-.tnq-card img {
-    width: 100px;
-    height: 100px;
-    aspect-ratio: 1 /1;
+.tnq-card .tnq-header{
+    margin: 1rem 0rem 1.5rem 0rem;    
 }
 
+.tnq-card img {
+    width: 140px;
+    margin-bottom: 1.5rem;
+}
 
+.tnq-card .res {    
+    background-color: var(--radio-bg-color); 
+    color: var(--button-bg-color);
+    font-weight: 400;
+    padding: .75rem .5rem;
+    border-radius: 2rem;   
+}
