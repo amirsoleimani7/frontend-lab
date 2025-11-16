@@ -1,0 +1,83 @@
+:root {
+    --button-bg-color : hsl(25, 97%, 53%);   
+    --body-bg-color : hsl(216, 12%, 8%);
+    --card-bg-color : hsl(213, 19%, 18%);
+    --font-color : hsl(217, 12%, 63%);
+    
+    --radio-bg-color : #272E38;
+}
+
+
+/* 
+==================================
+main body's styling 
+==================================
+*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-bg-color);
+
+    
+    height: 100vh;
+    font-family: 'Overpass';
+}
+
+
+
+/* 
+==================================
+rading card component styling
+==================================
+*/
+.rating-container {
+    max-width: 350px;
+    display: flex;
+    flex-direction:column ;
+    padding: 2rem 1rem;
+    background-color: var(--card-bg-color);
+    border-radius: 1.5rem;
+}
+
+
+
+
+.rating-container .title { 
+    color: white;
+}
+
+.rating-container .description {
+    color: var(--font-color);
+}
+
+.rating-container #input-form {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+}
+
+.rating-container #input-form label {
+    /* width: 30px; */
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-color: #38404e;
+    padding: .5rem;
+    border-radius: 100%;        
+    text-align: center;
+    transition: all .5s;
+    font-weight: 700;
+}
+
+.rating-container #input-form label:hover {
+    background-color: var(--button-bg-color);
+    
+}
+
+
+.rating-container #input-form input {
+    opacity: 0;
+    display: none;
+}
+
