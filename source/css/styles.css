@@ -39,8 +39,9 @@ rading card component styling
 ==================================
 */
 .rating-container {
+    /* display: flex; */
+    display: none;
     max-width: 350px;
-    display: flex;
     flex-direction:column ;
     padding: 2rem 1rem;
     background-color: var(--card-bg-color);
@@ -55,11 +56,11 @@ rading card component styling
     padding: .75rem;
 }
 
-.rating-container .title { 
+.title { 
     color: white;
 }
 
-.rating-container .description {
+.description {
     color: var(--font-color);
     margin: 0px;
 }
@@ -111,3 +112,30 @@ rading card component styling
     cursor: pointer;
 
 }
+
+/* 
+==================================
+tnq card component styling
+==================================
+*/
+
+
+.tnq-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    flex-direction:column ;
+    padding: 2rem 1rem;
+    background-color: var(--card-bg-color);
+    border-radius: 1.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.tnq-card img {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1 /1;
+}
+
+
