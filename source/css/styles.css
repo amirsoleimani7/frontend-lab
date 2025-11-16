@@ -4,7 +4,7 @@
     --card-bg-color : hsl(213, 19%, 18%);
     --font-color : hsl(217, 12%, 63%);
     
-    --radio-bg-color : #272E38;
+    --radio-bg-color : #38404e;
 }
 
 
@@ -40,8 +40,13 @@ rading card component styling
     border-radius: 1.5rem;
 }
 
-
-
+.rating-container img {
+    width: 20px;
+    height: 20px;
+    background-color: var(--radio-bg-color);    
+    border-radius: 100%;
+    padding: .75rem;
+}
 
 .rating-container .title { 
     color: white;
@@ -62,7 +67,7 @@ rading card component styling
     width: 30px;
     height: 30px;
     display: block;
-    background-color: #38404e;
+    background-color: var(--radio-bg-color);
     padding: .5rem;
     border-radius: 100%;        
     text-align: center;
