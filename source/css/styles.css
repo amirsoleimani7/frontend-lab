@@ -20,7 +20,7 @@ body {
     background-color: var(--body-bg-color);
 
     
-    height: 100vh;
+    height: 90vh;
     font-family: 'Overpass';
 }
 
@@ -54,35 +54,52 @@ rading card component styling
 
 .rating-container .description {
     color: var(--font-color);
+    margin-bottom: 0rem;
 }
 
 .rating-container #input-form {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0rem;
+    padding: 1rem 0rem 1.5rem 0rem;
 }
 
 .rating-container #input-form label {
-    /* width: 30px; */
     width: 30px;
     height: 30px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--radio-bg-color);
     padding: .5rem;
     border-radius: 100%;        
-    text-align: center;
     transition: all .5s;
     font-weight: 700;
 }
 
 .rating-container #input-form label:hover {
     background-color: var(--button-bg-color);
-    
+    cursor: pointer;
 }
-
-
 .rating-container #input-form input {
     opacity: 0;
     display: none;
 }
 
+.rating-container #input-form input[type="radio"]:checked+label { 
+    
+    background-color: var(--button-bg-color);
+}
+
+.rating-container .submit {
+    border:none;
+    background-color: var(--button-bg-color);
+    font-weight: 700;
+    border-radius: 2rem;
+    padding: 1rem;
+    transition: all .5s;
+}
+
+.rating-container .submit:hover {
+    background-color: white;
+    cursor: pointer;
+}
