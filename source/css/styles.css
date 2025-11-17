@@ -40,7 +40,7 @@ rading card component styling
 */
 .rating-container {
     /* display: flex; */
-    display: flex;
+    display: none;
     max-width: 350px;
     flex-direction:column ;
     padding: 2rem 1rem;
@@ -120,7 +120,8 @@ tnq card component styling
 ==================================
 */
 .tnq-card {
-    display: none;
+    position: relative;
+    display: flex;
     flex-direction: column;
     max-width: 350px;
     flex-direction:column ;
@@ -129,7 +130,28 @@ tnq card component styling
     border-radius: 1.5rem;
     align-items: center;
     text-align: center;
+
+    animation:  opening_in;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
 }
+
+@keyframes opening_in {
+    0%{
+        bottom: -300px;
+    } 
+
+    75%{
+        bottom: 10px;
+    }
+    80%{
+        bottom: -5px;
+    }
+    100%{
+        bottom: 0px;
+    } 
+}
+
 
 .tnq-card .tnq-header{
     margin: 1rem 0rem 1.5rem 0rem;    
