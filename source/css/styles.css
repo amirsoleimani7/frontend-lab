@@ -111,10 +111,10 @@ rading card component styling
 .rating-container .submit:hover {
     background-color: white;
     cursor: pointer;
-
+    scale: 1.01; 
+    box-shadow: 1px 1px 5px var(--button-bg-color);
 }
-
-/* 
+/*                              
 ==================================
 tnq card component styling
 ==================================
