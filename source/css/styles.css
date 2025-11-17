@@ -87,6 +87,8 @@ rading card component styling
 .rating-container #input-form label:hover {
     background-color: var(--button-bg-color);
     cursor: pointer;
+    scale: 1.01; 
+    box-shadow: 1px 1px 5px var(--button-bg-color);
 }
 
 .rating-container #input-form input {
@@ -96,6 +98,8 @@ rading card component styling
 
 .rating-container #input-form input[type="radio"]:checked+label {     
     background-color: var(--button-bg-color);
+    scale: 1.01; 
+    box-shadow: 1px 1px 5px var(--button-bg-color);
 }
 
 .rating-container .submit {
@@ -112,7 +116,7 @@ rading card component styling
     background-color: white;
     cursor: pointer;
     scale: 1.01; 
-    box-shadow: 1px 1px 5px var(--button-bg-color);
+    box-shadow: 0px 0px 5px var(--button-bg-color);
 }
 /*                              
 ==================================
