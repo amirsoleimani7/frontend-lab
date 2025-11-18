@@ -1,0 +1,17 @@
+:root {
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+    font-family: 'Word Sans';
+}
+
+
+.container {
+    background-color: red;
+}
