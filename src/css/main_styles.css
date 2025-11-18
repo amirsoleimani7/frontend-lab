@@ -1,4 +1,7 @@
 :root {
+    --text-color-1 : hsl(292, 42%, 14%);
+    --text-color-2 : hsl(292, 16%, 49%);
+    --text-color-3 : hsl(275, 100%, 97%);
     
 }
 
@@ -7,11 +10,47 @@ body {
     justify-content: center;
     align-items: center;
     height: 90vh;
+    background-image: url('../../assets/images/background-pattern-desktop.svg');
+    font-family: 'Work Sans';
+}
 
-    font-family: 'Word Sans';
+.container {
+    display: flex;
+    flex-direction:column ;
+    gap: 1rem;
+    background-color: white;
+    max-width: 600px;
+    border-radius:1.5rem;
+    padding: 2rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    color: var(--text-color-1);
+    font-size: 3rem;
+    font-weight:700;
+}
+
+.faq-header { 
+    
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    font-weight: 600;
+}
+
+.faq-header:hover {
+    color: var(--text-color-2); 
+    cursor: pointer;
 }
 
 
-.container {
-    background-color: red;
+
+.faq-description {
+    display: none;
+    font-weight: 400;
+    color: var(--text-color-2);
 }
