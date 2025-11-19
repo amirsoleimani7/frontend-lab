@@ -2,7 +2,11 @@
     --text-color-1 : hsl(292, 42%, 14%);
     --text-color-2 : hsl(292, 16%, 49%);
     --text-color-3 : hsl(275, 100%, 97%);
-    
+    /* background-image: url('../../assets/images/background-pattern-desktop.svg'); */
+}
+
+html {
+    background-size: 50% auto;
 }
 
 body {
@@ -11,6 +15,9 @@ body {
     align-items: center;
     height: 90vh;
     background-image: url('../../assets/images/background-pattern-desktop.svg');
+    background-color: var(--text-color-3);
+    background-size: 100%;
+    background-repeat: no-repeat;
     font-family: 'Work Sans';
 }
 
@@ -28,6 +35,7 @@ body {
     display: flex;
     align-items: center;
     color: var(--text-color-1);
+    gap: 1rem;
     font-size: 3rem;
     font-weight:700;
 }
