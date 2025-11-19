@@ -1,9 +1,16 @@
 let questions = document.querySelectorAll('.faq-item');
-console.log(`items r : ${questions}`)
+let minus_icons = document.querySelectorAll('.minus');
+let plus = document.querySelectorAll('.plus');
+
+console.log(`items r : ${minus_icons[0].style.display}`)
 
 for (let i = 0 ;i < questions.length ;++i){
     questions[i].addEventListener('click' , (e)=>{
         let description = e.target.nextElementSibling;
-        e.target.nextElementSibling.style.display = description.style.display == 'block' ? 'none' : 'block';
+        if (e.target.className == "faq-header"){
+            e.target.children[0].style.display = getComputedStyle(e.target.children[0]).display == 'block' ? 'none' : 'block';
+            e.target.children[1].style.display = getComputedStyle(e.target.children[1]).display == 'none' ? 'block' : 'none';
+            e.target.nextElementSibling.style.display = description.style.display == 'block' ? 'none' : 'block';
+        }       
     })
 }

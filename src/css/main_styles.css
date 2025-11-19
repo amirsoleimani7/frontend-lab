@@ -6,7 +6,10 @@
 }
 
 html {
-    background-size: 50% auto;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
 }
 
 body {
@@ -26,7 +29,7 @@ body {
     flex-direction:column ;
     gap: 1rem;
     background-color: white;
-    max-width: 600px;
+    max-width: 450px;
     border-radius:1.5rem;
     padding: 2rem;
     border: none;
@@ -44,7 +47,6 @@ body {
 }
 
 .faq-header { 
-    
     font-size: 1.1rem;
     display: flex;
     justify-content: space-between;
@@ -65,4 +67,12 @@ body {
     font-weight: 400;
     color: var(--text-color-2);
     transition: all 2s;
+}
+
+.plus {
+    display: block;
+}
+
+.minus {
+    display: none;
 }
