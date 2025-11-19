@@ -62,7 +62,7 @@ body {
 
 
 .faq-description {
-    overflow: scroll;
+    overflow-y:scroll ;
     max-height: 0px;
     font-weight: 400;
     color: var(--text-color-2);
