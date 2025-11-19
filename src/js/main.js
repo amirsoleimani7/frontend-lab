@@ -8,7 +8,7 @@ for (let i = 0 ;i < questions.length ;++i){
         if (e.target.className == "faq-header"){
             e.target.children[0].style.display = getComputedStyle(e.target.children[0]).display == 'block' ? 'none' : 'block';
             e.target.children[1].style.display = getComputedStyle(e.target.children[1]).display == 'none' ? 'block' : 'none';
-            e.target.nextElementSibling.style.display = description.style.display == 'block' ? 'none' : 'block';
+            e.target.nextElementSibling.classList.toggle('open');
         }       
     })
 }
