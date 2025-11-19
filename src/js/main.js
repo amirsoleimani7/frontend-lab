@@ -1,8 +1,6 @@
 let questions = document.querySelectorAll('.faq-item');
-let minus_icons = document.querySelectorAll('.minus');
-let plus = document.querySelectorAll('.plus');
-
-console.log(`items r : ${minus_icons[0].style.display}`)
+// let minus_icons = document.querySelectorAll('.minus');
+// let plus_icons = document.querySelectorAll('.plus');
 
 for (let i = 0 ;i < questions.length ;++i){
     questions[i].addEventListener('click' , (e)=>{
