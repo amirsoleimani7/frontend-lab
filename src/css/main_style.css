@@ -13,7 +13,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     background-color: var(--font-color-1);
     font-family: var(--main-font-family);
 }
@@ -33,8 +33,8 @@ label {
     gap: 1.3rem;
 
     animation-name:coming-in ;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+    animation-duration: .9s;
+    animation-timing-function: ease-in;
 }
 
 @keyframes coming-in {
@@ -60,9 +60,20 @@ label:has(+ input:required):after {
     display:inline;
 }
 
+
+/* 
+==================
+error styling
+==================
+*/
 .error {
     display: none;
     color: var(--font-color-3);
+}
+
+
+[aria-invalid="true"] ~ .error {
+    display: block;
 }
 
 input[type=text] , textarea {
@@ -71,6 +82,20 @@ input[type=text] , textarea {
     font-size:1rem;
     border:1px solid grey ;
 }
+
+input[aria-invalid="true"] , textarea[aria-invalid="true"] { 
+    outline: 2px solid red;
+    border: none;
+}
+
+input[type=text]:focus , textarea:focus {
+    border: none;
+    cursor: pointer;
+    outline:2px solid var(--font-color-2);
+
+}
+
+
 
 /* 
 ==================
@@ -152,7 +177,7 @@ submit button styling
     justify-content: center;
     color: white;
     font-weight: 700;
-    transition: all .5s;
+    transition: all .2s;
 }
 
 .submit-button:hover {
