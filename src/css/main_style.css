@@ -9,8 +9,6 @@
 }
 
 /* TODO : add joining togeother animation ...  */
-
-
 body{
     display: flex;
     justify-content: center;
@@ -27,11 +25,28 @@ label {
 .form-container {
     display: flex;
     max-width: 500px;
+    overflow: hidden;
     background-color: white;
     padding: 2rem;
     flex-direction: column;
     border-radius:.5rem ;
     gap: 1.3rem;
+
+    animation-name:coming-in ;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes coming-in {
+    0% {
+        max-height: 0px;        
+    }    
+    
+    100%{
+        /* this is just something much bigger than the actual thing */
+        max-height: 2000px; 
+        
+    }
 }
 
 .label{
@@ -47,6 +62,7 @@ label:has(+ input:required):after {
 
 .error {
     display: none;
+    color: var(--font-color-3);
 }
 
 input[type=text] , textarea {
@@ -68,7 +84,6 @@ names styling
 }
 
 
-
 /* 
 ==================
 emails stying
@@ -78,6 +93,7 @@ emails stying
     display: flex;
     flex-direction: column;
 }
+
 
 /* 
 ==================
@@ -126,7 +142,11 @@ query type styling
 }
 
 
-
+/* 
+==================
+submit button styling
+==================
+*/
 .submit-button {
     background-color: var(--font-color-2);
     justify-content: center;
@@ -140,3 +160,4 @@ query type styling
     background-color: white;
     color: var(--font-color-5);
 }
+
