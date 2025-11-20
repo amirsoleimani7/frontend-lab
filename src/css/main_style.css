@@ -39,7 +39,7 @@ label:has(+ input:required):after {
     display: none;
 }
 
-input[type=text] {
+input[type=text] , textarea {
     border-radius:.5rem;
     padding: 1rem 2rem;
     font-size:1rem;
@@ -99,4 +99,9 @@ query type styling
 .submit-button {
     background-color: var(--font-color-2);
     justify-content: center;
+}
+
+
+.messages input{
+    height: 3rem;
 }
