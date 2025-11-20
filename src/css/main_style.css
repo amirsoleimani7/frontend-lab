@@ -21,6 +21,7 @@ body{
     display: flex;
     flex-direction: column;
     border-radius:.5rem ;
+    gap: 1rem;
 }
 
 .label{
@@ -38,13 +39,27 @@ label:has(+ input:required):after {
     display: none;
 }
 
-
+input[type=text] {
+    border-radius:.5rem;
+    padding: 1rem 2rem;
+    font-size:1rem;
+    border:1px solid grey ;
+}
 
 .names {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+    justify-content: space-between;;
 }
 
 
+.emails{
+    display: flex;
+    flex-direction: column;
+}
+
+.emails input{
+    
+}
 
 
