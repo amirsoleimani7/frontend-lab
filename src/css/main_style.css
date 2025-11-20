@@ -46,6 +46,11 @@ input[type=text] {
     border:1px solid grey ;
 }
 
+/* 
+==================
+names styling
+==================
+*/
 .names {
     display: flex;
     gap: 1rem;
@@ -53,13 +58,45 @@ input[type=text] {
 }
 
 
+
+/* 
+==================
+emails stying
+==================
+*/
 .emails{
     display: flex;
     flex-direction: column;
 }
 
-.emails input{
-    
+/* 
+==================
+query type styling
+==================
+*/
+.que-type{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
 }
 
+.item input[type=radio]{
+    scale: 1.5;
+}
 
+.item {
+    flex:1 1 0px;
+    border-radius:.5rem;
+    padding: 1rem 2rem;
+    font-size:1rem;
+    border:1px solid grey;
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+}
+
+.submit-button {
+    background-color: var(--font-color-2);
+    justify-content: center;
+}
