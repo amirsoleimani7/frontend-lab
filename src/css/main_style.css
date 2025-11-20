@@ -8,11 +8,14 @@
     --font-color-5 : hsl(187, 24%, 22%);
 }
 
+/* TODO : add joining togeother animation ...  */
+
+
 body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     background-color: var(--font-color-1);
     font-family: var(--main-font-family);
 }
@@ -22,13 +25,13 @@ label {
 }
 
 .form-container {
+    display: flex;
     max-width: 500px;
     background-color: white;
     padding: 2rem;
-    display: flex;
     flex-direction: column;
     border-radius:.5rem ;
-    gap: 1rem;
+    gap: 1.3rem;
 }
 
 .label{
@@ -83,9 +86,14 @@ query type styling
 */
 .que-type{
     display: flex;
-    gap: 1rem;
+    flex-direction:column ;
     justify-content: space-between;
 
+}
+.que-type .inner {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
 .item input[type=radio]{
@@ -107,11 +115,6 @@ query type styling
     align-items: baseline;
 }
 
-.messages input{
-    height: 3rem;
-}
-
-
 .consent label {
     margin:auto 0;
 }
@@ -122,6 +125,8 @@ query type styling
     gap: 1rem;
 }
 
+
+
 .submit-button {
     background-color: var(--font-color-2);
     justify-content: center;
@@ -131,7 +136,7 @@ query type styling
 }
 
 .submit-button:hover {
-    scale: 1.01;
+    scale: 1.009;
     background-color: white;
     color: var(--font-color-5);
 }

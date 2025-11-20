@@ -12,10 +12,9 @@
 <body>
 
   <div class="form-container">
-    <h2 class="form-header">Contact Us</h2>
+    <h2 class="form-header" style="font-weight: 700;">Contact Us</h2>
     
     <div class="names">
-      
       <div>
         <label for="first-name" class="label">First Name</label> 
         <input type="text" id="first-name" aria-describedby="first-name-error" aria-invalid="true" autocomplete="name" required>
@@ -36,23 +35,25 @@
       <p id="email-error" class="error">Please enter a valid email address</p>
     </div>
 
-    <label for="general" class="label">Query Type</label>
     <div id="que-type" class="que-type">
-      <div class="item">
-        <input type="radio" id="general" name="query-type" value="genral" required>
-        <label for="general" class="label">General Enquiry</label>
+      <label for="general" id="que-label" class="label">Query Type</label>
+      <div class="inner">
+        <div class="item">
+          <input type="radio" id="general" name="query-type" value="genral" required>
+          <label for="general" class="label">General Enquiry</label>
+        </div>
+        <div class="item">
+          <input type="radio" id="support" name="query-type" value="support" required>
+          <label for="support" class="label">Support Request</label>
+        </div>
+        <p class="error">Please select a query type</p>
       </div>
-      <div class="item">
-        <input type="radio" id="support" name="query-type" value="support" required>
-        <label for="support" class="label">Support Request</label>
-      </div>
-      <p class="error">Please select a query type</p>
     </div>
     
 
     <div class="emails messages">
       <label for="message" class="label">Message</label>
-      <textarea name="user-message" id="message" rows="5" required></textarea>
+      <textarea name="user-message" class="text-area" id="message" rows="5" style="resize: none;" required></textarea>
       <p id="message-error" class="error">This field is required</p>
     </div>
 
