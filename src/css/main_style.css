@@ -1,0 +1,50 @@
+:root {
+    --main-font-family : 'Karla';
+    --font-color-1 : hsl(148, 38%, 91%);
+    --font-color-2 : hsl(169, 82%, 27%);
+    --font-color-3 : hsl(0, 66%, 54%);    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--font-color-1);
+    font-family: var(--main-font-family);
+}
+
+.form-container {
+    max-width: 500px;
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius:.5rem ;
+}
+
+.label{
+    display: block;
+    margin-bottom: .5rem;
+}
+
+label:has(+ input:required):after {
+    color: var(--font-color-2);
+    content: ' *';
+    display:inline;
+}
+
+.error {
+    display: none;
+}
+
+
+
+.names {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
