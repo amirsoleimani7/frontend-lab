@@ -322,6 +322,5 @@ const increament = (function(){
     };
 })();
 
-
 console.log(increament(5 ,2));
 console.log(increament(5))

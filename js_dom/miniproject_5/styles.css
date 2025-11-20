@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    height: 100vh;
+    height: 90vh;
     margin:auto;
     padding:2rem;
     display: flex;
@@ -68,6 +68,9 @@ body {
     cursor: pointer;
     border: none;
     background: transparent;
+}
+.task:hover { 
+    background-color: lightcyan; 
 }
 
 .task #done:hover{

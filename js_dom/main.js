@@ -174,4 +174,61 @@
 // } , false 
 // );
 
-// ==================== event delegation  ====================
+// // ==================== event delegation  ====================
+// document.querySelector("#football").addEventListener
+// ('click' ,function(e){
+//     console.log('football pressed');
+    
+//     const target = e.target;
+//     target.style.backgroundColor = 'lightgrey';
+//     if(target.matches('li')){
+//     }
+// })
+
+// document.querySelector("#basketball").addEventListener
+// ('click' ,function(e){
+//     console.log('basketball pressed');
+    
+//     const target = e.target;
+//     target.style.backgroundColor = 'lightgrey';
+//     if(target.matches('li')){
+//     }
+// })
+// document.querySelector("#tennis").addEventListener
+// ('click' ,function(e){
+//     console.log('tennis pressed');
+    
+//     const target = e.target;
+//     target.style.backgroundColor = 'lightgrey';
+//     if(target.matches('li')){
+//     }
+// })
+// document.querySelector("#golf").addEventListener
+// ('click' ,function(e){
+//     console.log('golf pressed');
+    
+//     const target = e.target;
+//     target.style.backgroundColor = 'lightgrey';
+//     if(target.matches('li')){
+//     }
+// })
+
+
+// // ==================== event delegation  ==================== improved
+document.querySelector('#sports').addEventListener
+('click' , function(e){
+    
+    console.log(e.target.getAttribute('id') + 'is clicked');
+
+    const target = e.target;
+    
+    if (target.matches('li')){
+        target.style.backgroundColor = 'lightgrey';
+    }
+})
+
+const sports = document.querySelector('#sports');
+const new_sport = document.createElement('li');
+new_sport.innerText = 'rugby';
+new_sport.setAttribute('id' , 'rugby');
+sports.appendChild(new_sport)

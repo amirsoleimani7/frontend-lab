@@ -210,7 +210,7 @@ a {
         height: auto;
         justify-content: end;
     }
-    
+        
     .nav__list {
         gap: 1rem;
         display: flex;
