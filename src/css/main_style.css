@@ -72,7 +72,7 @@ error styling
 ==================
 */
 .error {
-    display: none;
+    display: block;
     color: var(--font-color-3);
 }
 
@@ -160,14 +160,17 @@ query type styling
     align-items: baseline;
 }
 
-.consent label {
-    margin:auto 0;
-}
 
-.consent {
+
+
+.consent .inner{
     display: flex;
     align-items: baseline;
     gap: 1rem;
+}
+
+.consent label {
+    margin:auto 0;
 }
 
 
@@ -190,8 +193,6 @@ submit button styling
     color: var(--font-color-5);
 }
 
-
-
 /* 
 ==================
 success message styling
@@ -208,20 +209,21 @@ success message styling
     top: 0px;
     
     animation-name: succes-card;
-    animation-duration: .5s; 
+    animation-duration: .3s; 
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
 }
 
 @keyframes succes-card{
+    
     70%{
-        top: 30px ;    
+        top: 20px; 
     }
     85%{
-        top: 20px;
+        top: 15px;
     }    
     100%{
-        top: 30px;    
+        top: 20px;    
     }   
 }
 
