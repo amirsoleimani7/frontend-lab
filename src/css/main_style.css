@@ -14,9 +14,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     background-color: var(--font-color-1);
     font-family: var(--main-font-family);
+}
+
+* {
+    /* outline: 1px solid red; */
 }
 
 label {
@@ -25,7 +29,7 @@ label {
 
 .form-container {
     display: flex;
-    max-width: 500px;
+    /* max-width: 500px; */
     overflow: hidden;
     background-color: white;
     padding: 2rem;
@@ -107,6 +111,8 @@ names styling
     gap: 1rem;
     justify-content: space-between;;
 }
+
+
 
 /* 
 ==================
@@ -208,17 +214,15 @@ success message styling
 }
 
 @keyframes succes-card{
-    
     70%{
-        top: 100px;    
+        top: 30px ;    
     }
     85%{
-        top: 90px;
+        top: 20px;
     }    
     100%{
-        top: 100px;    
-    }
-    
+        top: 30px;    
+    }   
 }
 
 .success-message .header img {
