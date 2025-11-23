@@ -20,7 +20,6 @@ let email_empty_error = document.querySelector('#email-error-empty');
 let email_empty_validation = document.querySelector('#email-error-validation');
 let message_error = document.querySelector('#message-error');
 
-let valid_flag = true;
 
 function radio_check(radio_in){
     let selected_value = ''
@@ -34,8 +33,8 @@ function radio_check(radio_in){
 
 submit_button.addEventListener('click' , (e)=> {
     e.preventDefault();
-
-    console.log(`messsage is : ${messsage.value}`);
+    s
+    var valid_flag = true;
     // check first_name and last_name
     if(first_name.value){
         console.log(`first name is : ${first_name.value}`);
@@ -45,7 +44,7 @@ submit_button.addEventListener('click' , (e)=> {
         first_name_error.style.display = 'block';
         valid_flag = false;
     }
-
+    
     if(last_name.value){
         console.log(`last name is : ${last_name.value}`);
         last_name_error.style.display = 'none';
@@ -54,19 +53,29 @@ submit_button.addEventListener('click' , (e)=> {
         last_name_error.style.display = 'block'
         valid_flag = false;
     }
+
+    //emails check 
+    if(email.value){
+        console.log(`the email is : ${email.value}`);
+        email_empty_error.style.display = 'none';
+    }
+    else{
+        email_empty_error.style.display = 'block';
+        valid_flag = false;
+    }
+
     
     // message_check 
     if(messsage.value == ''){
         console.log(`last name is : ${messsage.value}`);
         message_error.style.display = 'block';
         valid_flag = false;
-
     }
     else{        
         message_error.style.display = 'none';
     }
     
-    // radio check :
+    // radio check
     if (radio_check(querty_type_radio)){
         console.log(`the selected value is : ${radio_check(querty_type_radio)}`)
         radio_error.style.display = 'none';   
@@ -87,7 +96,7 @@ submit_button.addEventListener('click' , (e)=> {
     }
 
     if(valid_flag){
-        
+        console.log(`we are in there`);        
         succ_msg.style.display = getComputedStyle(succ_msg).display == 'none' ? 'block' : 'none';
     }
 })
