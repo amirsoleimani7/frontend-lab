@@ -26,13 +26,12 @@
         <p id="last-name-error" class="error">This field is required</p>
       </div>
     </div>
-    
 
     <div class="emails">
       <label for="email" class="label">Email Address</label>
       <input type="text" id="email" autocomplete="email" aria-errormessage="email-error" required>
-      <p id="email-error" class="error">This field is required</p>
-      <!-- <p id="email-error" class="error">Please enter a valid email address</p> -->
+      <p id="email-error-empty" class="error">This field is required</p>
+      <p id="email-error-validation" class="error">Please enter a valid email address</p>
     </div>
 
     <div id="que-type" class="que-type">
@@ -53,8 +52,8 @@
 
     <div class="emails messages">
       <label for="message" class="label">Message</label>
-      <textarea name="user-message" class="text-area" id="message" aria-errormessage="message-error" aria-invalid="false" rows="5" style="resize: none;" required></textarea>
-      <p id="message-error" class="error">This field is required</p>
+      <textarea name="user-message" class="text-area" id="message" aria-errormessage="message-error" rows="5" style="resize: none;" required></textarea>
+      <p  id="message-error" class="error">This field is required</p>
     </div>
     
     <div class="consent">
