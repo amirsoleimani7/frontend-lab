@@ -20,6 +20,7 @@ let email_empty_error = document.querySelector('#email-error-empty');
 let email_validattion_error = document.querySelector('#email-error-validation');
 let message_error = document.querySelector('#message-error');
 
+
 function radio_check(radio_in){
     let selected_value = ''
     for (let i = 0; i < radio_in.length ;++i ){
@@ -31,18 +32,27 @@ function radio_check(radio_in){
 }
 
 function email_validation(email){
-    let is_valid = true;
-    
-    // let index_alpha = email. 
+    let is_valid = true;    
+    let index_alpha = email.indexOf('@');
+
+    // checking for the @ 
     if(!email.includes('@')){
         is_valid = false;
     }
+    
+    // checking for stuff after/before the @ 
+    if((email.slice(index_alpha + 1)) == "" || email.slice(0 , index_alpha -1) == ""){ 
+        is_valid = false;
+    }
+    
     return is_valid;
 }
 
 submit_button.addEventListener('click' , (e)=> {
     e.preventDefault();
     var valid_flag = true;
+   
+   
     // check first_name and last_name
     if(first_name.value){
         console.log(`first name is : ${first_name.value}`);
@@ -73,8 +83,8 @@ submit_button.addEventListener('click' , (e)=> {
         else{
             email_validattion_error.style.display = 'none';                
         }
-        
     }
+    
     else{
         email_empty_error.style.display = 'block';
         valid_flag = false;
@@ -83,7 +93,7 @@ submit_button.addEventListener('click' , (e)=> {
     
     // message_check 
     if(messsage.value == ''){
-        console.log(`last name is : ${messsage.value}`);
+        console.log(`message is : ${messsage.value}`);
         message_error.style.display = 'block';
         valid_flag = false;
     }
