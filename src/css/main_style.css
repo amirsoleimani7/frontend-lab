@@ -250,22 +250,33 @@ success message styling
 */
 
 .success-message {
+    
+    display: block;
     position: absolute;
     background-color: var(--font-color-5);
     border-radius: .5rem;
     max-width: 450px;
     padding: 0rem 1rem;
     color: white;
-    top: 0px;
     max-height: 0px;
     overflow: hidden; 
+    top: 0px;
+    transition: all .3s ease-out;    
 }
 
 .success-message:hover { 
     cursor: pointer;    
 }
 
-.success-message.reverse {
+.success-message.forward {
+    max-height: 200px;
+    transform: translateY(20px);
+
+}
+
+
+
+/* .success-message.reverse {
     animation-name: succes-card-reverse;
     animation-duration:.3s;
     animation-fill-mode: forwards;
@@ -312,7 +323,7 @@ success message styling
         top: 20px; 
         max-height: 200px ;   
     }   
-}
+} */
 
 .success-message .header img {
     width: 25px;

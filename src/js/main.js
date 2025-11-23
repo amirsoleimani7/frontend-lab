@@ -150,6 +150,5 @@ submit_button.addEventListener('click' , (e)=> {
 
 succ_msg.addEventListener('click' , () => {
     succ_msg.classList.remove('forward');
-    succ_msg.classList.add('reverse');
 })
 
