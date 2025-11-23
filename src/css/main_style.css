@@ -205,7 +205,7 @@ success message styling
     background-color: var(--font-color-5);
     border-radius: .5rem;
     max-width: 450px;
-    padding: 1rem;
+    padding: 0rem 1rem;
     color: white;
     top: 0px;
     
@@ -229,7 +229,7 @@ success message styling
 }
 
 .success-message .header img {
-    width: 30px;
+    width: 25px;
     aspect-ratio: 1;
 }
 
@@ -237,12 +237,15 @@ success message styling
     display: flex;
     gap: 1rem;
     align-items: center;
-    font-size: 1rem;
+    font-size: .9rem;
+}
+.success-header {
+     margin-bottom: 1rem;
 }
 
 .success-message .success-description {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: .9rem;
     color: var(--font-color-4);
     margin-top: 0px;
 }

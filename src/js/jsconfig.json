@@ -1,0 +1,40 @@
+// {
+//   "compilerOptions": {
+//     // Enable VS Code IntelliSense & type checking in JS
+//     "checkJs": true,
+//     "strict": true,
+
+//     // Use the latest ECMAScript features
+//     "target": "es2022",
+//     "module": "es2022",
+
+//     // Allow DOM types (document, window, etc.)
+//     "lib": ["es2022", "dom", "dom.iterable"],
+
+//     // Allow using modern imports in JS
+//     // "moduleResolution": "node",
+
+//     // Path aliases (edit as needed)
+//     // "baseUrl": ".",
+//     // "paths": {
+//     //   "@/*": ["src/*"]
+//     // },
+
+//     // Improve IntelliSense for default imports
+//     "esModuleInterop": true,
+//     "allowSyntheticDefaultImports": true,
+
+//     // Enables auto-imports & better suggestions
+//     "resolveJsonModule": true,
+
+//     // Prevents errors for unused variables etc.
+//     "noUnusedLocals": false,
+//     "noUnusedParameters": false
+//   },
+
+//   // Include all JS/TS files in your project
+//   "include": ["**/*"],
+
+//   // Exclude folders you don’t want IntelliSense checking
+//   "exclude": ["node_modules", "dist", "build"]
+// }

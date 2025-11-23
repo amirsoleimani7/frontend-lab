@@ -17,9 +17,8 @@ let consent_error = document.querySelector('#consent-error');
 let first_name_error = document.querySelector('#first-name-error');
 let last_name_error = document.querySelector('#last-name-error');
 let email_empty_error = document.querySelector('#email-error-empty');
-let email_empty_validation = document.querySelector('#email-error-validation');
+let email_validattion_error = document.querySelector('#email-error-validation');
 let message_error = document.querySelector('#message-error');
-
 
 function radio_check(radio_in){
     let selected_value = ''
@@ -31,9 +30,18 @@ function radio_check(radio_in){
     return selected_value;
 }
 
+function email_validation(email){
+    let is_valid = true;
+    
+    // let index_alpha = email. 
+    if(!email.includes('@')){
+        is_valid = false;
+    }
+    return is_valid;
+}
+
 submit_button.addEventListener('click' , (e)=> {
     e.preventDefault();
-    s
     var valid_flag = true;
     // check first_name and last_name
     if(first_name.value){
@@ -53,17 +61,25 @@ submit_button.addEventListener('click' , (e)=> {
         last_name_error.style.display = 'block'
         valid_flag = false;
     }
-
+    
     //emails check 
     if(email.value){
         console.log(`the email is : ${email.value}`);
         email_empty_error.style.display = 'none';
+        if (!email_validation(email.value)){
+            email_validattion_error.style.display = 'block';    
+            valid_flag = false;
+        }
+        else{
+            email_validattion_error.style.display = 'none';                
+        }
+        
     }
     else{
         email_empty_error.style.display = 'block';
         valid_flag = false;
-    }
 
+    }
     
     // message_check 
     if(messsage.value == ''){
