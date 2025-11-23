@@ -19,17 +19,12 @@ body{
     font-family: var(--main-font-family);
 }
 
-* {
-    /* outline: 1px solid red; */
-}
-
 label {
     color: var(--font-color-5);
 }
 
 .form-container {
     display: flex;
-    /* max-width: 500px; */
     overflow: hidden;
     background-color: white;
     padding: 2rem;
@@ -71,6 +66,7 @@ label:has(+ input:required):after {
 error styling
 ==================
 */
+
 .error {
     display: none;
     color: var(--font-color-3);
@@ -81,13 +77,15 @@ error styling
     display: block;
 }
 
-input[type=text] , textarea {
-    
+input[type=text],
+textarea {
     border-radius:.5rem;
     padding: 1rem 2rem;
     font-size:1rem;
-    border: none ;
-    outline:1px solid grey ;
+    border: none;
+    outline:1px solid grey;
+    width: 100%;          /* <-- important */
+    box-sizing: border-box; /* include padding in width */
 }
 
 input[aria-invalid="true"] , textarea[aria-invalid="true"] { 
@@ -95,8 +93,7 @@ input[aria-invalid="true"] , textarea[aria-invalid="true"] {
     border: none;
 }
 
-input[type=text]:focus , textarea:focus {
-    
+input[type=text]:focus , textarea:focus {    
     cursor: pointer;
     outline:2px solid var(--font-color-2);
 }
@@ -107,15 +104,19 @@ input[type=text]:focus , textarea:focus {
 names styling
 ==================
 */
-.names {
+.names{
     display: flex;
+    
     gap: 1rem;
-    justify-content: space-between;;
+    /* flex-wrap: wrap; */
+}
+
+.names .name {
+    flex: 1 1 250px; /* grow, shrink, min width */
 }
 
 
-
-/* 
+/*
 ==================
 emails stying
 ==================
@@ -324,8 +325,6 @@ success message styling
     transform: translateY(20px);
 
 }
-
-
 
 /* .success-message.reverse {
     animation-name: succes-card-reverse;
