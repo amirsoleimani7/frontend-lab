@@ -136,15 +136,13 @@ query type styling
     justify-content: space-between;
 
 }
+
 .que-type .inner {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
 
-.item input[type=radio]{
-    scale: 1.5;
-}
 
 .item label {
     margin: auto 0;
@@ -155,7 +153,8 @@ query type styling
     border-radius:.5rem;
     padding: 1rem 2rem;
     font-size:1rem;
-    border:1px solid grey;
+    border: none;
+    outline:1px solid grey;
     display: flex;
     gap: 1rem;
     align-items: baseline;
@@ -208,11 +207,9 @@ query type styling
     width: 18px;
     height: 18px;
     background-image: url("../../assets/images/icon-checkbox-check.svg");
-    background-size: contain;
+    background-size: cover;
     border-radius: .5rem;
 }
-
-
 
 .consent .inner{
     display: flex;
@@ -223,6 +220,7 @@ query type styling
 .consent label {
     margin:auto 0;
 }
+
 
 
 /* 

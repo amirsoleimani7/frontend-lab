@@ -21,7 +21,12 @@ let email_validattion_error = document.querySelector('#email-error-validation');
 let message_error = document.querySelector('#message-error');
 
 
-function radio_check(radio_in){
+
+
+
+
+// radio query validation
+function radio_validation(radio_in){
     let selected_value = ''
     for (let i = 0; i < radio_in.length ;++i ){
         if (radio_in[i].checked){
@@ -31,6 +36,7 @@ function radio_check(radio_in){
     return selected_value;
 }
 
+// email validation
 function email_validation(email){
     let is_valid = true;    
     let index_alpha = email.indexOf('@');
@@ -47,6 +53,23 @@ function email_validation(email){
     
     return is_valid;
 }
+
+
+for (let i = 0 ;i < querty_type_radio.length ;++i){
+    querty_type_radio[i].addEventListener('click' , (e)=>{
+        e.target.parentElement.style.backgroundColor = "hsl(186, 15%, 59%)";
+        e.target.parentElement.style.outline = "2px solid  hsl(169, 82%, 27%)";
+        
+        for (let i = 0 ;i < querty_type_radio.length ;++i){
+            if (querty_type_radio[i] != e.target){
+                querty_type_radio[i].parentElement.style.backgroundColor = "";
+                querty_type_radio[i].parentElement.style.outline = "";
+            }
+        }
+    })
+}
+
+
 
 submit_button.addEventListener('click' , (e)=> {
     e.preventDefault();
@@ -102,8 +125,8 @@ submit_button.addEventListener('click' , (e)=> {
     }
     
     // radio check
-    if (radio_check(querty_type_radio)){
-        console.log(`the selected value is : ${radio_check(querty_type_radio)}`)
+    if (radio_validation(querty_type_radio)){
+        console.log(`the selected value is : ${radio_validation(querty_type_radio)}`)
         radio_error.style.display = 'none';   
     }
     else{
