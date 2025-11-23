@@ -17,6 +17,14 @@ body{
     height: 90vh;
     background-color: var(--font-color-1);
     font-family: var(--main-font-family);
+
+
+    -moz-transition: all .5s ease-in-out, left 1s ease-in-out;
+    -webkit-transition: all .5s ease-in-out, left 1s ease-in-out;
+    -moz-transition: all .5s ease-in-out, left 1s ease-in-out;
+    -o-transition: all .5s ease-in-out, left 1s ease-in-out;
+    transition: all .5s ease-in-out, left 1s ease-in-out;
+
 }
 
 label {
