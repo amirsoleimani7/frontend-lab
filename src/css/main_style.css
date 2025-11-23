@@ -143,6 +143,59 @@ query type styling
     gap: 1rem;
 }
 
+.que-type .inner .item label {
+    display: flex;
+}
+
+.que-type .inner .item input[type=radio]{
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+.que-type .inner .item input[type=radio] + label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+    display: inline-block;   
+
+}
+
+.que-type .inner .item input[type=radio] + label:before { 
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    outline: 1px solid grey ;
+    background-color: white;    
+    border-radius: 50%;
+}
+
+.que-type .inner .item input[type=radio]:checked + label::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    outline:1px solid var(--font-color-2);
+    background-color: white;    
+    border-radius: 50%;
+}
+
+.que-type .inner .item input[type=radio]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    /* outline:1px solid var(--font-color-2); */
+    background-color: hsl(187, 24%, 22%); ;    
+    border-radius: 50%;
+}
 
 .item label {
     margin: auto 0;
@@ -184,7 +237,7 @@ query type styling
     height: 18px;
     outline:1px solid grey ;
     background-color: white;    
-    border-radius: .5rem;
+    border-radius: 50%;
 }
 .consent .inner  input[type=checkbox]:checked + label::before{
     content: "";
@@ -195,8 +248,7 @@ query type styling
     height: 18px;
     outline:1px solid var(--font-color-2);
     background-color: white;    
-    border-radius: .5rem;
-
+    border-radius: 50%;
 }
 
 .consent .inner  input[type=checkbox]:checked + label::after{
@@ -208,7 +260,7 @@ query type styling
     height: 18px;
     background-image: url("../../assets/images/icon-checkbox-check.svg");
     background-size: cover;
-    border-radius: .5rem;
+    border-radius: 50%;
 }
 
 .consent .inner{
@@ -220,7 +272,6 @@ query type styling
 .consent label {
     margin:auto 0;
 }
-
 
 
 /* 
