@@ -67,11 +67,12 @@ submit_button.addEventListener('click' , (e)=> {
         console.log(`last name is : ${last_name.value}`);
         last_name_error.style.display = 'none';
     }
+    
     else{
         last_name_error.style.display = 'block'
         valid_flag = false;
     }
-    
+        
     //emails check 
     if(email.value){
         console.log(`the email is : ${email.value}`);
@@ -88,9 +89,8 @@ submit_button.addEventListener('click' , (e)=> {
     else{
         email_empty_error.style.display = 'block';
         valid_flag = false;
-
     }
-    
+
     // message_check 
     if(messsage.value == ''){
         console.log(`message is : ${messsage.value}`);

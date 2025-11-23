@@ -82,10 +82,12 @@ error styling
 }
 
 input[type=text] , textarea {
+    
     border-radius:.5rem;
     padding: 1rem 2rem;
     font-size:1rem;
-    border:1px solid grey ;
+    border: none ;
+    outline:1px solid grey ;
 }
 
 input[aria-invalid="true"] , textarea[aria-invalid="true"] { 
@@ -94,10 +96,9 @@ input[aria-invalid="true"] , textarea[aria-invalid="true"] {
 }
 
 input[type=text]:focus , textarea:focus {
-    border: none;
+    
     cursor: pointer;
     outline:2px solid var(--font-color-2);
-
 }
 
 
