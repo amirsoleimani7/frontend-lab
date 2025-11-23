@@ -161,6 +161,56 @@ query type styling
     align-items: baseline;
 }
 
+.consent .inner input {
+    display: none;
+}
+
+.consent .inner  input[type=checkbox]{
+    opacity: 0;
+}
+
+.consent .inner  input[type=checkbox] + label {
+    position: relative;
+    padding-left:30px ;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.consent .inner  input[type=checkbox] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    outline:1px solid grey ;
+    background-color: white;    
+    border-radius: .5rem;
+}
+.consent .inner  input[type=checkbox]:checked + label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    outline:1px solid var(--font-color-2);
+    background-color: white;    
+    border-radius: .5rem;
+
+}
+
+.consent .inner  input[type=checkbox]:checked + label::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background-image: url("../../assets/images/icon-checkbox-check.svg");
+    background-size: contain;
+    border-radius: .5rem;
+}
 
 
 
