@@ -106,7 +106,6 @@ names styling
 */
 .names{
     display: flex;
-    
     gap: 1rem;
     /* flex-wrap: wrap; */
 }
@@ -398,3 +397,28 @@ success message styling
     margin-top: 0px;
 }
 
+
+@media screen and (max-width:435px){
+    :root {
+        font-size: 14px;   
+    }
+
+    body { 
+        height: 100vh;
+    }
+    .names {
+        flex-direction: column;
+    }
+    .names .name {
+        flex: 1 1 10px; /* grow, shrink, min width */
+    }
+    
+    .que-type .inner{
+        flex-direction: column;
+    }
+    
+    .success-message {
+        max-width: 250px;        
+    }
+
+}
