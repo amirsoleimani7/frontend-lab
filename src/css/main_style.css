@@ -248,8 +248,8 @@ submit button styling
 success message styling
 ==================
 */
+
 .success-message {
-    display: none;
     position: absolute;
     background-color: var(--font-color-5);
     border-radius: .5rem;
@@ -257,15 +257,51 @@ success message styling
     padding: 0rem 1rem;
     color: white;
     top: 0px;
-    
+    max-height: 0px;
+    overflow: hidden; 
+}
+
+.success-message:hover { 
+    cursor: pointer;    
+}
+
+.success-message.reverse {
+    animation-name: succes-card-reverse;
+    animation-duration:.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function:ease-in ;
+}
+
+.success-message.forward {
     animation-name: succes-card;
     animation-duration: .3s; 
     animation-fill-mode: forwards;
+    animation-iteration-count:1; 
     animation-timing-function: ease-out;
 }
 
+@keyframes succes-card-reverse{
+    0%{
+        top: 20px;
+        max-height: 200px;
+    }
+    30%{
+        top: 15px; 
+    }
+    40%{
+        top: 20px;
+    }    
+    100%{
+        top: 0px;  
+        max-height: 0px;
+    }   
+}
+
 @keyframes succes-card{
-    
+    0%{
+        top: 0px;
+    }
     70%{
         top: 20px; 
     }
@@ -273,7 +309,8 @@ success message styling
         top: 15px;
     }    
     100%{
-        top: 20px;    
+        top: 20px; 
+        max-height: 200px ;   
     }   
 }
 

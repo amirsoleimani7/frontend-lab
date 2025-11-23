@@ -22,9 +22,6 @@ let message_error = document.querySelector('#message-error');
 
 
 
-
-
-
 // radio query validation
 function radio_validation(radio_in){
     let selected_value = ''
@@ -47,16 +44,16 @@ function email_validation(email){
     }
     
     // checking for stuff after/before the @ 
-    if((email.slice(index_alpha + 1)) == "" || email.slice(0 , index_alpha -1) == ""){ 
+    if((email.slice(index_alpha + 1)) == "" || email.slice(0 , index_alpha) == ""){ 
         is_valid = false;
     }
-    
     return is_valid;
 }
 
 
 for (let i = 0 ;i < querty_type_radio.length ;++i){
     querty_type_radio[i].addEventListener('click' , (e)=>{
+        radio_error.style.display = 'none';
         e.target.parentElement.style.backgroundColor = "hsl(186, 15%, 59%)";
         e.target.parentElement.style.outline = "2px solid  hsl(169, 82%, 27%)";
         
@@ -111,6 +108,7 @@ submit_button.addEventListener('click' , (e)=> {
     
     else{
         email_empty_error.style.display = 'block';
+        email_validattion_error.style.display = 'none';    
         valid_flag = false;
     }
 
@@ -144,11 +142,14 @@ submit_button.addEventListener('click' , (e)=> {
         consent_error.style.display = 'none';
     }
 
-    if(valid_flag){
-        console.log(`we are in there`);        
-        succ_msg.style.display = getComputedStyle(succ_msg).display == 'none' ? 'block' : 'none';
+    if(valid_flag){ 
+        succ_msg.classList.add('forward');
     }
 })
 
 
- 
+succ_msg.addEventListener('click' , () => {
+    succ_msg.classList.remove('forward');
+    succ_msg.classList.add('reverse');
+})
+
