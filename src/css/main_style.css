@@ -10,9 +10,9 @@
     --main-font-family : 'Inter';
 }
 
-
 body {
     font-family: var(--main-font-family);   
+    
 }
 
 .main-container {
@@ -35,5 +35,57 @@ body {
 .main-container .top-cotainer .navigation-bar a {
     text-decoration: none;
     color: var(--neu-color-3);
+}
 
+
+/* 
+=====================
+main content styling
+=====================
+*/
+.main-container .content-container .content-main{
+    display: flex;
+    flex-direction: row;    
+}
+
+.main-container .content-container .content-main .first-content-main{
+        
+}
+
+.main-container .content-container .content-main .first-content-main .inner-first {
+    display: flex;    
+    padding: 1rem;
+}
+
+.content-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--neu-color-4);
+    width: 40%;
+}
+
+.content-description {
+    width: 60%;        
+    position: relative;
+}
+
+.content-description .description {
+    color: var(--neu-color-3);
+}
+
+.content-description .read-more-button {
+    position: absolute;
+    width: 50%;
+    background-color: var(--font-color-2);
+    letter-spacing: .3rem;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-weight: 800;
+    font-size: 1rem;
+    bottom: 0px ;
+}
+
+.main-container .content-container .content-main .first-content-main img {
+    width: 100%;
+    object-fit: cover;
 }
