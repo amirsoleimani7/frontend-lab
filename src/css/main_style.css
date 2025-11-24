@@ -12,7 +12,6 @@
 
 body {
     font-family: var(--main-font-family);   
-    
 }
 
 .main-container {
@@ -126,5 +125,49 @@ main content styling second-conetnt-main
     border: none;
     outline: none;
     border-bottom: 1px solid grey;
+}
+
+
+
+/* 
+=====================
+bottom stlying 
+=====================
+*/
+
+.bottom {
+    display: flex;
+}
+
+.bottom .bottom-item {
+    flex: 1 1 0px;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+}
+
+.bottom .bottom-item img {
+    width: 40%;
+    height: 60%;
+    object-fit: cover;    
+}
+
+.bottom .bottom-item .inner-bottom-item {
+    padding: 1rem;
+    
+}
+
+.bottom .bottom-item .inner-bottom-item .bottom-number{
+    font-weight: 800;
+    color: var(--font-color-1);
+}
+
+.bottom .bottom-item .inner-bottom-item .bottom-title{
+    font-weight: 800;
+    font-size: 1.125rem;
+}
+.bottom .bottom-item .inner-bottom-item .bottom-description {
+    color: var(--neu-color-3);
+
 }
 
