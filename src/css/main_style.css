@@ -1,0 +1,39 @@
+:root {
+    --font-color-1 : hsl(35, 77%, 62%);
+    --font-color-2 : hsl(5, 85%, 63%);
+    
+    --neu-color-1 : hsl(36, 100%, 99%);
+    --neu-color-2 : hsl(233, 8%, 79%);
+    --neu-color-3 : hsl(236, 13%, 42%);
+    --neu-color-4 : hsl(240, 100%, 5%);
+
+    --main-font-family : 'Inter';
+}
+
+
+body {
+    font-family: var(--main-font-family);   
+}
+
+.main-container {
+    padding: 5rem 4rem;
+}
+
+.main-container .top-cotainer {
+    display: flex;    
+    justify-content: space-between;
+}
+
+.main-container .top-cotainer .navigation-bar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+.main-container .top-cotainer .navigation-bar a {
+    text-decoration: none;
+    color: var(--neu-color-3);
+
+}
