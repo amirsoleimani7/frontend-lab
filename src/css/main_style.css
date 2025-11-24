@@ -15,7 +15,8 @@ body {
 }
 
 .main-container {
-    padding: 5rem 4rem;
+    padding: 10vh 10vw;
+    
 }
 
 .main-container .top-cotainer {
@@ -44,6 +45,7 @@ main content styling -first-conetnt-main
 */
 .main-container .content-container {
     display: grid;
+    padding: 1rem;
     gap: 1rem;
     grid-template-areas: 
                         'wall wall second'
@@ -89,6 +91,7 @@ main content styling second-conetnt-main
 */
 .main-container .content-container .second-content-main{
     background-color: var(--neu-color-4);
+    padding: 2rem;
     color:white;
 }
 
@@ -96,6 +99,11 @@ main content styling second-conetnt-main
 .main-container .content-container .second-content-main .other-header{
     color: var(--font-color-1);
     font-size:3rem;
+    margin-bottom: 0px;
+}
+
+.item {
+    padding: 2rem 0rem;
 }
 
 .item .item-header {
@@ -120,38 +128,40 @@ bottom stlying
 =====================
 */
 
-.bottom {
-    /* display: block; */
-}
-
-.bottom .bottom-item {
-    flex: 1 1 0px;
+.bottom-item {
     display: flex;
-    padding: 1rem;
     align-items: center;
 }
 
-.bottom .bottom-item img {
-    width: 40%;
-    height: 60%;
+.bottom-item .bottom-inner {
+    display: flex;
+    align-items: center;
+    height: 70%;
+    overflow: hidden;
+}
+
+.bottom-item img {
     object-fit: cover;    
 }
 
-.bottom .bottom-item .inner-bottom-item {
+.bottom-item .inner-bottom-item {
+    height: 100%;
+    font-size: 12px;
     padding: 1rem;
-    
 }
 
-.bottom .bottom-item .inner-bottom-item .bottom-number{
+.bottom-item .inner-bottom-item .bottom-number{
+    margin-top: 0px;
     font-weight: 800;
     color: var(--font-color-1);
 }
 
-.bottom .bottom-item .inner-bottom-item .bottom-title{
+.bottom-item .inner-bottom-item .bottom-title{
     font-weight: 800;
     font-size: 1.125rem;
 }
-.bottom .bottom-item .inner-bottom-item .bottom-description {
+
+.bottom-item .inner-bottom-item .bottom-description {
     color: var(--neu-color-3);
 
 }
