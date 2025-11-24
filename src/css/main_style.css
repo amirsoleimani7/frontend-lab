@@ -15,8 +15,7 @@ body {
 }
 
 .main-container {
-    padding: 10vh 10vw;
-    
+    padding: 10vh 10vw;    
 }
 
 .main-container .top-cotainer {
@@ -33,10 +32,35 @@ body {
     font-size: 1.125rem;
 }
 
+
 .main-container .top-cotainer .navigation-bar a {
+    position: relative;
     text-decoration: none;
     color: var(--neu-color-3);
+    padding: .5rem 0rem;
 }
+
+.main-container .top-cotainer .navigation-bar a:hover{
+    color: var(--neu-color-4);
+}
+
+.main-container .top-cotainer .navigation-bar a::after{ 
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: .175rem;
+    background-color: var(--neu-color-4);
+    bottom: 0px;
+    left: 0px;
+    transform: scale(0 ,1);
+    transition: transform .3s ease;
+}
+
+.main-container .top-cotainer .navigation-bar a:hover::after {
+    transform: scale(1 ,1);    
+}
+
+
 
 /* 
 =====================
