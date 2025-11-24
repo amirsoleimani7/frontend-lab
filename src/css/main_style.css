@@ -22,6 +22,7 @@ body {
 .main-container .top-cotainer {
     display: flex;    
     justify-content: space-between;
+    padding: 1rem;
 }
 
 .main-container .top-cotainer .navigation-bar {
@@ -40,7 +41,7 @@ body {
 
 /* 
 =====================
-main content styling
+main content styling -first-conetnt-main
 =====================
 */
 .main-container .content-container .content-main{
@@ -49,23 +50,25 @@ main content styling
 }
 
 .main-container .content-container .content-main .first-content-main{
-        
+    width: 75%;
+    padding: 1rem;
 }
 
 .main-container .content-container .content-main .first-content-main .inner-first {
     display: flex;    
     padding: 1rem;
+    padding-bottom:0px ;
 }
 
 .content-title {
     font-size: 4rem;
     font-weight: 800;
     color: var(--neu-color-4);
-    width: 40%;
+    width: 45%;
 }
 
 .content-description {
-    width: 60%;        
+    width: 55%;
     position: relative;
 }
 
@@ -89,3 +92,39 @@ main content styling
     width: 100%;
     object-fit: cover;
 }
+
+/* 
+=====================
+main content styling second-conetnt-main
+=====================
+*/
+.main-container .content-container .content-main .second-content-main{
+    width: 25%;
+    padding: 1rem;
+    margin: 1rem 1rem ;
+    background-color: var(--neu-color-4);
+    color:white;
+}
+
+
+.main-container .content-container .content-main .second-content-main .other-header{
+    color: var(--font-color-1);
+    font-size:3rem;
+}
+
+.item .item-header {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.item .item-question {
+    color: var(--neu-color-3);    
+} 
+
+.sep {
+    height: 0px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+}
+
