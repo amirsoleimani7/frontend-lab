@@ -12,6 +12,14 @@
 
 body {
     font-family: var(--main-font-family);   
+
+    /* make div unselectable */
+     user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    
 }
 
 .main-container {
@@ -75,6 +83,10 @@ main content styling -first-conetnt-main
                         'wall wall second'
                         'header desc second'
                         'b1 b2 b3';
+}
+
+.main-container .content-container > *{
+    min-width: 0px;
 }
 
 .content-title {
@@ -146,12 +158,12 @@ main content styling second-conetnt-main
     border-bottom: 1px solid grey;
 }
 
+
 /* 
 =====================
 bottom stlying 
 =====================
 */
-
 .bottom-item {
     display: flex;
     align-items: center;
@@ -187,6 +199,53 @@ bottom stlying
 
 .bottom-item .inner-bottom-item .bottom-description {
     color: var(--neu-color-3);
+}
 
+@media screen and (max-width:1000px){
+    
+    .main-container {
+        padding: 5vh 5vw;    
+    }
+    
+    .bottom-item .bottom-inner{
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .main-container .content-container {
+        grid-template-areas: 
+                            'wall wall wall'
+                            'second second second'
+                            'header desc desc'
+                            'b1 b2 b3';
+    }
+    
+}
+
+@media screen and (max-width:650px){
+
+    .main-container {
+        padding: 2vh 2vw;    
+    }
+    
+    .bottom-item .bottom-inner{
+        flex-direction: row;
+        /* height: 100%; */
+    }
+    
+    .content-description .read-more-button {
+        position: relative;
+    }
+    .main-container .content-container {
+        grid-template-areas: 
+                            'wall wall'
+                            'second second'
+                            'header header'
+                            'desc desc'
+                            'b1 b1'
+                            'b2 b2'
+                            'b3 b3';
+    }
+    
 }
 
