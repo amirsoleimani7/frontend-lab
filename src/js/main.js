@@ -144,11 +144,18 @@ submit_button.addEventListener('click' , (e)=> {
 
     if(valid_flag){ 
         succ_msg.classList.add('forward');
+        let x = document.body.children;
+        for (let i =0 ;i < x.length; ++i ){
+            x[i].style.filter = x[i].id == succ_msg.id ? 'blur(0px)' : "blur(5px)";
+        }
     }
 })
 
-
 succ_msg.addEventListener('click' , () => {
     succ_msg.classList.remove('forward');
+    let x = document.body.children;
+    for (let i =0 ;i < x.length; ++i ){
+        x[i].style.filter = 'blur(0px)';
+    }    
 })
 
