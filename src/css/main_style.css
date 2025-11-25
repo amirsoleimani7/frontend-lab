@@ -156,16 +156,33 @@ main content styling -first-conetnt-main
     font-weight: 800;
     font-size: 1rem;
     bottom: 0px ;
-
+    z-index: 1;
+    transition: all .5s ease;
 }
-/* 
+
+.content-description .read-more-button:hover {
+    cursor: pointer;    
+}
+
 .content-description .read-more-button::after{
     content: "";
     position: absolute;
-    height: 2rem;
-    width: 2rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    width: 100%;
+    height: 0%;
+    background-color: lightgrey;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    transition: all .5s ease;
+}
 
-} */
+.content-description .read-more-button:hover::after {
+    height: 100%;
+}
 
 .main-container .content-container .wall-img-container img {
     width: 100%;
