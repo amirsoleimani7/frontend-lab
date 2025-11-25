@@ -10,4 +10,14 @@ open_nav_btn.addEventListener('click' , (e)=> {
     open_nav_btn.style.display = 'none';
     close_nav_btn.style.display = 'block';
     hidden_menu.style.maxWidth = '500px';
+    
+
+
 })
+
+close_nav_btn.addEventListener('click' , (e)=> {
+    open_nav_btn.style.display = 'block';
+    close_nav_btn.style.display = 'none';
+    hidden_menu.style.maxWidth = '0px';
+})
+

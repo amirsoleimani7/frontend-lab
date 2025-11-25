@@ -19,7 +19,6 @@ body {
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
-    
 }
 
 .main-container {
@@ -98,7 +97,6 @@ body {
 .main-container .top-cotainer .navigation-bar a:hover::after {
     transform: scale(1 ,1);    
 }
-
 
 
 /* 
