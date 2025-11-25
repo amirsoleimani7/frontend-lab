@@ -42,6 +42,9 @@ body {
     top: 0px;
     right: 0px;
     background-color: white;
+    
+    /* animation to the width change */
+    transition: all .5s ease;
 }
 
 .main-container .top-cotainer .hidden-menu .navigation-bar {
@@ -61,6 +64,7 @@ body {
 
 .main-container .top-cotainer .menu-img-container{
     display: none;
+    z-index: 10;
 }
 
 .main-container .top-cotainer .menu-img-container button {
