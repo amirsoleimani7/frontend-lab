@@ -46,8 +46,10 @@ body {
 } 
 
 .main-container .top-cotainer .hidden-menu {
+    /* display: none; */
     position: absolute;
     max-width: 0px;
+    overflow: hidden;
     width: 60%;
     height: 100%;
     top: 0px;
@@ -154,7 +156,16 @@ main content styling -first-conetnt-main
     font-weight: 800;
     font-size: 1rem;
     bottom: 0px ;
+
 }
+/* 
+.content-description .read-more-button::after{
+    content: "";
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+
+} */
 
 .main-container .content-container .wall-img-container img {
     width: 100%;
@@ -294,6 +305,5 @@ bottom stlying
     .main-container .top-cotainer .menu-img-container{
         display: block;
     }
-    
 }
 
