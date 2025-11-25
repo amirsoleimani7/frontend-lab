@@ -25,6 +25,18 @@ body {
     padding: 10vh 10vw;    
 }
 
+.main-container.x::before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    
+}
+
 .main-container .top-cotainer .navigation-bar {
     display: flex;
     align-items: center;
