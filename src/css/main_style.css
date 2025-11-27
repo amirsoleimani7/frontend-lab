@@ -34,7 +34,6 @@ body {
     width: 100%;
     height: 100%;
     opacity: .4;
-    
 }
 
 .main-container .top-cotainer .navigation-bar {
@@ -182,6 +181,11 @@ main content styling -first-conetnt-main
 
 .content-description .read-more-button:hover::after {
     height: 100%;
+}
+
+.content-description .read-more-button:active { 
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .main-container .content-container .wall-img-container img {
