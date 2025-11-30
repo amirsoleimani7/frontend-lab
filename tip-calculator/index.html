@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Bhaiksuki&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Young+Serif&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+
+  <img src="images/logo.svg" alt="the spliter logo">
+  <div class="main-div">
+    <div class="input-div">
+      <div>
+        <span class="input-text-bill-amount">Bill</span> 
+        <div style="position: relative;">
+          <img id="dollor-sign" src="images/icon-dollar.svg" alt="dollor sign">
+          <input id="input-bill-amount" type="number" placeholder="0">
+        </div>
+      </div>
+      <div>
+        <span class="select-tip">Select Tip %</span>
+        <div class="main-grid">
+          <div class="item">
+            <input type="radio" name="tip" id="five-percent" value="5" checked>
+            <label for="five-percent">5%</label>
+          </div>
+        
+          <div class="item">
+            <input type="radio" name="tip" id="ten-percent" value="10">
+            <label for="ten-percent">10%</label>
+          </div>
+        
+          <div class="item">
+            <input type="radio" name="tip" id="fifteen-percent" value="15">
+            <label for="fifteen-percent">15%</label>
+          </div>
+        
+          <div class="item">
+            <input type="radio" name="tip" id="twenyfive-percent" value="25">
+            <label for="twenyfive-percent">25%</label>
+          </div>
+        
+          <div class="item">
+            <input type="radio" name="tip" id="fifty-percent" value="50">
+            <label for="fifty-percent">50%</label>
+          </div>
+
+          <div class="item input-radio" id="input-radio">
+            <input id="input-radio" type="number" placeholder="0">
+          </div>
+          
+        </div>
+      </div>
+      <div>
+        <div class="inner">
+          <span class="input-text-number-of-people">Number of People</span>
+          <span class="error-text-number-of-people">Can't be zero</span>
+        </div>
+        <div style="position: relative;">
+          <img id="people-sign" src="images/icon-person.svg" alt="person icons">
+          <input id="input-number-of-people" type="number" placeholder="0">
+        </div>
+      </div>
+    </div>
+    <div class="info-div">
+      <div class="amounts">
+        <div class="inner">
+            <span class="first">Tip Amount</span> <br>
+            <span class="second">/ person</span>
+        </div>
+        <span class="price" id="calc-tip">$0</span>
+      </div>
+      <div class="amounts">
+        <div class="inner">
+            <span class="first">Total</span> <br>
+            <span class="second">/ person</span>
+          </div>
+        <span class="price" id="calc-total">$0</span>
+      </div>
+      <button id="reset-button">RESET</button>
+    </div>
+  </div>
+
+  <script src="src/js/main.js"></script>
+
+</body>
+</html>
