@@ -1,0 +1,175 @@
+:root {
+    --button-bg-color : hsl(25, 97%, 53%);   
+    --body-bg-color : hsl(216, 12%, 8%);
+    --card-bg-color : hsl(213, 19%, 18%);
+    --font-color : hsl(217, 12%, 63%);
+    
+    --radio-bg-color : #38404e;
+}
+
+
+/* 
+==================================
+main body's styling 
+==================================
+*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-bg-color);
+
+    
+    height: 90vh;
+    font-family: 'Overpass';
+
+    /* making the text unselectable */
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+
+
+/* 
+==================================
+rading card component styling
+==================================
+*/
+.rating-container {
+    /* display: flex; */
+    display: flex;
+    max-width: 350px;
+    flex-direction:column ;
+    padding: 2rem 1rem;
+    background-color: var(--card-bg-color);
+    border-radius: 1.5rem;
+}
+
+.rating-container img {
+    width: 20px;
+    height: 20px;
+    background-color: var(--radio-bg-color);    
+    border-radius: 100%;
+    padding: .75rem;
+}
+
+.title { 
+    color: white;
+}
+
+.description {
+    color: var(--font-color);
+    margin: 0px;
+}
+
+.rating-container #input-form {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0rem 1.5rem 0rem;
+}
+
+.rating-container #input-form label {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--radio-bg-color);
+    padding: .5rem;
+    border-radius: 100%;        
+    transition: all .5s;
+    font-weight: 700;
+}
+
+.rating-container #input-form label:hover {
+    background-color: var(--button-bg-color);
+    cursor: pointer;
+    scale: 1.01; 
+    box-shadow: 1px 1px 5px var(--button-bg-color);
+}
+
+.rating-container #input-form input {
+    opacity: 0;
+    display: none;
+}
+
+.rating-container #input-form input[type="radio"]:checked+label {     
+    background-color: var(--button-bg-color);
+    scale: 1.01; 
+    box-shadow: 1px 1px 5px var(--button-bg-color);
+}
+
+.rating-container .submit {
+    border:none;
+    background-color: var(--button-bg-color);
+    font-weight: 700;
+    letter-spacing: .1rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    transition: all .5s;
+}
+
+.rating-container .submit:hover {
+    background-color: white;
+    cursor: pointer;
+    scale: 1.01; 
+    box-shadow: 0px 0px 5px var(--button-bg-color);
+}
+/*                              
+==================================
+tnq card component styling
+==================================
+*/
+.tnq-card {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    max-width: 350px;
+    flex-direction:column ;
+    padding: 2rem 1rem;
+    background-color: var(--card-bg-color);
+    border-radius: 1.5rem;
+    align-items: center;
+    text-align: center;
+
+    animation:  opening_in;
+    animation-duration: .8s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes opening_in {
+    0%{
+        bottom: -300px;
+    }
+    75%{
+        bottom: 20px;
+    }
+    80%{
+        bottom: -10px;
+    }
+    100%{
+        bottom: 0px;
+    } 
+}
+
+.tnq-card .tnq-header{
+    margin: 1rem 0rem 1.5rem 0rem;    
+}
+
+.tnq-card img {
+    width: 140px;
+    margin-bottom: 1.5rem;
+}
+
+.tnq-card .res {  
+
+    background-color: var(--radio-bg-color); 
+    color: var(--button-bg-color);
+    font-weight: 400;
+    
+    padding: .75rem .5rem;
+    border-radius: 2rem;   
+}
