@@ -1,4 +1,4 @@
-**a collection of frontend project (mostly from [frontend mentor](https://www.frontendmentor.io/))** 
+**a collection of frontend miniprojects (mostly from [frontend mentor](https://www.frontendmentor.io/))** 
 
 | Project  |  code | live Preview |
 |----------|-------|--------|
