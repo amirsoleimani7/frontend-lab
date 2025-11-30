@@ -9,7 +9,7 @@
 | tip-calculator   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/tip-calculator)  | [live](https://candid-cuchufli-1b8369.netlify.app/)  |
 | responsive-time-tarcking-dashboard   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/time_tracking_dashboard)  | [live](https://remarkable-souffle-52c77b.netlify.app/)  |
 | newsletter-sign-up-with-success-message-main   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/newsletter-sign-up-with-success-message-main)  | [live](https://frontend-lab-virid.vercel.app/)  |
-| article-preview-component   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/article-preview-component)  | [live](https://amirsoleimani7.github.io/article-preview-component/)  |
+| article-preview-component   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/article-preview-component)  | [live](https://frontend-lab-hr6h.vercel.app/)  |
 | responsive-order-summary-card   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/order-summary-card)  | [live](https://amirsoleimani7.github.io/order-summary-card/)  |
 | NFT-preview-card   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/NFT-preview-card-component)  | [live](https://amirsoleimani7.github.io/NFT-preview-card-component/)  |
 | repsonsive testimonial-grid-section   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/testimonial_grid_section)  | [live](https://amirsoleimani7.github.io/testimonial_grid_section/)  |
