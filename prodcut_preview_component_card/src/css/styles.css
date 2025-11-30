@@ -1,0 +1,164 @@
+/* ==========================================================================
+    Custom Properties of the web apge
+    ==========================================================================
+*/
+:root { 
+    --primary-grey-font-color:#6F6F71;
+    --primary-green-font-color:#3D8168;
+    --primary-border-radius:0.75rem;
+}
+
+body{
+    background-color: #F3EAE3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+
+/* ==========================================================================
+    main card styling 
+    ==========================================================================
+*/
+.card {
+    width: 50%;   
+    max-width: 500px; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    background-color: white;
+    border-radius: var(--primary-border-radius);
+}
+
+#product_image_desktop{
+    border-radius: var(--primary-border-radius) 0 0 var(--primary-border-radius);
+    width: 50%;
+    object-fit: cover;
+}
+
+#product_image_phone{
+    border-radius: var(--primary-border-radius) var(--primary-border-radius) 0 0;
+    object-fit: cover;
+    display: none;
+}
+
+/* ==========================================================================
+    product_detail styling 
+    ==========================================================================
+*/
+
+.prodcut_detail {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 1rem 2rem 1rem 2rem;
+    overflow: hidden;
+}
+
+.prodcut_detail .product_category{
+    text-align: start;
+    font-family: sans-serif;
+    font-size: 0.875rem;
+    color:var(--primary-grey-font-color);    
+    letter-spacing: .2rem;
+}
+
+.prodcut_detail .product_name {
+    text-align: start;    
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 0;
+}
+
+/* ==========================================================================
+    Description styling    
+    ==========================================================================
+*/
+.prodcut_detail .product_descripion {
+    font-family: sans-serif;
+    font-size: 0.875rem;
+    color:var(--primary-grey-font-color);
+    text-align: left;
+    line-height: 1.3rem;
+    margin: 1rem 0 0 0;
+}
+
+/* ==========================================================================
+    Price Styling
+    ==========================================================================
+*/
+.price #actual_price {
+    text-decoration: line-through;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    text-align: center ;
+    gap: 1rem;
+    font-family: 'Lobster';
+    margin: 1rem 1rem 1rem 0;
+}
+
+.price #off_price {
+    font-size: 2rem;
+    color: var(--primary-green-font-color);
+}
+
+.price #actual_price {
+    font-family: sans-serif;
+    font-size: 1rem;
+    color:var(--primary-grey-font-color);
+}
+
+/* ==========================================================================
+   Buy Button styling 
+    ==========================================================================
+*/
+.prodcut_detail .buy_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;    
+    margin-top: auto;
+    border: 1px solid var(--primary-green-font-color);
+    background-color: var(--primary-green-font-color);
+    padding: 0.1rem;
+    border-radius: var(--primary-border-radius);
+    gap: 0.5rem;
+}
+
+.prodcut_detail .buy_btn p{
+    color: white;
+    font-weight: 700;
+}
+ 
+/* ==========================================================================
+    Media Queries for responsiveenss of the page
+    ==========================================================================
+*/
+
+@media screen and (max-width:900px){
+    .card{
+        flex-direction: column;         
+        width: 60%;
+        overflow: hidden;
+    }
+    
+    #product_image_desktop {
+        display: none;
+    }
+
+    #product_image_phone {
+        display: block;
+    }
+
+    .prodcut_detail{
+        width: 80%;
+    }
+}
