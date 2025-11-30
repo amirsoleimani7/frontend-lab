@@ -1,0 +1,139 @@
+:root {
+    --main-background-color:#0D1A2D;
+    --card-background-color:#15273F;
+    --grey-text-color: #7087A6;
+    --ether-color:#00FFF8;
+    
+
+    /* font sizes  */
+    --main-font-family : 'Noto Sans Bhaiksuki';
+    --small-font-size:.875rem;
+    --mid-font-size:1rem;
+    --big-font-size:1.125rem
+
+}
+
+
+
+
+
+/*  ===========================
+    main body styling
+    ===========================
+*/
+
+body {
+    font-family: var(--main-font-family);
+    background-color: var(--main-background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.card .product-image {
+    border-radius: 1rem;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.card { 
+    padding: 1.5rem;
+    background-color: var(--card-background-color);
+    border-radius: 1rem;
+    max-width: 275px;
+
+
+    /*shadows*/
+    box-shadow :0px 20px 30px #0C1729 , 0px 40px 50px #0C192C;
+}
+
+/*  ===========================
+    header and description
+    ===========================
+*/
+.header {
+    color: white ;
+    font-size: var(--big-font-size);
+}
+
+
+.description {
+    color :var(--grey-text-color);
+    font-size: var(--mid-font-size);
+}
+
+
+/*  ===========================
+    extra info on the price and name
+===========================
+*/
+.extra-info { 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap ;
+    gap: 1rem;
+}
+
+.extra-info .price-info {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--ether-color);
+    font-size: var(--small-font-size);
+    font-weight: 600;
+}
+
+.extra-info .timing-info {
+    display: flex;
+    align-items: center;
+    color: var(--grey-text-color);
+    gap: .5rem;
+    font-size: var(--small-font-size);
+    font-weight: 600;
+}
+
+
+.devider { 
+    height: 1px;
+    background-color: grey;
+    margin: 1rem 0;
+}
+
+/*  ===========================
+    user info styling
+    ===========================
+*/
+
+.card .creator-info {
+    display: flex;
+    align-items: center;    
+}
+
+.card .creator-info .prof-image {
+    margin-right: 1rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.creator {
+    font-size: .875rem;
+    color: var(--grey-text-color);
+}
+
+.creator-name {
+    margin-left: .1rem;
+    color: white;
+    font-weight: 500;
+}
+
+@media screen and (max-width:255px){
+    .extra-info {
+        justify-content: center;
+    }
+
+
+}
