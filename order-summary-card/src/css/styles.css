@@ -1,0 +1,129 @@
+:root {
+    --main-background-color: #D6E1FF;
+    --container-background-color : #ffffff;
+    --sub-background-color:#F8F9FE;
+
+    --sub-font-color:#787C8F;
+    --buy-botton-color:#382AE1;
+    --main-font-family : 'Poppins';
+}
+
+body{
+    
+    background-color: #E0E8FF;
+    background-image: url('../../images/pattern-background-desktop.svg');
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    height: 90vh;
+    font-family: var(--main-font-family);
+
+}
+
+.container {    
+
+    border-radius: 1rem;
+    background-color: var(--container-background-color);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.header { 
+    margin-bottom: 0px;
+}
+
+.description {
+    color: var(--sub-font-color);
+}
+
+.container .inner-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.container .inner-container .pan .type , .price {
+    font-size: .875rem;
+}
+
+.container .inner-container .pan {
+    padding: 2rem;
+    background-color: var(--sub-background-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container .inner-container .pan a{
+    margin-left: auto;
+
+}
+
+.container .inner-container .pan .inner-pan{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .inner-container .pan .inner-pan .type{ 
+    font-weight: 700;
+}
+
+.container .inner-container .pan .inner-pan .price{ 
+    color: var(--sub-font-color);
+}
+
+.container .inner-container .pan .inner-pan{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.container .inner-container button{
+    width: 100%;
+}
+
+.container .inner-container button:hover{
+    cursor: pointer;
+}
+
+
+
+.pay {
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--buy-botton-color);
+    border:none;
+
+    font-size: 1rem;
+    color: white;
+    font-weight: 700;
+    
+    box-shadow: 0px 10px 20px #D6D3FF;
+}
+
+.cancel {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border:none;
+    background: transparent;
+    font-size: .9rem;
+    color: var(--sub-font-color);
+    font-weight: 800;
+}
+
