@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    height: 85vh;
+    font-family: 'Montserrat';
+}
+
+/* =======================================
+    main_content styling
+=======================================
+*/
+.container .main_content {
+    max-width: 450px;
+    margin:0 auto;
+    margin-bottom: 3vw;
+}
+
+/* =======================================
+    headers styling 
+    ======================================
+*/
+.container .header1{
+    font-size: 2rem;
+    font-weight: 200;
+    color: grey;
+}
+
+.container .header2{
+    font-size: 2rem;
+    font-weight: 700;    
+}
+
+.container .description{
+    color: grey;
+    font-size: .8rem;
+}
+
+/* =======================================
+    main flexbox styling
+    =======================================
+*/
+
+.container .products{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    flex: 1 1 0px;
+    padding:2rem;
+    text-align: start;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 0.70rem;
+}
+
+/*
+nth-child(n) the first one is 1 not 0
+*/
+.container .products .product:first-child{
+    background-image: linear-gradient(#51CDCB 2%, rgba(0,0,0,0) 2%); 
+}
+
+.container .products .inner_flex .product:first-child{
+    background-image: linear-gradient(#ED5355 2%, rgba(0,0,0,0) 2%); 
+}
+
+.container .products .inner_flex .product:last-child{
+    background-image: linear-gradient(#FBAC49 2%, rgba(0,0,0,0) 2%); 
+}
+
+.container .products .product:last-child{
+    background-image: linear-gradient(#5C9EE6 2%, rgba(0,0,0,0) 2%); 
+}
+
+.container .products .product h1{
+    font-size: 1.125rem;
+}
+
+.container .products .product p{
+    font-size: .875rem;
+}
+
+.container .products .product img{
+    width: 60px;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.container .products .inner_flex {
+    display: flex;
+    flex-direction: column;
+    word-wrap: wrap;
+    gap: 1rem;
+    flex: 1 1 0px;
+}
+
+@media screen and (max-width:750px){
+    .container .products .inner_flex {
+        display: contents;
+    }
+    .container .products {
+        align-items: stretch;
+    }
+
+}
