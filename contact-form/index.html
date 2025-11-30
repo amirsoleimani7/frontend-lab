@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/css/main_style.css">  
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lobster&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Bhaiksuki&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  
+  <form  action="" method="GET" class="form-container">
+    <h2 class="form-header" style="font-weight: 700;">Contact Us</h2>
+  
+    <div class="names">   
+        <div class="name">
+          <label for="first-name" class="label">First Name:</label>
+          <input type="text" id="first-name" aria-errormessage="first-name-error" aria-invalid="false" autocomplete="name" required>
+          <p id="first-name-error" class="error">This field is required</p>
+        </div>
+        <div class="name">
+          <label for="last-name" class="label">Last Name:</label>
+          <input type="text" id="last-name" aria-errormessage="last-name-error" aria-invalid="false" autocomplete="name" required>
+          <p id="last-name-error" class="error">This field is required</p>
+
+
+        </div>
+    </div>
+    
+    <div class="emails">
+      <label for="email" class="label">Email Address</label>
+      <input type="text" id="email" autocomplete="email" aria-errormessage="email-error" required>
+      <p id="email-error-empty" class="error">This field is required</p>
+      <p id="email-error-validation" class="error">Please enter a valid email address</p>
+    </div>
+
+    <div id="que-type" class="que-type">
+      <label for="general" id="que-label" class="label">Query Type</label>
+      <div class="inner">
+        <div class="item">
+          <input type="radio" id="general" aria-errormessage="que-type-error" name="query-type" value="genral" required>
+          <label for="general" class="label">General Enquiry</label>
+        </div>
+        <div class="item">
+          <input type="radio" id="support" aria-errormessage="que-type-error" name="query-type" value="support" required>
+          <label for="support" class="label">Support Request</label>
+        </div>
+      </div>
+      <p id="que-type-error" class="error">Please select a query type</p>
+    </div>
+    
+
+    <div class="emails messages">
+      <label for="message" class="label">Message</label>
+      <textarea name="user-message" class="text-area" id="message" aria-errormessage="message-error" rows="5" style="resize: none;" required></textarea>
+      <p  id="message-error" class="error">This field is required</p>
+    </div>
+    
+    <div class="consent">
+      <div class="inner">
+        <input type="checkbox" id="consent" aria-errormessage="consent-error" value="con" required>
+        <!-- <img src="assets/images/icon-checkbox-check.svg" class="img-checked" alt="checkd image"> -->
+        <label for="consent" class="label">I consent to being contacted by the team</label>
+      </div>
+      <p id="consent-error" class="error">To submit this form, please consent to being contacted</p>    
+    </div>
+    <button class="submit-button item">Submit</button>
+  </form>
+  
+  <div class="success-message" id="success-message">
+    <div class="header">
+      <img src="assets/images/icon-success-check.svg" alt="">
+      <h2 class="success-header">Message Sent!</h2>
+    </div>
+    <p class="success-description">Thanks for completing the form. We'll be in touch soon!</p>
+  </div> 
+
+  <script src="src/js/main.js"></script>
+
+</body>
+</html>
