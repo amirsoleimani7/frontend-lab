@@ -8,7 +8,7 @@
 | interactive-rating-compoennt   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/interactive-rating-component)  | [live](https://beamish-marshmallow-a2f682.netlify.app/)  |
 | tip-calculator   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/tip-calculator)  | [live](https://candid-cuchufli-1b8369.netlify.app/)  |
 | responsive-time-tarcking-dashboard   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/time_tracking_dashboard)  | [live](https://remarkable-souffle-52c77b.netlify.app/)  |
-| newsletter-sign-up-with-success-message-main   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/newsletter-sign-up-with-success-message-main)  | [live](https://amirsoleimani7.github.io/newsletter-sign-up-with-success-message-main/)  |
+| newsletter-sign-up-with-success-message-main   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/newsletter-sign-up-with-success-message-main)  | [live](https://frontend-lab-virid.vercel.app/)  |
 | article-preview-component   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/article-preview-component)  | [live](https://amirsoleimani7.github.io/article-preview-component/)  |
 | responsive-order-summary-card   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/order-summary-card)  | [live](https://amirsoleimani7.github.io/order-summary-card/)  |
 | NFT-preview-card   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/NFT-preview-card-component)  | [live](https://amirsoleimani7.github.io/NFT-preview-card-component/)  |
