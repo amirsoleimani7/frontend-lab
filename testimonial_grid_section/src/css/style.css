@@ -1,0 +1,143 @@
+:root  {
+    
+    /* background colors used */
+    --background-color-1:#733FC8;
+    --background-color-2:#49556B;
+    --background-color-3:#191F2D;
+
+    /* fonts */
+    --main-font-family:'Hanken Grotesk';
+    --font-size-big:2rem;
+    --font-size-mid:1rem;
+    --font-size-small:.75rem;
+
+
+    /* main paddings , border radius*/
+    --main-border-radius:0.5rem;
+    --main-paddings:2rem;
+
+    /*other stuff is needed  */
+}
+
+img{
+    display: block;
+}
+
+body {
+    padding: 5rem;
+}
+
+.container {
+    isolation: isolate;
+    display: grid;
+    gap: 1rem ;
+    grid-template-columns: repeat(4 ,1fr);
+    grid-template-areas: "a a b c"
+                        "d e e c";
+}
+
+.tesimonial {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: #fff;
+
+    font-family: var(--main-font-family);    
+    border-radius: var(--main-border-radius);
+    padding: var(--main-paddings);
+    box-shadow: 50px 50px 400px grey;    
+}
+
+
+.tesimonial:nth-child(1){
+    grid-area: a;
+}
+
+.tesimonial:nth-child(2){
+    grid-area: b;
+}
+
+.tesimonial:nth-child(3){
+  grid-area: d;
+}
+
+.tesimonial:nth-child(4){
+    grid-area: e;
+}
+
+.tesimonial:nth-child(5){
+    grid-area: c;
+}
+
+.tesimonial .prof_pic {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: 60px ;
+    height: 60px;
+}
+
+.tesimonial .back {
+    z-index: -1;
+    position: absolute;
+    justify-self:end;
+    margin-right: 8%;
+    width: 10vw;
+}
+
+.tesimonial:first-child{
+    padding:var(--main-paddings)
+}
+
+.tesimonial .info-container {
+    display: flex;    
+    gap: 1rem;
+    padding: var(--main-paddings) 0px 0px 0px;
+}
+
+.tesimonial .info-container .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: center;
+}
+
+.tesimonial .info-container .inner .name {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.tesimonial .first_comment {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1024px){
+    :root {
+        font-size: 14px;
+    }
+    .container {
+        display: grid;
+        gap: 1rem ;
+        grid-template-columns: repeat(3 ,1fr);
+        grid-template-areas: "a a c"
+                            "b d c"
+                            "e e e";
+    }
+}
+
+@media screen and (max-width: 768px){
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        display: grid;
+        gap: 1rem ;
+        grid-template-columns: repeat(3 ,1fr);
+        grid-template-areas: "a a a"
+                            "b b b"
+                            "c c c"
+                            "d d d"
+                            "e e e";
+    }
+}
