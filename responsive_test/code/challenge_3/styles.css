@@ -1,0 +1,48 @@
+:root{
+    --main-font-family: Roboto;
+    --font-size-mid: 1.313rem;
+    --font-size-big: 3rem;
+    --font-weight-reg:400;
+    --font-weight-bold:700;
+    --main-font-family:'Roboto'
+}
+
+body {
+    display: flex;
+    /* align-items: center;  */
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh; 
+    background-color: #23424A;
+    margin-left: 10rem ;
+}
+
+.card {
+    width: 50%;
+    color: white;
+    font-family: var(--main-font-family);
+}
+
+.card h1 {
+    font-size: var(--font-size-big);
+}
+.card p{
+    font-size: var(--font-size-mid);
+    font-weight: var(--font-weight-reg);
+}
+
+.card .learn_button {
+    background-color: #38CFD9;
+    border: 1px solid #38CFD9;
+    border-radius: 3rem;
+
+    padding: 1rem 2rem 1rem 2rem;
+    
+    font-size: var(--font-size-mid);
+    font-weight: var(--font-weight-bold);
+
+    margin-top: 3rem;
+}   
+
+    
+

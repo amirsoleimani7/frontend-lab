@@ -1,0 +1,88 @@
+body {
+    background-image: url('images/cute-fairytale-forest-landscape-scene/STUDIO\ PC\ 2086-16.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 90vh;
+    margin:auto;
+    padding:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    
+    width: 30%;
+    background-color: lightgray;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+    flex-direction:column ;
+}
+
+.main-container .add-task {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.main-container .add-task input  {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+.main-container .add-task button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.main-container .add-task img {
+    width: 40px;
+    height: 40px;
+}
+
+.task-list{
+    overflow-y: scroll;
+    max-height: 400px;
+    width: 100%;    
+}
+
+.task {
+    margin-bottom: .5rem;
+    background-color: lightgoldenrodyellow;
+    border-radius: 1rem;
+    display: flex;
+    padding: .5rem 1rem;
+}
+
+.task button {
+    border-radius:1rem  ;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+.task:hover { 
+    background-color: lightcyan; 
+}
+
+.task #done:hover{
+    background-color: greenyellow;
+}
+
+
+.task #delete:hover{
+   background-color: red;
+}
+
+
+.task .task-name {
+    margin-right: auto;    
+}
