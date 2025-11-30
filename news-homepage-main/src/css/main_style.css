@@ -1,0 +1,330 @@
+:root {
+    --font-color-1 : hsl(35, 77%, 62%);
+    --font-color-2 : hsl(5, 85%, 63%);
+    
+    --neu-color-1 : hsl(36, 100%, 99%);
+    --neu-color-2 : hsl(233, 8%, 79%);
+    --neu-color-3 : hsl(236, 13%, 42%);
+    --neu-color-4 : hsl(240, 100%, 5%);
+
+    --main-font-family : 'Inter';
+}
+
+body {
+    font-family: var(--main-font-family);   
+
+    /* make div unselectable */
+     user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.main-container {
+    padding: 10vh 10vw;    
+}
+
+.main-container.x::before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+}
+
+.main-container .top-cotainer .navigation-bar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 400;
+    font-size: 1.125rem;
+} 
+
+.main-container .top-cotainer .hidden-menu {
+    /* display: none; */
+    position: absolute;
+    max-width: 0px;
+    overflow: hidden;
+    width: 60%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+    
+    /* animation to the width change */
+    transition: all .5s ease;
+}
+
+.main-container .top-cotainer .hidden-menu .navigation-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10rem 2rem;
+}
+
+.main-container .top-cotainer {
+    display: flex;    
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+
+.main-container .top-cotainer .menu-img-container{
+    display: none;
+    z-index: 10;
+}
+
+.main-container .top-cotainer .menu-img-container button {
+    background-color: white;
+    border: none;
+}
+
+.main-container .top-cotainer .navigation-bar a {
+    position: relative;
+    text-decoration: none;
+    color: var(--neu-color-3);
+    padding: .5rem 0rem;
+}
+
+.main-container .top-cotainer .navigation-bar a:hover{
+    color: var(--neu-color-4);
+}
+
+.main-container .top-cotainer .navigation-bar a::after{ 
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: .175rem;
+    background-color: var(--neu-color-4);
+    bottom: 0px;
+    left: 0px;
+    transform: scale(0 ,1);
+    transition: transform .3s ease;
+}
+
+.main-container .top-cotainer .navigation-bar a:hover::after {
+    transform: scale(1 ,1);    
+}
+
+
+/* 
+=====================
+main content styling -first-conetnt-main
+=====================
+*/
+.main-container .content-container {
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+    grid-template-areas: 
+                        'wall wall second'
+                        'header desc second'
+                        'b1 b2 b3';
+}
+
+.main-container .content-container > *{
+    min-width: 0px;
+}
+
+.content-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--neu-color-4);
+}
+
+.content-description {
+    position: relative;
+}
+
+.content-description .description {
+    color: var(--neu-color-3);
+}
+
+.content-description .read-more-button {
+    position: absolute;
+    width: 50%;
+    background-color: var(--font-color-2);
+    letter-spacing: .3rem;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-weight: 800;
+    font-size: 1rem;
+    bottom: 0px ;
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+.content-description .read-more-button:hover {
+    cursor: pointer;    
+}
+
+.content-description .read-more-button::after{
+    content: "";
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    width: 100%;
+    height: 0%;
+    background-color: lightgrey;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    transition: all .5s ease;
+}
+
+.content-description .read-more-button:hover::after {
+    height: 100%;
+}
+
+.content-description .read-more-button:active { 
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.main-container .content-container .wall-img-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 
+=====================
+main content styling second-conetnt-main
+=====================
+*/
+.main-container .content-container .second-content-main{
+    background-color: var(--neu-color-4);
+    padding: 2rem;
+    color:white;
+}
+
+
+.main-container .content-container .second-content-main .other-header{
+    color: var(--font-color-1);
+    font-size:3rem;
+    margin-bottom: 0px;
+}
+
+.item {
+    padding: 2rem 0rem;
+}
+
+.item .item-header {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.item .item-question {
+    color: var(--neu-color-3);    
+} 
+
+.sep {
+    height: 0px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+}
+
+
+/* 
+=====================
+bottom stlying 
+=====================
+*/
+.bottom-item {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-item .bottom-inner {
+    display: flex;
+    align-items: center;
+    height: 70%;
+    overflow: hidden;
+}
+
+.bottom-item img {
+    object-fit: cover;    
+}
+
+.bottom-item .inner-bottom-item {
+    height: 100%;
+    font-size: 12px;
+    padding: 1rem;
+}
+
+.bottom-item .inner-bottom-item .bottom-number{
+    margin-top: 0px;
+    font-weight: 800;
+    color: var(--font-color-1);
+}
+
+.bottom-item .inner-bottom-item .bottom-title{
+    font-weight: 800;
+    font-size: 1.125rem;
+}
+
+.bottom-item .inner-bottom-item .bottom-description {
+    color: var(--neu-color-3);
+}
+
+@media screen and (max-width:1000px){
+    
+    .main-container {
+        padding: 4vh 4vw;    
+    }
+    
+    .bottom-item .bottom-inner{
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .main-container .content-container {
+        grid-template-areas: 
+                            'wall wall wall'
+                            'second second second'
+                            'header desc desc'
+                            'b1 b2 b3';
+    }
+    
+}
+
+@media screen and (max-width:650px){
+
+    .main-container {
+        padding: 4vh 4vw;    
+    }
+    
+    .bottom-item .bottom-inner{
+        flex-direction: row;
+    }
+    
+    .content-description .read-more-button {
+        position: relative;
+    }
+    .main-container .content-container {
+        grid-template-areas: 
+                            'wall wall'
+                            'second second'
+                            'header header'
+                            'desc desc'
+                            'b1 b1'
+                            'b2 b2'
+                            'b3 b3';
+    }
+
+    .main-container .top-cotainer .navigation-bar {
+        display: none;
+    }
+
+    .main-container .top-cotainer .menu-img-container{
+        display: block;
+    }
+}
+
