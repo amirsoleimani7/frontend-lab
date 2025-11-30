@@ -1,0 +1,321 @@
+:root {
+    --user-background-color:#5746EA;
+    --all-card-background-color:#1D204B;
+    --main-background-color:#0D1323;
+    /* neutral colors */
+    --color-navy-200:hsl(236, 100%, 87%);
+    --color-work:hsl(15, 100%, 70%);
+    
+    /* font family */
+    --main-font-family:'Rubik' , sans;
+    
+
+}
+
+
+body { 
+    display: flex;
+    font-family: var(--main-font-family);
+    background-color: var(--main-background-color);
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 2rem;
+    
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+
+    
+}
+
+.user-control{ 
+    background-color: var(--all-card-background-color);
+    border-radius: 1rem;
+    max-width: 240px;
+}
+/*  
+    ========================
+    user info
+    ========================
+*/
+.user-control .user-info {
+    background-color: var(--user-background-color);
+    display: flex;
+    flex-direction: column;                                                             
+    box-sizing: border-box;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.user-control .user-info:hover {
+    background-color: hsl(235, 45%, 61%);    
+}
+
+.user-control .user-info #profile-image{ 
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid white;   
+    width: 64px;
+    height: 64px;
+    margin-bottom: 2rem;
+}
+
+.user-control .user-info .info-container span{
+    color: var(--color-navy-200);
+}
+
+.user-control .user-info .info-container .user-name{
+    margin-top: .2rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
+}
+
+/*
+    ========================
+    user-input styling
+    ========================
+*/
+.user-control .user-input {
+    color: var(--color-navy-200);
+    font-weight: 400;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.user-control .user-input .item{
+    margin-bottom: .7rem;
+}
+
+.user-control .user-input form{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="radio"] {
+    display: none; 
+}
+
+
+
+input[type="radio"]:hover + label {
+    cursor: pointer;
+    animation-name: font-var;
+    animation-timing-function: ease-in-out;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+@keyframes font-var {
+    100% {
+        font-size: 1.5rem;
+    }
+}
+
+/* making the radio buttons lables unselectable .. */
+label {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+input[type="radio"]:checked + label {
+    color: white;
+}
+
+/*  ========================
+    grid container styling
+    ========================
+*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    /* grid-auto-rows: 1fr;     */
+    grid-template-areas: 'user-main . . .'
+                        'user-main . . .';
+    gap: 1rem;
+}
+
+.user-control {
+    grid-area: user-main;
+}
+
+/*  ========================
+    card styling
+    ========================
+*/
+.card .image-container {
+    position: absolute;
+    padding: 1rem;
+    width: 40px;
+    height: 40px;
+    align-self: end;
+    top: 0px;
+    right: 40px;
+    padding-top: 0px ;
+}
+
+/* 
+    todo : fix border leacking ... [saw it , not fixed yet]
+*/
+.card {    
+    background-color: lightblue;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    transition: all;
+    
+    overflow: hidden;
+    /* min-width: 159px; */
+}
+
+.card .detail .upper-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .detail .switch-cat {
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+.card .detail .switch-cat:hover{
+    cursor: pointer;
+}
+
+.card .detail .change-cat{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    top: -3rem;
+    right: -1rem;
+}
+
+
+.card .detail{   
+    /* flex */
+    display: flex; 
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--all-card-background-color);
+    color: white;
+    z-index: 1;
+    height: 65%;
+    border-radius: inherit; 
+    
+    transition: .2s;
+
+    animation-iteration-count:1;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+    animation-name : fill-the-background;           
+}
+
+@keyframes fill-the-background {
+    0%{
+        height: 0%;
+
+    }   
+    100%{
+        height: 65%;
+    }
+}
+
+.card .detail:hover{
+    scale: 1.01;
+    cursor: pointer;
+    background-color: hsl(235, 45%, 61%);    
+}
+
+
+.card .detail .item-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    
+}
+
+.card .detail .current {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.card .detail .prev {
+    color: var(--color-navy-200);
+}
+
+
+@media screen and (max-width:725px){
+    /* kidna a responsive font-size */
+    :root {
+        font-size: 14px;
+    }
+    
+    body {
+        padding: 1rem;
+    }
+    
+    .user-control {
+        max-width: none;
+    }
+
+    .grid-container {
+            grid-template-columns: repeat(3 , 1fr);
+            grid-auto-rows: .5fr;    
+            grid-template-areas: 'user-main user-main user-main'
+                                '. . .' 
+                                '. . .';
+            width: 100%;
+    }
+}
+
+@media screen and (max-width:350px){
+
+    body {
+        height: 100%;   
+    }
+    
+    .user-control .user-input {
+        padding: 2rem 1rem;
+    }
+
+    .user-control .user-input form{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-auto-rows: .8fr;    
+        grid-template-areas: 'user-main'
+                            '.' 
+                            '.'
+                            '.'
+                            '.'
+                            '.'
+                            '.';
+        width: 100%;
+    }
+    
+    .user-control .user-info {
+        flex-direction: row;
+        padding: 1rem;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .user-control .user-info .info-container .user-name{
+        font-size: 1.25rem;        
+    }
+
+}
