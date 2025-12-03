@@ -22,22 +22,30 @@ body {
 }
 
 
-/* navigation bar */
+/* 
+=========================
+main navigation styling 
+=========================
+*/
 .main-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;    
+    flex-wrap: wrap;
 }
 
 /* link contaienr (left side of navigation) */
 .link-container {
     display: flex;
+    flex-wrap: wrap;
     gap:3rem;
 }
 
 .link-container .links {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    
 }
 
 .link-container a {
@@ -65,9 +73,81 @@ body {
     object-fit: cover; 
 } */
 
-
 .info-container #profile img{
     width: 50px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
+
+
+/* 
+=========================
+main product styling
+=========================
+*/
+
+
+/* items images */
+.item {
+    display: flex;
+}
+
+.item-images {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    grid-template-areas: 
+                    'main main main main'
+                    'main main main main'
+                    'main main main main'
+                    'tum1 tum2 tum3 tum4';    
+}    
+
+/* TODO : these should be buttons (radio buttons) i think */
+.item-images img {
+    border-radius: 1rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+
+/* items info */
+.outer-info {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.item-info {
+    width: 60%;
+    align-self: center;
+}
+
+.company-name {
+    color: var(--dark-graiesh-blue);
+    font-size:1rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+}
+
+.item-name {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.item-description {
+    color: var(--dark-graiesh-blue);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.pricing .wrapper {
+    display: flex;
+    gap: .75rem;
+}
+
+
+
+
