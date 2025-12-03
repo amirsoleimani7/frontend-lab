@@ -1,0 +1,80 @@
+@import url("main-style.css");
+
+/* 
+=========================
+main product styling
+=========================
+*/
+
+
+
+/* items images */
+.item {
+    display: flex;
+}
+
+.outer-image {
+    width: 50%;
+}
+
+.item-images {
+    justify-self: end;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0 , 1fr));
+
+    gap: 1rem;
+    grid-template-areas: 
+                    'main main main main'
+                    'main main main main'
+                    'main main main main'
+                    'tum1 tum2 tum3 tum4';    
+}    
+
+/* TODO : these should be buttons (radio buttons) i think */
+.item-images img {
+    border-radius: 1rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+
+/* items info */
+.outer-info {
+    width: 50%;
+    display: flex;
+}
+
+.item-info {
+    width: 60%;
+    align-self: center;
+    justify-self: start;
+    margin-left: 5rem;
+}
+
+.company-name {
+    color: var(--dark-graiesh-blue);
+    font-size:1rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+}
+
+.item-name {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.item-description {
+    color: var(--dark-graiesh-blue);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.pricing .wrapper {
+    display: flex;
+    gap: .75rem;
+}
+
+

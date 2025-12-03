@@ -1,0 +1,59 @@
+@import url("main-style.css");
+
+/* 
+=========================
+main navigation styling 
+=========================
+*/
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    flex-wrap: wrap;
+}
+
+/* link contaienr (left side of navigation) */
+.link-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap:3rem;
+}
+
+.link-container .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+}
+
+.link-container a {
+    text-decoration: none;
+    color: var(--dark-graiesh-blue);
+    font-weight: 400;
+}
+
+/* info conatiner */
+.info-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.info-container .item-button {
+    background: transparent;
+    border: none;
+    outline: none ;
+}
+
+/* .info-container #cart img{
+    width: 20px; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+} */
+
+.info-container #profile img{
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
