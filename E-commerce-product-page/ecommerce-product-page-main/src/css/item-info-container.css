@@ -6,8 +6,6 @@ main product styling
 =========================
 */
 
-
-
 /* items images */
 .item {
     display: flex;
@@ -72,9 +70,36 @@ main product styling
     font-weight: 400;
 }
 
+.pricing {
+    font-weight: 700;
+}
+
 .pricing .wrapper {
     display: flex;
-    gap: .75rem;
+    align-items: center;
+    gap: 1rem;
 }
+
+.wrapper * {
+    margin-bottom: .5rem;
+}
+
+.dis-price {
+    font-size: 1.5rem;
+}
+
+.discount {
+    padding: .25rem .5rem;
+    background-color: black;
+    color: white;
+    border-radius: .25rem ;
+}
+
+.real-price {
+    font-size: 1rem;
+    margin-top: 0px ;
+    text-decoration: line-through;    
+}
+
 
 
