@@ -13,10 +13,11 @@
     --main-font-family : 'Kumbh Sans';
 }
 
+
 /* main body's styling */
 body {
     font-family: var(--main-font-family);
-    padding: 2rem 3rem;
+    padding: 5vh 10vw;
     /* height: 100vh; */
 }
 
@@ -52,13 +53,21 @@ body {
     gap: 2rem;
 }
 
-.info-container .cart {
+.info-container .item-button {
     background: transparent;
     border: none;
     outline: none ;
 }
 
-.info-container .cart img{
-    width: 30px;
+/* .info-container #cart img{
+    width: 20px; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+} */
+
+
+.info-container #profile img{
+    width: 50px;
     aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
