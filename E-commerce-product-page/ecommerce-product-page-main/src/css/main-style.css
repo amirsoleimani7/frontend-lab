@@ -1,0 +1,64 @@
+:root {
+    /* primary colors */
+    --orange-color :  hsl(26, 100%, 55%);
+    --pale-orange-color : hsl(25, 100%, 94%);
+    
+    /* secondary colors */
+    --very-dark-blue : hsl(220, 13%, 13%);
+    --dark-graiesh-blue : hsl(219, 9%, 45%);
+    --gray-blue : hsl(220, 14%, 75%);
+    --light-gray-blue : hsl(223, 64%, 98%);
+
+    /* main fontfamily */
+    --main-font-family : 'Kumbh Sans';
+}
+
+/* main body's styling */
+body {
+    font-family: var(--main-font-family);
+    padding: 2rem 3rem;
+    /* height: 100vh; */
+}
+
+
+/* navigation bar */
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+/* link contaienr (left side of navigation) */
+.link-container {
+    display: flex;
+    gap:3rem;
+}
+
+.link-container .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.link-container a {
+    text-decoration: none;
+    color: var(--dark-graiesh-blue);
+    font-weight: 400;
+}
+
+/* info conatiner */
+.info-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.info-container .cart {
+    background: transparent;
+    border: none;
+    outline: none ;
+}
+
+.info-container .cart img{
+    width: 30px;
+    aspect-ratio: 1 / 1;
+}
