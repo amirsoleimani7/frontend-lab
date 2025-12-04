@@ -29,7 +29,6 @@ main navigation styling
                     'tum1 tum2 tum3 tum4';    
 }    
 
-/* TODO : these should be buttons (radio buttons) i think */
 .item-images input[type=radio] {
     background-color: red;
     appearance: none;
@@ -40,11 +39,10 @@ main navigation styling
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
-
 }
 
 .item-images input[type=radio]:checked+label{
-    outline: 2px solid red;
+    outline: 3px solid var(--orange-color);
 }
 
 .item-images img {
@@ -53,7 +51,6 @@ main navigation styling
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
-
 
 .main-navigation {
     display: flex;
@@ -93,6 +90,7 @@ main navigation styling
     background: transparent;
     border: none;
     outline: none ;
+    position: relative;
 }
 
 /* .info-container #cart img{
@@ -105,5 +103,33 @@ main navigation styling
     width: 50px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+}
+
+
+/* top cart styling  */
+.item-button .cart-info{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    z-index: 1;
+    
+    /*  psotioning*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 250px;
+
+    border: 1px solid black;    
+    width: 400px;
+    height: 400px;
+    border-radius: .5rem;
+    box-shadow: 0px 20px 20px var(--gray-blue);
+    border: 0px;
+}
+.item-button:hover {
+    cursor: pointer;
+    
 }
 
