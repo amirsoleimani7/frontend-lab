@@ -94,7 +94,6 @@ main product styling
     
 }
 
-
 #add-to-cart {
     width: 60%;
     font-weight: 700;
@@ -106,10 +105,4 @@ main product styling
     gap: 1rem;
     justify-content: center;
 }
-
-/* change color of svg  */
-#add-to-cart img {
-
-}
-
 
