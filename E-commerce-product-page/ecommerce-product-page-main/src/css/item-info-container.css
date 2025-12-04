@@ -101,5 +101,45 @@ main product styling
     text-decoration: line-through;    
 }
 
+.buy-section {
+    display: flex;
+    gap: 1rem;
+}
+
+.number-of-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    background-color: var(--gray-blue);
+    font-weight: 700;
+    border-radius: .5rem;
+}
+
+.number-of-items button {
+    background: transparent;
+    outline: none;
+    border: none; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+#add-to-cart {
+    width: 60%;
+    font-weight: 700;
+    background-color: var(--orange-color);
+    border:none;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+#add-to-cart img {
+
+}
 
 
