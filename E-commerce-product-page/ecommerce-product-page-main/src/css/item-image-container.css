@@ -5,6 +5,39 @@
 main navigation styling 
 =========================
 */
+/* items images */
+.item {
+    display: flex;
+}
+
+.outer-image {
+    width: 50%;
+}
+
+.item-images {
+    justify-self: end;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0 , 1fr));
+
+    gap: 1rem;
+    grid-template-areas: 
+                    'main main main main'
+                    'main main main main'
+                    'main main main main'
+                    'tum1 tum2 tum3 tum4';    
+}    
+
+/* TODO : these should be buttons (radio buttons) i think */
+.item-images img {
+    border-radius: 1rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+
 .main-navigation {
     display: flex;
     justify-content: space-between;
