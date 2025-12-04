@@ -30,6 +30,20 @@ main navigation styling
 }    
 
 /* TODO : these should be buttons (radio buttons) i think */
+.item-images input[type=radio] {
+    background-color: red;
+    appearance: none;
+}
+
+.item-images label {
+    border-radius: 1rem;
+    outline: 2px solid red;
+}
+
+.item-images input[type=radio]:checked+label{
+    border:2px solid black;
+}
+
 .item-images img {
     border-radius: 1rem;
     width: 100%;

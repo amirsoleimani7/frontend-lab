@@ -79,7 +79,7 @@ main product styling
     justify-content: space-around;
     align-items: center;
     width: 40%;
-    background-color: var(--gray-blue);
+    background-color: var(--light-gray-blue);
     font-weight: 700;
     border-radius: .5rem;
 }
@@ -97,6 +97,7 @@ main product styling
 #add-to-cart {
     width: 60%;
     font-weight: 700;
+    font-size: 1rem;
     background-color: var(--orange-color);
     border:none;
     border-radius: .5rem;
@@ -105,4 +106,5 @@ main product styling
     gap: 1rem;
     justify-content: center;
 }
+
 
