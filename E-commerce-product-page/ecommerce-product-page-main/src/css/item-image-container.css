@@ -108,12 +108,14 @@ main navigation styling
 /* top cart styling  */
 .item-button .cart-info{
     position: absolute;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     z-index: 1;
     
     /*  psotioning*/
     right: -200px;
-    top: 40px;
+    top: 50px;
     
     /* size of the cart box */
     width: 400px;
@@ -140,7 +142,16 @@ main navigation styling
 }
 
 .sep {
+    margin-top: 1.25rem;
     width: 100%;
-    border-bottom: 1px solid black;
+    outline: 0px;
+    border-bottom: 1px solid var(--dark-graiesh-blue);
 }
 
+.bought-info {
+    flex: 1 1 auto;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
