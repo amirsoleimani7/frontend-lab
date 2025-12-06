@@ -35,8 +35,7 @@ add_to_cart_button.addEventListener('click' , () =>{
 })
 
 // reading current photo selected
-let radio_pics = document.getElementsByName('photo');
-
+var radio_pics = document.getElementsByName('photo');
 
 // which pic are we on at the moment
 let current_index = 1;
@@ -104,10 +103,8 @@ function make_plus_and_minus() {
     next_button.id = 'next';
     // event for going to the other picture
     next_button.addEventListener('click' , () => {
-        
         current_index = (current_index == 4) ? 1 : current_index + 1;
-
-        for (let i = 1; i <= 4;++i){
+        for (let i = 4; i <= 8;++i){
             if (radio_pics[i].value == current_index){
                 radio_pics[i].checked = true;
                 update_image(radio_pics[i].value);
@@ -126,8 +123,10 @@ function make_plus_and_minus() {
     // event for going to the prevv picture
     prev_button.addEventListener('click' , () => {
 
+        console.log(`current index is : ${current_index}`);
+        
         current_index = (current_index == 1) ? 4 : current_index - 1;
-        for (let i = 1; i <= 4;++i){
+        for (let i = 4; i <= 8;++i){
             if (radio_pics[i].value == current_index){
                 radio_pics[i].checked = true;
                 update_image(radio_pics[i].value);
@@ -162,9 +161,10 @@ function making_light_box(){
     
     for (let i = 0; i < inner_div.querySelectorAll('input[type=radio]').length ; ++i){
         inner_div.querySelectorAll('input[type=radio]')[i].id = `tum${i+1}-other`;
+        // inner_div.querySelectorAll('input[type=radio]')[i].value = i + 5;
         inner_div.querySelectorAll('.radio-lbl')[i].htmlFor = `tum${i+1}-other`;
     }
-
+    
     lightbox.appendChild(inner_div);
 
     radio_pics = document.querySelectorAll('input[type=radio]');
