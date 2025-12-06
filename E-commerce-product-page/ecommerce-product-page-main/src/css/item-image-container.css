@@ -74,7 +74,6 @@ main navigation styling
     height: 24px;
 }
 
-
 #next div {
     background-color: black;     /* background stays white */
     mask: url('../../images/icon-next.svg') no-repeat center;
@@ -82,7 +81,6 @@ main navigation styling
     width: 24px;
     height: 24px;
 }
-
 
 #next div:hover , #prev div:hover {
     cursor: pointer;
@@ -194,15 +192,37 @@ main navigation styling
 .link-container .links {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    
+    gap: 2rem;    
 }
 
 .link-container a {
     text-decoration: none;
     color: var(--dark-graiesh-blue);
     font-weight: 400;
+    position: relative;
 }
+
+.link-container a:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    left: 0px;
+    bottom: -3.5rem;
+    border: 0px;
+    outline: 0px;
+    background-color: var(--orange-color);
+    transition: all 0.2s ease;
+}
+
+.link-container a:hover {
+    color: black;    
+}
+
+.link-container a:hover:before{
+    width: 100%;
+}
+
 
 /* info conatiner */
 .info-container {
