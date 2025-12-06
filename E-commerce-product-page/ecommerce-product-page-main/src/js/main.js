@@ -20,8 +20,6 @@ remove_item_button.addEventListener('click' , () => {
     }
 })
 
-
-
 // add to cart functionality 
 let add_to_cart_button = document.querySelector('#add-to-cart');
 let number_of_items_on_cart = document.querySelector('.current-number-of-items');
@@ -34,9 +32,7 @@ add_to_cart_button.addEventListener('click' , () =>{
     else{        
         number_of_items_on_cart.style.display = 'none';
     }
-})    
-
-
+})
 
 // reading current photo selected
 let radio_pics = document.getElementsByName('photo');
@@ -48,13 +44,19 @@ let current_index = 1;
 function update_image(image_number) {
 
     let current_image_class = `.image-${image_number}`;
-    let image_to_show = document.querySelector(current_image_class);
-    image_to_show.style.display = 'block';
+    let image_to_show = document.querySelectorAll(current_image_class);
+    for (let i =0 ;i < image_to_show.length ;++i){
+        image_to_show[i].style.display = 'block';
+    }
+    
     
     for (let i = 1; i <= 4;++i){
         if (i != image_number){
             let this_one = `.image-${i}`;
-            document.querySelector(this_one).style.display = 'none';
+            let _none_images = document.querySelectorAll(this_one);
+            for (let i = 0 ; i < _none_images.length ;++i){
+                _none_images[i].style.display = 'none';
+            }
         }
     }
 }
@@ -63,7 +65,6 @@ function update_image(image_number) {
 for (let i = 0 ; i < radio_pics.length ; ++i){
     radio_pics[i].addEventListener('click' , () => {
         current_index = parseInt(radio_pics[i].value);
-        console.log(`this is : ${radio_pics[i].value}`);
         update_image(radio_pics[i].value);
     })
 }
@@ -101,10 +102,7 @@ function make_plus_and_minus() {
     next_button.id = 'next';
     // event for going to the other picture
     next_button.addEventListener('click' , () => {
-        console.log('we are in the next');
-        console.log(`current_index is  : ${current_index}`);
         
-
         current_index = (current_index == 4) ? 1 : current_index + 1;
 
         for (let i = 1; i <= 4;++i){
@@ -116,8 +114,6 @@ function make_plus_and_minus() {
     })
 
 
-
-
     let next_image = document.createElement('img');
     next_image.src = '../../images/icon-next.svg';
     next_button.appendChild(next_image);
@@ -126,8 +122,6 @@ function make_plus_and_minus() {
     prev_button.id = 'prev';
     // event for going to the prevv picture
     prev_button.addEventListener('click' , () => {
-        console.log('we are in the prev');
-        console.log(`current_index is  : ${current_index}`);
 
         current_index = (current_index == 1) ? 4 : current_index - 1;
         for (let i = 1; i <= 4;++i){
@@ -169,21 +163,8 @@ function making_light_box(){
 for (let i = 0; i < images.length ; ++i){
     images[i].addEventListener('click' , (e) => {
         // what is the current iamge that is clicked on (first one is diffrent)
-        console.log(`the target is : ${e.target.classList[0]}`);
         making_light_box();
         
         lightbox.classList.add('active');
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
