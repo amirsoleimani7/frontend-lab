@@ -90,10 +90,15 @@ main product styling
     border: none; 
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;    
+    transition: all .1s ease;    
 }
 
+.number-of-items button:active {
+    transform: translateY(2px);        
+}
+
+/* add to cart styling */
 #add-to-cart {
     width: 60%;
     font-weight: 700;
