@@ -54,7 +54,7 @@ function update_image(image_number) {
     for (let i = 1; i <= 4;++i){
         if (i != image_number){
             let this_one = `.image-${i}`;
-            document.querySelector(this_one).style.display = 'none';;
+            document.querySelector(this_one).style.display = 'none';
         }
     }
 }
@@ -62,7 +62,7 @@ function update_image(image_number) {
 // adding event listeners 
 for (let i = 0 ; i < radio_pics.length ; ++i){
     radio_pics[i].addEventListener('click' , () => {
-        current_index = radio_pics[i].value;
+        current_index = parseInt(radio_pics[i].value);
         console.log(`this is : ${radio_pics[i].value}`);
         update_image(radio_pics[i].value);
     })
@@ -101,7 +101,12 @@ function make_plus_and_minus() {
     next_button.id = 'next';
     // event for going to the other picture
     next_button.addEventListener('click' , () => {
+        console.log('we are in the next');
+        console.log(`current_index is  : ${current_index}`);
+        
+
         current_index = (current_index == 4) ? 1 : current_index + 1;
+
         for (let i = 1; i <= 4;++i){
             if (radio_pics[i].value == current_index){
                 radio_pics[i].checked = true;
@@ -119,7 +124,22 @@ function make_plus_and_minus() {
     
     let prev_button = document.createElement('button');
     prev_button.id = 'prev';
-        
+    // event for going to the prevv picture
+    prev_button.addEventListener('click' , () => {
+        console.log('we are in the prev');
+        console.log(`current_index is  : ${current_index}`);
+
+        current_index = (current_index == 1) ? 4 : current_index - 1;
+        for (let i = 1; i <= 4;++i){
+            if (radio_pics[i].value == current_index){
+                radio_pics[i].checked = true;
+                update_image(radio_pics[i].value);
+            }
+       }
+    })
+
+    
+
     let prev_image = document.createElement('img');
     prev_image.src = '../../images/icon-previous.svg';
     prev_button.appendChild(prev_image);
