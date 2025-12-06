@@ -37,6 +37,7 @@ add_to_cart_button.addEventListener('click' , () =>{
 // reading current photo selected
 let radio_pics = document.getElementsByName('photo');
 
+
 // which pic are we on at the moment
 let current_index = 1;
 
@@ -62,17 +63,18 @@ function update_image(image_number) {
 }
 
 // adding event listeners 
+
 for (let i = 0 ; i < radio_pics.length ; ++i){
-    radio_pics[i].addEventListener('click' , () => {
+    radio_pics[i].addEventListener('click' , (e) => {
+        console.log(`number of photos is : ${radio_pics.length}`);
+        console.log(`target is : ${e.target.id}`);
         current_index = parseInt(radio_pics[i].value);
-        update_image(radio_pics[i].value);
+        update_image(parseInt(radio_pics[i].value));
     })
 }
 
 // see which image is clicked on 
 let images = document.querySelectorAll('.image');
-
-
 
     
 var lightbox = document.createElement('div');
@@ -112,14 +114,15 @@ function make_plus_and_minus() {
             }
        }
     })
-
-
+    
     let next_image = document.createElement('img');
     next_image.src = '../../images/icon-next.svg';
     next_button.appendChild(next_image);
     
     let prev_button = document.createElement('button');
     prev_button.id = 'prev';
+
+    
     // event for going to the prevv picture
     prev_button.addEventListener('click' , () => {
 
@@ -157,6 +160,18 @@ function making_light_box(){
     make_close_button(inner_div);
     make_plus_and_minus();
     lightbox.appendChild(inner_div);
+    
+    console.log(`radio len is : ${radio_pics.length}`);
+    
+    for (let i = 0 ; i < radio_pics.length ; ++i){
+        radio_pics[i].addEventListener('click' , (e) => {
+            console.log(`number of photos is : ${radio_pics.length}`);
+            console.log(`target is : ${e.target.value}`);
+            current_index = parseInt(radio_pics[i].value);
+            update_image(parseInt(radio_pics[i].value));
+        })
+    }
+
 }
 
 

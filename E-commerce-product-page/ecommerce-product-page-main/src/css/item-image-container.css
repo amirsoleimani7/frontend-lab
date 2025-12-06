@@ -70,11 +70,6 @@ main navigation styling
     cursor: pointer;
 }
 
-
-
-
-
-
 /* lightbox styling */
 #lightbox {
     width: 100%;
@@ -117,12 +112,11 @@ main navigation styling
                     'tum1 tum2 tum3 tum4';    
 }    
 
-.item-images input[type=radio] {
-    background-color: red;
+.radio-btn {
     appearance: none;
 }
 
-.item-images label {
+.radio-lbl {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,7 +126,7 @@ main navigation styling
     transition: all .2s ease;
 }
 
-.item-images label::before {
+.radio-lbl::before {
     content: "";
     position: absolute;
     border-radius: 1rem;
@@ -144,16 +138,16 @@ main navigation styling
     transition: all .2s ease;
 }
 
-.item-images input[type=radio]:hover +label {
+.radio-btn:hover +.radio-lbl {
     cursor: pointer;
     scale: 1.02;
 }
 
-.item-images input[type=radio]:checked+label::before {
+.radio-btn:checked+.radio-lbl::before {
     width: 100%;
 }
 
-.item-images input[type=radio]:checked+label{
+.radio-btn:checked+.radio-lbl{
     outline: 3px solid var(--orange-color);
 }
 
