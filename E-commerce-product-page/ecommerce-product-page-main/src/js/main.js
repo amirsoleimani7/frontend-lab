@@ -112,8 +112,8 @@ function make_plus_and_minus() {
        }
     })
     
-    let next_image = document.createElement('img');
-    next_image.src = '../../images/icon-next.svg';
+    let next_image = document.createElement('div');
+    // next_image.data = '../../images/icon-next.svg';
     next_button.appendChild(next_image);
     
     let prev_button = document.createElement('button');
@@ -136,8 +136,8 @@ function make_plus_and_minus() {
 
     
 
-    let prev_image = document.createElement('img');
-    prev_image.src = '../../images/icon-previous.svg';
+    let prev_image = document.createElement('div');
+    // prev_image.data = '../../images/icon-previous.svg';
     prev_button.appendChild(prev_image);
 
     inner_div.appendChild(prev_button);
@@ -165,8 +165,9 @@ function making_light_box(){
         inner_div.querySelectorAll('.radio-lbl')[i].htmlFor = `tum${i+1}-other`;
     }
     
+    
     lightbox.appendChild(inner_div);
-
+    
     radio_pics = document.querySelectorAll('input[type=radio]');
     for (let i = 0 ; i < radio_pics.length ; ++i){
         radio_pics[i].addEventListener('click' , (e) => {
@@ -174,7 +175,8 @@ function making_light_box(){
             update_image(parseInt(radio_pics[i].value));
         })
     }
-
+    
+    
 }
 
 

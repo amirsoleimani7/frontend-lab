@@ -66,8 +66,27 @@ main navigation styling
     left: -20px;    
 }
 
-#next:hover , #prev:hover {
+#prev div {
+    background-color: black;     /* background stays white */
+    mask: url('../../images/icon-previous.svg') no-repeat center;
+    -webkit-mask: url('../../images/icon-previous.svg') no-repeat center;
+    width: 24px;
+    height: 24px;
+}
+
+
+#next div {
+    background-color: black;     /* background stays white */
+    mask: url('../../images/icon-next.svg') no-repeat center;
+    -webkit-mask: url('../../images/icon-next.svg') no-repeat center;
+    width: 24px;
+    height: 24px;
+}
+
+
+#next div:hover , #prev div:hover {
     cursor: pointer;
+    background-color: var(--orange-color);
 }
 
 /* lightbox styling */
