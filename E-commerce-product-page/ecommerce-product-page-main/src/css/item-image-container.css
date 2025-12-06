@@ -57,14 +57,21 @@ main navigation styling
 }
 
 #next {
-    top: 30%;
-    right: 0px;    
+    top: 33%;
+    right: -20px;
 }
 
 #prev {
-    top: 30%;
-    left: 0px;    
+    top: 33%;
+    left: -20px;    
 }
+
+#next:hover , #prev:hover {
+    cursor: pointer;
+}
+
+
+
 
 
 
