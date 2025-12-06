@@ -41,7 +41,9 @@ add_to_cart_button.addEventListener('click' , () =>{
 // reading current photo selected
 let radio_pics = document.getElementsByName('photo');
 
-function make_image(image_number) {
+
+// updating current image
+function update_image(image_number) {
 
     let current_image_class = `.image-${image_number}`;
     let image_to_show = document.querySelector(current_image_class);
@@ -55,12 +57,31 @@ function make_image(image_number) {
     }
 }
 
+// adding event listeners 
 for (let i = 0 ; i < radio_pics.length ; ++i){
     radio_pics[i].addEventListener('click' , () => {
         console.log(`this is : ${radio_pics[i].value}`)
-        make_image(radio_pics[i].value);
+        update_image(radio_pics[i].value);
     })
 }
+
+
+
+// see which image is clicked on 
+let images = document.querySelectorAll('.image');
+
+for (let i = 0; i < images.length ; ++i){
+    images[i].addEventListener('click' , (e) => {
+        
+        // what is the current iamge that is clicked on
+        console.log(`the ttarget is : ${e.target.classList}`);
+        
+    })
+}
+
+
+
+
 
 
 
