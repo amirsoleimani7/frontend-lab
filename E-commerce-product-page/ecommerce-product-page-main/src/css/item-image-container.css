@@ -66,20 +66,24 @@ main navigation styling
     left: -20px;    
 }
 
-#prev div {
+#prev div, #next div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;     /* background stays white */
-    mask: url('../../images/icon-previous.svg') no-repeat center;
-    -webkit-mask: url('../../images/icon-previous.svg') no-repeat center;
     width: 24px;
     height: 24px;
 }
 
+#prev div{ 
+    mask: url('../../images/icon-previous.svg') no-repeat center;
+    -webkit-mask: url('../../images/icon-previous.svg') no-repeat center;
+}
+
+
 #next div {
-    background-color: black;     /* background stays white */
     mask: url('../../images/icon-next.svg') no-repeat center;
     -webkit-mask: url('../../images/icon-next.svg') no-repeat center;
-    width: 24px;
-    height: 24px;
 }
 
 #next div:hover , #prev div:hover {
@@ -258,8 +262,6 @@ main navigation styling
 } */
 
 .info-container #profile {
-
-
     position: relative;
 
     border-radius: 50%;
@@ -269,7 +271,15 @@ main navigation styling
     justify-content: center;
     align-items: center;
 
-    transition: all 2s linear;
+    transition: all .2s ease;
+}
+
+.info-container #profile:hover {
+    cursor: pointer;        
+}
+
+.info-container #profile:active {
+    scale: 1.05;    
 }
 
 @property --angle{
@@ -299,15 +309,11 @@ main navigation styling
     }
 }
 
-.info-container #profile:hover::after  ,.info-container #profile:hover::before{
-    cursor: pointer;   
-    animation-play-state: running;
-}
-
 .info-container #profile::before{
     filter: blur(1.5rem);
     opacity: .5;
 }
+
 
 .info-container #profile img{
     width: 50px;

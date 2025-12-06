@@ -112,8 +112,8 @@ function make_plus_and_minus() {
        }
     })
     
+    // adding svg as mask
     let next_image = document.createElement('div');
-    // next_image.data = '../../images/icon-next.svg';
     next_button.appendChild(next_image);
     
     let prev_button = document.createElement('button');
@@ -134,10 +134,9 @@ function make_plus_and_minus() {
        }
     })
 
-    
 
+    // adding svg as mask 
     let prev_image = document.createElement('div');
-    // prev_image.data = '../../images/icon-previous.svg';
     prev_button.appendChild(prev_image);
 
     inner_div.appendChild(prev_button);
@@ -174,17 +173,14 @@ function making_light_box(){
             current_index = parseInt(radio_pics[i].value);
             update_image(parseInt(radio_pics[i].value));
         })
-    }
-    
-    
+    } 
 }
 
 
 for (let i = 0; i < images.length ; ++i){
     images[i].addEventListener('click' , (e) => {
-        // what is the current iamge that is clicked on (first one is diffrent)
+        // what is the current image that is clicked on (first one is diffrent)
         making_light_box();
-        
         lightbox.classList.add('active');
     })
 }
