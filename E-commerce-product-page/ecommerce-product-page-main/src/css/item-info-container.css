@@ -110,9 +110,9 @@ main product styling
     align-items: center;
     gap: 1rem;
     justify-content: center;
-
     transition: all .1s ease;
 }
+
 
 #add-to-cart:hover{
     cursor: pointer;
