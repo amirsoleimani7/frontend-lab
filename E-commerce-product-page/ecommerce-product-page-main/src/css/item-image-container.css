@@ -40,6 +40,8 @@ main navigation styling
     align-items: center;
     border-radius: 1rem;
     position: relative;
+
+    transition: all .2s ease;
 }
 
 .item-images label::before {
@@ -52,6 +54,11 @@ main navigation styling
     opacity: 40%;
     background-color: white ;
     transition: all .2s ease;
+}
+
+.item-images input[type=radio]:hover +label {
+    cursor: pointer;
+    scale: 1.02;
 }
 
 .item-images input[type=radio]:checked+label::before {
@@ -129,11 +136,65 @@ main navigation styling
     object-fit: cover; 
 } */
 
+.info-container #profile {
+
+
+    position: relative;
+
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 2s linear;
+}
+
+
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.info-container #profile::after  ,.info-container #profile::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius:inherit ;
+    z-index: -1;
+    padding: 3px;
+    background-image: conic-gradient(from var(--angle), transparent,var(--orange-color));
+    animation: 1s spin linear infinite;
+}
+
+@keyframes spin {
+    from {
+        --angle : 0deg;
+    }
+    to {
+        --angle : 360deg;
+    }
+}
+
+.info-container #profile:hover::after  ,.info-container #profile:hover::before{
+    cursor: pointer;   
+    animation-play-state: running;
+}
+
+.info-container #profile::before{
+    filter: blur(1.5rem);
+    opacity: .5;
+}
+
 .info-container #profile img{
     width: 50px;
+    height: 50px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    
 }
 
 /* top cart styling  */
