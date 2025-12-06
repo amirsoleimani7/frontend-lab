@@ -94,6 +94,10 @@ main product styling
     transition: all .1s ease;    
 }
 
+.number-of-items button:hover {
+    cursor: pointer;
+}
+
 .number-of-items button:active {
     transform: translateY(2px);        
 }
@@ -120,12 +124,3 @@ main product styling
 #add-to-cart:active {
     transform: translateY(2px);    
 }
-
-
-
-
-
-
-
-
-

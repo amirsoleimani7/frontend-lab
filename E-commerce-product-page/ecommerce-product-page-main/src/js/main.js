@@ -38,6 +38,34 @@ add_to_cart_button.addEventListener('click' , () =>{
 
 
 
+// reading current photo selected
+let radio_pics = document.getElementsByName('photo');
+
+function make_image(image_number) {
+
+    let current_image_class = `.image-${image_number}`;
+    let image_to_show = document.querySelector(current_image_class);
+    image_to_show.style.display = 'block';
+    
+    for (let i = 1; i <= 4;++i){
+        if (i != image_number){
+            let this_one = `.image-${i}`;
+            document.querySelector(this_one).style.display = 'none';;
+        }
+    }
+}
+
+for (let i = 0 ; i < radio_pics.length ; ++i){
+    radio_pics[i].addEventListener('click' , () => {
+        console.log(`this is : ${radio_pics[i].value}`)
+        make_image(radio_pics[i].value);
+    })
+}
+
+
+
+
+
 
 
 
