@@ -41,6 +41,8 @@ add_to_cart_button.addEventListener('click' , () =>{
 // reading current photo selected
 let radio_pics = document.getElementsByName('photo');
 
+// which pic are we on at the moment
+let current_index = 1;
 
 // updating current image
 function update_image(image_number) {
@@ -60,11 +62,11 @@ function update_image(image_number) {
 // adding event listeners 
 for (let i = 0 ; i < radio_pics.length ; ++i){
     radio_pics[i].addEventListener('click' , () => {
-        console.log(`this is : ${radio_pics[i].value}`)
+        current_index = radio_pics[i].value;
+        console.log(`this is : ${radio_pics[i].value}`);
         update_image(radio_pics[i].value);
     })
 }
-
 
 // see which image is clicked on 
 let images = document.querySelectorAll('.image');
@@ -97,7 +99,20 @@ function make_plus_and_minus() {
     
     let next_button = document.createElement('button');
     next_button.id = 'next';
-    
+    // event for going to the other picture
+    next_button.addEventListener('click' , () => {
+        current_index = (current_index == 4) ? 1 : current_index + 1;
+        for (let i = 1; i <= 4;++i){
+            if (radio_pics[i].value == current_index){
+                radio_pics[i].checked = true;
+                update_image(radio_pics[i].value);
+            }
+       }
+    })
+
+
+
+
     let next_image = document.createElement('img');
     next_image.src = '../../images/icon-next.svg';
     next_button.appendChild(next_image);
@@ -111,7 +126,6 @@ function make_plus_and_minus() {
 
     inner_div.appendChild(prev_button);
     inner_div.appendChild(next_button);
-    
 }
 
 
