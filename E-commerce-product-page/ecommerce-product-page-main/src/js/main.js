@@ -93,6 +93,28 @@ function make_close_button(inner_div) {
 }
 
 
+function make_plus_and_minus() {
+    
+    let next_button = document.createElement('button');
+    next_button.id = 'next';
+    
+    let next_image = document.createElement('img');
+    next_image.src = '../../images/icon-next.svg';
+    next_button.appendChild(next_image);
+    
+    let prev_button = document.createElement('button');
+    prev_button.id = 'prev';
+        
+    let prev_image = document.createElement('img');
+    prev_image.src = '../../images/icon-previous.svg';
+    prev_button.appendChild(prev_image);
+
+    inner_div.appendChild(prev_button);
+    inner_div.appendChild(next_button);
+    
+}
+
+
 
 function making_light_box(){
     
@@ -105,6 +127,7 @@ function making_light_box(){
     inner_div.innerHTML = document.querySelector('.outer-image').innerHTML;
     
     make_close_button(inner_div);
+    make_plus_and_minus();
     lightbox.appendChild(inner_div);
 }
 
@@ -114,6 +137,7 @@ for (let i = 0; i < images.length ; ++i){
         // what is the current iamge that is clicked on (first one is diffrent)
         console.log(`the target is : ${e.target.classList[0]}`);
         making_light_box();
+        
         lightbox.classList.add('active');
     })
 }
