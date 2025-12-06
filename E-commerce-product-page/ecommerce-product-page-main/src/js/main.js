@@ -159,14 +159,17 @@ function making_light_box(){
     
     make_close_button(inner_div);
     make_plus_and_minus();
+    
+    for (let i = 0; i < inner_div.querySelectorAll('input[type=radio]').length ; ++i){
+        inner_div.querySelectorAll('input[type=radio]')[i].id = `tum${i+1}-other`;
+        inner_div.querySelectorAll('.radio-lbl')[i].htmlFor = `tum${i+1}-other`;
+    }
+
     lightbox.appendChild(inner_div);
-    
-    console.log(`radio len is : ${radio_pics.length}`);
-    
+
+    radio_pics = document.querySelectorAll('input[type=radio]');
     for (let i = 0 ; i < radio_pics.length ; ++i){
         radio_pics[i].addEventListener('click' , (e) => {
-            console.log(`number of photos is : ${radio_pics.length}`);
-            console.log(`target is : ${e.target.value}`);
             current_index = parseInt(radio_pics[i].value);
             update_image(parseInt(radio_pics[i].value));
         })
