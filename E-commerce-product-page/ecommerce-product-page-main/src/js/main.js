@@ -1,12 +1,10 @@
-// initialization of the thing
-
 // adding and removing item 
 let add_item_button = document.querySelector('#add-item');
 let remove_item_button = document.querySelector('#remove-item');
 let item_number = document.querySelector('#items-no');
 
+// initialization of the thing
 item_number.textContent = 0;
-
 
 // adding an item
 add_item_button.addEventListener('click' , () => {
@@ -37,6 +35,7 @@ add_to_cart_button.addEventListener('click' , () =>{
         number_of_items_on_cart.style.display = 'none';
     }
 })    
+
 
 
 

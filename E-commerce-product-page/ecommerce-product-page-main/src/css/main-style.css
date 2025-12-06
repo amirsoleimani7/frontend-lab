@@ -16,6 +16,11 @@
 
 /* main body's styling */
 body {
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    
     font-family: var(--main-font-family);
     padding: 5vh 10vw;
     /* height: 100vh; */
