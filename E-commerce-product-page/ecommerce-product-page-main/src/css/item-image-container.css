@@ -8,11 +8,35 @@ main navigation styling
 /* items images */
 .item {
     display: flex;
+    justify-content: center;
 }
 
 .outer-image {
-    width: 50%;
+    width: 40%;
 }
+
+.image:hover {
+    cursor: pointer;
+}
+
+
+/*  close button styling */
+#close-light-box {
+    position: absolute;
+    top: -2.5rem ;
+    right: 0px ;
+    scale: 1.2;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#close-light-box:hover {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(51%) sepia(91%) saturate(1138%) hue-rotate(347deg) brightness(100%) contrast(102%);
+}
+
 
 /* lightbox styling */
 #lightbox {
@@ -33,7 +57,9 @@ main navigation styling
     align-items: center;    
 }
 
-
+#inner_div {
+    width: 35%;
+}
 
 .item-images {
     justify-self: end;
@@ -171,8 +197,6 @@ main navigation styling
 
     transition: all 2s linear;
 }
-
-
 
 @property --angle{
     syntax: "<angle>";

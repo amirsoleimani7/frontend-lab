@@ -66,33 +66,54 @@ for (let i = 0 ; i < radio_pics.length ; ++i){
 }
 
 
-
 // see which image is clicked on 
 let images = document.querySelectorAll('.image');
 
 
-// making the lightbox element ... 
-var lightbox = document.createElement('div');
-lightbox.id = 'lightbox';
-document.body.appendChild(lightbox);
 
-lightbox.addEventListener('click' , e => {
-    lightbox.removeChild(e.target);
-    lightbox.classList.remove('active');
-})
+    
+var lightbox = document.createElement('div');
+var inner_div = document.createElement('div');
+
+// making the lightbox element ... 
+function make_close_button(inner_div) {
+    var close_button = document.createElement('button');
+    close_button.id = 'close-light-box';
+    let close_image = document.createElement('img');
+    close_image.src = '../../images/icon-close.svg';
+    close_button.appendChild(close_image);
+    
+
+    // adding closing functionality
+    close_button.addEventListener('click' , () => {
+        lightbox.classList.remove('active');
+    })
+
+    inner_div.appendChild(close_button);
+}
+
+
+
+function making_light_box(){
+    
+    lightbox.id = 'lightbox';
+    inner_div.id = 'inner_div';
+    inner_div.style.position = 'relative';
+    
+
+    document.body.appendChild(lightbox);
+    inner_div.innerHTML = document.querySelector('.outer-image').innerHTML;
+    
+    make_close_button(inner_div);
+    lightbox.appendChild(inner_div);
+}
 
 
 for (let i = 0; i < images.length ; ++i){
     images[i].addEventListener('click' , (e) => {
         // what is the current iamge that is clicked on (first one is diffrent)
-        console.log(`the ttarget is : ${e.target.classList[0]}`);
-        const image = document.createElement('img');
-        image.src = e.target.src;
-        image.style.width  = "400px";
-        image.style.height  = "400px";
-        image.style.aspectRatio  = "1 / 1";
-        image.style.borderRadius  = "1rem";        
-        lightbox.appendChild(image);
+        console.log(`the target is : ${e.target.classList[0]}`);
+        making_light_box();
         lightbox.classList.add('active');
     })
 }
