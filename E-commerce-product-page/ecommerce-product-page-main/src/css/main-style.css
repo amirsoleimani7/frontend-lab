@@ -23,5 +23,8 @@ body {
     
     font-family: var(--main-font-family);
     padding: 5vh 10vw;
-    /* height: 100vh; */
+    margin: 0px;
+    height: 100vh;
+    position: relative;
+
 }

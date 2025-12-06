@@ -14,6 +14,27 @@ main navigation styling
     width: 50%;
 }
 
+/* lightbox styling */
+#lightbox {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .8);
+
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+
 .item-images {
     justify-self: end;
     width: 80%;

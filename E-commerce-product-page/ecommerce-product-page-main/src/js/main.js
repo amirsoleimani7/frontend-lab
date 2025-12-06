@@ -70,12 +70,30 @@ for (let i = 0 ; i < radio_pics.length ; ++i){
 // see which image is clicked on 
 let images = document.querySelectorAll('.image');
 
+
+// making the lightbox element ... 
+var lightbox = document.createElement('div');
+lightbox.id = 'lightbox';
+document.body.appendChild(lightbox);
+
+lightbox.addEventListener('click' , e => {
+    lightbox.removeChild(e.target);
+    lightbox.classList.remove('active');
+})
+
+
 for (let i = 0; i < images.length ; ++i){
     images[i].addEventListener('click' , (e) => {
-        
-        // what is the current iamge that is clicked on
-        console.log(`the ttarget is : ${e.target.classList}`);
-        
+        // what is the current iamge that is clicked on (first one is diffrent)
+        console.log(`the ttarget is : ${e.target.classList[0]}`);
+        const image = document.createElement('img');
+        image.src = e.target.src;
+        image.style.width  = "400px";
+        image.style.height  = "400px";
+        image.style.aspectRatio  = "1 / 1";
+        image.style.borderRadius  = "1rem";        
+        lightbox.appendChild(image);
+        lightbox.classList.add('active');
     })
 }
 
