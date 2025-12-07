@@ -9,15 +9,20 @@ item_number.textContent = 0;
 
 // adding an item
 add_item_button.addEventListener('click' , () => {
-    console.log(`current number is : ${item_number.textContent}`);
+    
     item_number.textContent = parseInt(item_number.textContent) + 1;
+    console.log(`current number is : ${item_number.textContent}`);
+    make_out_papra(item_number.textContent);
 
 })
 
 // removing an item
 remove_item_button.addEventListener('click' , () => {
+    
     if (parseInt(item_number.textContent) > 0){
-        item_number.textContent = parseInt(item_number.textContent) + -1;
+        item_number.textContent = parseInt(item_number.textContent) -1;
+        console.log(`current number is : ${item_number.textContent}`);  
+        make_out_papra(item_number.textContent);  
     }
 })
 
@@ -190,8 +195,46 @@ for (let i = 0; i < images.length ; ++i){
 // handling cart related stuff
 let cart_button = document.querySelector('#cart');
 let cart_container  = document.querySelector('.basket-container');
+let first_para = document.querySelector('.res');
+let second_para = document.querySelector('#second-res');
+
+// empty error 
+let empty_error = document.querySelector('.empty-error');
+
+// others
+let checkout_button = document.querySelector('#checkout');
+let basket_container = document.querySelector('.item-in-cart');
+
+function make_out_papra(number_of_items){
+    let summation = 125 * number_of_items;
+    let first_text = `$125 x ${number_of_items}`;
+    let seocnd_text = `$${summation}`;
+    
+    first_para.textContent = first_text;
+    second_para.textContent = seocnd_text;
+}
 
 cart_button.addEventListener('click' , (e) => {
     
-    cart_container.classList.toggle('deactive');    
+    let current_number_ = parseInt(item_number.textContent);
+    console.log(`current number is : ${current_number_}`);
+    
+    cart_container.classList.toggle('activate');
+    
+    if (isNaN(current_number_) || current_number_ == 0){
+        empty_error.style.display = 'block';
+        checkout_button.style.display = "none";
+        basket_container.style.display = 'none';
+        
+    }
+
+    else {
+        make_out_papra(current_number_);    
+        checkout_button.style.display = "block";
+        basket_container.style.display = 'flex';        
+        empty_error.style.display = 'none';
+    }
+
+
+
 })
