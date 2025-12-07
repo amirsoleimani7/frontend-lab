@@ -244,6 +244,14 @@ main navigation styling
     position: relative;
 }
 
+.item-button:hover {
+    cursor: pointer;
+}
+
+.item-button:active {
+    transform: translateY(1px);
+}
+
 .item-button .current-number-of-items {
     display: none;
     font-weight: 700;
