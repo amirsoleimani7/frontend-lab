@@ -227,14 +227,23 @@ cart_button.addEventListener('click' , (e) => {
         basket_container.style.display = 'none';
         
     }
-
+    
     else {
         make_out_papra(current_number_);    
         checkout_button.style.display = "block";
         basket_container.style.display = 'flex';        
         empty_error.style.display = 'none';
     }
+})
 
+// delete product functionality 
+let delete_buttton = document.querySelector('.delete-product');
 
+delete_buttton.addEventListener('click' , () =>{
+    empty_error.style.display = 'block';
+    checkout_button.style.display = "none";
+    basket_container.style.display = 'none';
 
+    item_number.textContent = 0;
+    number_of_items_on_cart.style.display = 'none';    
 })
