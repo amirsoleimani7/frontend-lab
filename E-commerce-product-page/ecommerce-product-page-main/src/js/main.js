@@ -185,3 +185,13 @@ for (let i = 0; i < images.length ; ++i){
     })
 }
 
+
+
+// handling cart related stuff
+let cart_button = document.querySelector('#cart');
+let cart_container  = document.querySelector('.basket-container');
+
+cart_button.addEventListener('click' , (e) => {
+    cart_container.classList.toggle('deactive');    
+})
+
