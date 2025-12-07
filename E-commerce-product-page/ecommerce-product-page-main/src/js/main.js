@@ -3,6 +3,7 @@ let add_item_button = document.querySelector('#add-item');
 let remove_item_button = document.querySelector('#remove-item');
 let item_number = document.querySelector('#items-no');
 
+
 // initialization of the thing
 item_number.textContent = 0;
 
@@ -118,7 +119,6 @@ function make_plus_and_minus() {
     
     let prev_button = document.createElement('button');
     prev_button.id = 'prev';
-
     
     // event for going to the prevv picture
     prev_button.addEventListener('click' , () => {
@@ -184,3 +184,4 @@ for (let i = 0; i < images.length ; ++i){
         lightbox.classList.add('active');
     })
 }
+

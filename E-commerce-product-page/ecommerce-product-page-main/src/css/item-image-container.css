@@ -282,6 +282,8 @@ main navigation styling
     scale: 1.05;    
 }
 
+
+/* using property for angle so we can use it for animation */
 @property --angle{
     syntax: "<angle>";
     initial-value: 0deg;
@@ -321,3 +323,6 @@ main navigation styling
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
+
+
+/* cart stylign */
