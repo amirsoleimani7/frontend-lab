@@ -230,6 +230,7 @@ main navigation styling
 
 /* info conatiner */
 .info-container {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -325,4 +326,27 @@ main navigation styling
 }
 
 
-/* cart stylign */
+/* cart styling */
+.basket-container {
+    position: absolute;
+    /* width: 350px; */
+    background-color: white;
+    outline: 1px solid red;
+    top: 70px;
+    left: -220px;
+    padding: 1rem;
+}
+
+.empty-error { 
+    display: none;
+}
+
+.item-in-cart {
+    display: flex;
+}
+
+.delete-product {
+    background-color: black;
+    mask: url('../../images/icon-delete.svg') no-repeat center;
+    -webkit-mask: url('../../images/icon-delete.svg') no-repeat center;   
+}
