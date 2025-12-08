@@ -185,11 +185,14 @@ function making_light_box(){
 for (let i = 0; i < images.length ; ++i){
     images[i].addEventListener('click' , (e) => {
         // what is the current image that is clicked on (first one is diffrent)
-        making_light_box();
-        lightbox.classList.add('active');
+
+        // make the lightbox for bigger screens
+        if (window.innerWidth > 500) {
+            making_light_box();
+            lightbox.classList.add('active');
+        }
     })
 }
-
 
 
 // handling cart related stuff
@@ -260,6 +263,7 @@ backg.id = 'op-vg';
 document.body.appendChild(backg);
 
 open_menu.addEventListener('click' , () => {
+
     hiddne_links.classList.add('active');
     close_open.style.position = 'fixed';
     open_menu.style.display = 'none';

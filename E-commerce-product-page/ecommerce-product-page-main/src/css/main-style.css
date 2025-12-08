@@ -198,5 +198,13 @@ hr {
         display: none;
     }
 
+    /* removing the lightbox */
+    #lightbox {
+        display: none;
+    }
+
+    #lightbox.active {
+        display: none;
+    }
 
 }
