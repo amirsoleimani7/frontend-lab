@@ -143,6 +143,23 @@ body {
         padding: 1rem 2rem;
         min-width: 100%;
     }
+    
+    .main-navigation {
+        position: static;
+    }
+
+    .info-container {
+        position: static;
+    }    
+    
+    .basket-container {
+        position: absolute;
+        width: 80vw;
+        top: 100px;
+        left: 0; 
+        right: 0; 
+        margin-inline: auto; 
+    }
 
 
 
