@@ -30,6 +30,10 @@ hr {
 
 /* responsive queries */
 @media (max-width : 910px){
+    
+    :root{
+        font-size: 15px;
+    }
 
     body {
         padding: 4vh 7vw;
@@ -137,6 +141,10 @@ hr {
     }
 
     .mobile-nav {
+        display: block;
+    }
+    
+    #open {
         display: block;
     }
 }

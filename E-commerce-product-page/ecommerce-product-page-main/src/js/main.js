@@ -11,7 +11,6 @@ item_number.textContent = 0;
 add_item_button.addEventListener('click' , () => {
     
     item_number.textContent = parseInt(item_number.textContent) + 1;
-    console.log(`current number is : ${item_number.textContent}`);
     make_out_papra(item_number.textContent);
 
 })
@@ -21,7 +20,6 @@ remove_item_button.addEventListener('click' , () => {
     
     if (parseInt(item_number.textContent) > 0){
         item_number.textContent = parseInt(item_number.textContent) -1;
-        console.log(`current number is : ${item_number.textContent}`);  
         make_out_papra(item_number.textContent);  
     }
 })
@@ -47,11 +45,8 @@ var radio_pics = document.getElementsByName('photo');
 let current_index = 1;
 
 // updating current image
-function update_image(image_number) {
-
-    
+function update_image(image_number) {    
     let current_image_class = `.image-${image_number}`;
-    console.log(`current guy is : ${current_image_class}`);
     
     let image_to_show = document.querySelectorAll(current_image_class);
     for (let i =0 ;i < image_to_show.length ;++i){
@@ -71,11 +66,8 @@ function update_image(image_number) {
 }
 
 // adding event listeners 
-
 for (let i = 0 ; i < radio_pics.length ; ++i){
     radio_pics[i].addEventListener('click' , (e) => {
-        console.log(`number of photos is : ${radio_pics.length}`);
-        console.log(`target is : ${e.target.id}`);
         current_index = parseInt(radio_pics[i].value);
         update_image(parseInt(radio_pics[i].value));
     })
@@ -135,10 +127,7 @@ function make_plus_and_minus() {
     prev_button.id = 'prev';
     
     // event for going to the prevv picture
-    prev_button.addEventListener('click' , () => {
-
-        console.log(`current index is : ${current_index}`);
-        
+    prev_button.addEventListener('click' , () => {        
         current_index = (current_index == 1) ? 4 : current_index - 1;
         for (let i = 4; i <= 8;++i){
             try{
@@ -236,7 +225,6 @@ function make_out_papra(number_of_items){
 cart_button.addEventListener('click' , (e) => {
     
     let current_number_ = parseInt(item_number.textContent);
-    console.log(`current number is : ${current_number_}`);
     
     cart_container.classList.toggle('activate');
     
@@ -281,6 +269,7 @@ document.body.appendChild(backg);
 open_menu.addEventListener('click' , () => {
     
     hiddne_links.classList.add('active');
+    
     close_open.style.position = 'fixed';
     open_menu.style.display = 'none';
     close_menu.style.display = 'block';
@@ -294,13 +283,13 @@ open_menu.addEventListener('click' , () => {
 close_menu.addEventListener('click' , () => {
 
     hiddne_links.classList.remove('active');
-    open_menu.style.display = 'block';
+    open_menu.style.display = '';
     close_open.style.position = '';
-    close_menu.style.display = 'none';
+    close_menu.style.display = '';
 
     hiddne_links.style.paddingLeft = '0px';
     hiddne_links.style.paddingTop = '0px';
-    backg.style.display = 'none';       
+    backg.style.display = '';       
 
 
 })
@@ -324,7 +313,6 @@ function _next_prev_small(){
     
         let prev_button = document.createElement('button');
         prev_button.id = 'prev1';
-        
         
         // adding svg as mask 
         let prev_image = document.createElement('div');
