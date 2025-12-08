@@ -255,6 +255,10 @@ let close_menu = document.querySelector('#close');
 let hiddne_links = document.querySelector('.links');
 let close_open = document.querySelector('.mobile-nav');
 
+let backg = document.createElement('div');
+backg.id = 'op-vg';
+document.body.appendChild(backg);
+
 open_menu.addEventListener('click' , () => {
     hiddne_links.classList.add('active');
     close_open.style.position = 'fixed';
@@ -263,6 +267,8 @@ open_menu.addEventListener('click' , () => {
     
     hiddne_links.style.paddingLeft = '3rem';
     hiddne_links.style.paddingTop = '6rem';
+
+    backg.style.display = 'block';       
 
 })
 
@@ -275,6 +281,7 @@ close_menu.addEventListener('click' , () => {
 
     hiddne_links.style.paddingLeft = '0px';
     hiddne_links.style.paddingTop = '0px';
+    backg.style.display = 'none';       
 
 
 })

@@ -34,13 +34,17 @@ body {
     .item {
         flex-direction: column;
     }
-    
+
+    #open {
+        display: block;     
+    }
+
     /* removing the links */
     .link-container .links {
         position: fixed;
         top: 0px;
         left: 0px;
-        z-index: 1;
+        z-index: 3;
         background-color: white;
         flex-direction: column;
         flex-wrap: nowrap;
