@@ -267,9 +267,8 @@ open_menu.addEventListener('click' , () => {
     
     hiddne_links.style.paddingLeft = '3rem';
     hiddne_links.style.paddingTop = '6rem';
-
-    backg.style.display = 'block';       
-
+    
+    backg.style.display = 'block';
 })
 
 close_menu.addEventListener('click' , () => {

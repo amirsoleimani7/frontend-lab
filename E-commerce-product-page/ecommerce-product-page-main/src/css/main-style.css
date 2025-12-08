@@ -127,8 +127,24 @@ body {
     .mobile-nav {
         display: block;
     }
+}
+
+
+@media (max-width : 500px){
+    .buy-section {
+        flex-direction: column;
+    }
     
-    
+    .number-of-items {
+        min-width: 100%;
+    }
+
+    #add-to-cart {
+        padding: 1rem 2rem;
+        min-width: 100%;
+    }
+
+
 
 
 }
