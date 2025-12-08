@@ -196,6 +196,13 @@ main navigation styling
     transform: translateY(2px);
 }
 
+
+/*  making the hidden menu*/
+
+
+
+
+
 .main-navigation {
     display: flex;
     justify-content: space-between;

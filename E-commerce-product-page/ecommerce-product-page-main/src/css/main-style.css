@@ -37,9 +37,29 @@ body {
 
     /* removing the links */
     .link-container .links {
-        display: none;
+        /* display: none; */
+        position: fixed;
+        top: 0px;
+        z-index: 1;
+        padding-top:3rem ;
+        background-color: white;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 100vh;
+        width: 40%;
+        gap: 3rem;
+    }
+    
+    .link-container a{
+        font-weight: 800;
+        font-size: 1.25rem;
+        color: black;
     }
 
+    .link-container a:hover:before{
+        width: 0%;
+    }
+    
     .outer-image{
         width: 100%;
     }
@@ -89,7 +109,7 @@ body {
         margin: 0px;
         padding: 0px;
     }
-
+    
     /* mobile link menu */
     .link-container {
         gap: 1rem;
@@ -99,6 +119,8 @@ body {
     .mobile-nav {
         display: block;
     }
+    
+    
 
 
 }
