@@ -181,10 +181,14 @@ main navigation styling
 
 /* mobile navigation info */
 .mobile-nav {
-    display: none;
+    z-index: 4;
     background-color: transparent;
     border: none;
     outline: none;
+}
+
+#close{
+    display: none;
 }
 
 .mobile-nav:hover {

@@ -247,3 +247,34 @@ delete_buttton.addEventListener('click' , () =>{
     item_number.textContent = 0;
     number_of_items_on_cart.style.display = 'none';    
 })
+
+
+// opening and closing hidden menu 
+let open_menu = document.querySelector('#open');
+let close_menu = document.querySelector('#close');
+let hiddne_links = document.querySelector('.links');
+let close_open = document.querySelector('.mobile-nav');
+
+open_menu.addEventListener('click' , () => {
+    hiddne_links.classList.add('active');
+    close_open.style.position = 'fixed';
+    open_menu.style.display = 'none';
+    close_menu.style.display = 'block';
+    
+    hiddne_links.style.paddingLeft = '3rem';
+    hiddne_links.style.paddingTop = '6rem';
+
+})
+
+close_menu.addEventListener('click' , () => {
+
+    hiddne_links.classList.remove('active');
+    open_menu.style.display = 'block';
+    close_open.style.position = '';
+    close_menu.style.display = 'none';
+
+    hiddne_links.style.paddingLeft = '0px';
+    hiddne_links.style.paddingTop = '0px';
+
+
+})
