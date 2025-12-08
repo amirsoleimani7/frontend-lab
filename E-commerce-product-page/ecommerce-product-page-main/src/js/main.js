@@ -263,7 +263,7 @@ backg.id = 'op-vg';
 document.body.appendChild(backg);
 
 open_menu.addEventListener('click' , () => {
-
+    
     hiddne_links.classList.add('active');
     close_open.style.position = 'fixed';
     open_menu.style.display = 'none';
@@ -286,5 +286,64 @@ close_menu.addEventListener('click' , () => {
     hiddne_links.style.paddingTop = '0px';
     backg.style.display = 'none';       
 
+
+})
+    
+    
+
+let start_up_width = window.innerWidth;
+if (start_up_width < 500){
+    if (document.querySelector('#next') == undefined && document.querySelector('#prev') == undefined){
+
+        let next_button = document.createElement('button');
+        next_button.id = 'next';
+        
+        // adding svg as mask
+        let next_image = document.createElement('div');
+        next_button.appendChild(next_image);
+        
+        let prev_button = document.createElement('button');
+        prev_button.id = 'prev';
+        
+        
+        // adding svg as mask 
+        let prev_image = document.createElement('div');
+        prev_button.appendChild(prev_image);
+        
+        document.body.appendChild(next_button);
+        document.body.appendChild(prev_button);
+    }
+}
+
+// adding button for smaller screens using window resize event 
+window.addEventListener('resize' , () => {
+    start_up_width = window.innerWidth;
+    
+    if (start_up_width < 500){
+        if (document.querySelector('#next') == undefined && document.querySelector('#prev') == undefined){
+
+            let next_button = document.createElement('button');
+            next_button.id = 'next';
+            
+            // adding svg as mask
+            let next_image = document.createElement('div');
+            next_button.appendChild(next_image);
+            
+            let prev_button = document.createElement('button');
+            prev_button.id = 'prev';
+            
+            
+            // adding svg as mask 
+            let prev_image = document.createElement('div');
+            prev_button.appendChild(prev_image);
+            
+            document.body.appendChild(next_button);
+            document.body.appendChild(prev_button);
+        }
+    }
+    else {
+        document.body.removeChild(document.querySelector('#next'));
+        document.body.removeChild(document.querySelector('#prev'));
+    }
 
 })

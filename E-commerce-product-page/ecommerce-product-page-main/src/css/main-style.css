@@ -206,5 +206,15 @@ hr {
     #lightbox.active {
         display: none;
     }
+    
+    #prev {
+        top: 37%;
+        left: 20px;   
+    }
+    
+    #next { 
+        top: 37%;
+        right: 20px;    
+    }
 
 }
