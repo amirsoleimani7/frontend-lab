@@ -23,3 +23,41 @@ body {
     padding: 5vh 10vw;
     margin: 0px;
 }
+
+/* responsive queries */
+@media (max-width : 910px){
+
+    body {
+        padding: 4vh 7vw;
+    }
+
+    .item {
+        flex-direction: column;
+    }
+
+    /* removing the links */
+    .link-container .links {
+        display: none;
+    }
+
+    .outer-image{
+        width: 100%;
+    }
+    
+    .item-images {
+        justify-self: center;
+        width: 100%;    
+    }
+
+    .outer-info {
+        min-width: 100%;
+    }
+    
+    .item-info {
+        flex-grow: 1;
+        width: 100%;
+
+    }
+
+
+}

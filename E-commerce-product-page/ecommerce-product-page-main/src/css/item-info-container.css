@@ -10,13 +10,12 @@ main product styling
 .outer-info {
     width: 50%;
     display: flex;
+    justify-content: center;
 }
 
 .item-info {
     width: 60%;
-    align-self: center;
-    justify-self: start;
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
 }
 
 .company-name {
