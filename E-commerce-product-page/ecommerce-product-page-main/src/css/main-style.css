@@ -42,7 +42,15 @@ hr {
     #open {
         display: block;     
     }
+    
+    #lightbox {
+        position: fixed;
+    }
 
+    #inner_div {
+        width: 60%;
+    }
+    
     /* removing the links */
     .link-container .links {
         position: fixed;
@@ -208,12 +216,12 @@ hr {
         display: none;
     }
     
-    #prev {
+    #prev1  {
         top: 37%;
         left: 20px;   
     }
     
-    #next { 
+    #next1 { 
         top: 37%;
         right: 20px;    
     }

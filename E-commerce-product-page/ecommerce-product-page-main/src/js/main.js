@@ -49,7 +49,10 @@ let current_index = 1;
 // updating current image
 function update_image(image_number) {
 
+    
     let current_image_class = `.image-${image_number}`;
+    console.log(`current guy is : ${current_image_class}`);
+    
     let image_to_show = document.querySelectorAll(current_image_class);
     for (let i =0 ;i < image_to_show.length ;++i){
         image_to_show[i].style.display = 'block';
@@ -111,9 +114,15 @@ function make_plus_and_minus() {
     next_button.addEventListener('click' , () => {
         current_index = (current_index == 4) ? 1 : current_index + 1;
         for (let i = 4; i <= 8;++i){
-            if (radio_pics[i].value == current_index){
-                radio_pics[i].checked = true;
-                update_image(radio_pics[i].value);
+            try {
+                if (radio_pics[i].value == current_index){
+                    radio_pics[i].checked = true;
+                    update_image(radio_pics[i].value);
+                }
+            }
+            catch(error){
+                console.log(`error : ${error}`);
+                
             }
        }
     })
@@ -132,9 +141,16 @@ function make_plus_and_minus() {
         
         current_index = (current_index == 1) ? 4 : current_index - 1;
         for (let i = 4; i <= 8;++i){
-            if (radio_pics[i].value == current_index){
-                radio_pics[i].checked = true;
-                update_image(radio_pics[i].value);
+            try{
+                if (radio_pics[i].value == current_index){
+                    radio_pics[i].checked = true;
+                    update_image(radio_pics[i].value);
+                }
+            }
+
+            catch(error){
+                console.log(`error : ${error}`);
+                    
             }
        }
     })
@@ -292,26 +308,45 @@ close_menu.addEventListener('click' , () => {
     
 
 let start_up_width = window.innerWidth;
-if (start_up_width < 500){
-    if (document.querySelector('#next') == undefined && document.querySelector('#prev') == undefined){
-
-        let next_button = document.createElement('button');
-        next_button.id = 'next';
+function _next_prev_small(){
+            let next_button = document.createElement('button');
+        next_button.id = 'next1';
         
         // adding svg as mask
         let next_image = document.createElement('div');
         next_button.appendChild(next_image);
-        
+
+        current_index = 1;
+        next_button.addEventListener('click' , () => {
+            current_index = (current_index == 4) ? 1 : current_index + 1;
+            update_image(current_index);
+        })
+    
         let prev_button = document.createElement('button');
-        prev_button.id = 'prev';
+        prev_button.id = 'prev1';
         
         
         // adding svg as mask 
         let prev_image = document.createElement('div');
         prev_button.appendChild(prev_image);
-        
+
+        prev_button.addEventListener('click' , () => {
+
+            current_index = (current_index == 1) ? 4 : current_index - 1;
+            update_image(current_index);
+        })
+                
+
         document.body.appendChild(next_button);
         document.body.appendChild(prev_button);
+
+
+}
+
+
+if (start_up_width < 500){
+    if (document.querySelector('#next') == undefined && document.querySelector('#prev') == undefined){
+        _next_prev_small();
     }
 }
 
@@ -320,31 +355,15 @@ window.addEventListener('resize' , () => {
     start_up_width = window.innerWidth;
     
     if (start_up_width < 500){
-        if (document.querySelector('#next') == undefined && document.querySelector('#prev') == undefined){
-
-            let next_button = document.createElement('button');
-            next_button.id = 'next';
-            
-            // adding svg as mask
-            let next_image = document.createElement('div');
-            next_button.appendChild(next_image);
-            
-            let prev_button = document.createElement('button');
-            prev_button.id = 'prev';
-            
-            
-            // adding svg as mask 
-            let prev_image = document.createElement('div');
-            prev_button.appendChild(prev_image);
-            
-            document.body.appendChild(next_button);
-            document.body.appendChild(prev_button);
+        if ((document.querySelector('#next1') == undefined) && (document.querySelector('#prev1') == undefined)){
+            _next_prev_small();
         }
     }
+
     else {
-        if (document.querySelector('#next') && document.querySelector('#prev')){
-            document.body.removeChild(document.querySelector('#next'));
-            document.body.removeChild(document.querySelector('#prev'));
+        if (document.querySelector('#prev1') && document.querySelector('#next1')){
+            document.body.removeChild(document.querySelector('#next1'));
+            document.body.removeChild(document.querySelector('#prev1'));
         }
     }
 

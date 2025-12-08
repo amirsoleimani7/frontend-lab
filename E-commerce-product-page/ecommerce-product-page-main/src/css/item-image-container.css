@@ -42,7 +42,7 @@ main navigation styling
 
 
 /* next and prev styling */
-#next, #prev {
+#next, #prev , #prev1 , #next1 {
     position: absolute;
     display: flex;
     justify-content: center ;
@@ -56,17 +56,17 @@ main navigation styling
     border-radius: 50%;
 }
 
-#next {
+#next , #next1 {
     top: 33%;
     right: -20px;
 }
 
-#prev {
+#prev , #prev1 {
     top: 33%;
     left: -20px;    
 }
 
-#prev div, #next div{
+#prev div, #next div ,#prev1 div , #next1 div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,18 +75,18 @@ main navigation styling
     height: 24px;
 }
 
-#prev div{ 
+#prev div , #prev1 div{ 
     mask: url('../../images/icon-previous.svg') no-repeat center;
     -webkit-mask: url('../../images/icon-previous.svg') no-repeat center;
 }
 
 
-#next div {
+#next div , #next1 div{
     mask: url('../../images/icon-next.svg') no-repeat center;
     -webkit-mask: url('../../images/icon-next.svg') no-repeat center;
 }
 
-#next div:hover , #prev div:hover {
+#next div:hover , #prev div:hover ,#prev1 div:hover, #next1 div:hover{
     cursor: pointer;
     background-color: var(--orange-color);
 }
@@ -110,7 +110,7 @@ main navigation styling
 }
 
 #inner_div {
-    width: 25%;
+    width: 35%;
 }
 
 /* overwrite the inintal with written just below -> in (.item-images : 80% !) */
