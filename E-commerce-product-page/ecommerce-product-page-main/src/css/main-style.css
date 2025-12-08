@@ -162,6 +162,7 @@ hr {
     }    
     
     .basket-container {
+        z-index: 2;
         position: absolute;
         width: 80vw;
         top: 100px;

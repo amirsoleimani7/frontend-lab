@@ -342,8 +342,10 @@ window.addEventListener('resize' , () => {
         }
     }
     else {
-        document.body.removeChild(document.querySelector('#next'));
-        document.body.removeChild(document.querySelector('#prev'));
+        if (document.querySelector('#next') && document.querySelector('#prev')){
+            document.body.removeChild(document.querySelector('#next'));
+            document.body.removeChild(document.querySelector('#prev'));
+        }
     }
 
 })
