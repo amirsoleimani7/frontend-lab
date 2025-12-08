@@ -24,6 +24,10 @@ body {
     margin: 0px;
 }
 
+hr {
+    margin: 2.5rem 0rem;
+}
+
 /* responsive queries */
 @media (max-width : 910px){
 
@@ -131,6 +135,11 @@ body {
 
 
 @media (max-width : 500px){
+    
+    :root{
+        font-size: 14px;
+    }
+
     .buy-section {
         flex-direction: column;
     }
@@ -161,7 +170,33 @@ body {
         margin-inline: auto; 
     }
 
+    hr {
+        margin-bottom: 0px;
+        display: none;
+    }
 
+    .item-images {
+        margin: 2rem -7rem;
+        border-radius: 0px;
+        width: 100vw;
+        grid-template-rows: repeat(3, minmax(0 , 1fr));
+        grid-template-areas: 
+            'main main main main'
+            'main main main main'
+            'main main main main'; 
+    }
+
+    .item-images img {
+        border-radius: 0px;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+
+    .current-image{
+        display: none;
+    }
 
 
 }
