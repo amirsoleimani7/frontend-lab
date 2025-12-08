@@ -60,4 +60,45 @@ body {
     }
 
 
+    /* pricing */
+    .pricing {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .pricing .real-price {
+        margin-bottom: 0px;    
+    }
+
+    .wrapper{
+        align-items: center;
+    }
+
+    .dis-price {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .discount {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .real-price {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /* mobile link menu */
+    .link-container {
+        gap: 1rem;
+        align-items: baseline;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+
 }

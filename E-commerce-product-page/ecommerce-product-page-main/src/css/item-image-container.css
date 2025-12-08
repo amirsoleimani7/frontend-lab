@@ -179,6 +179,23 @@ main navigation styling
     object-fit: cover;
 }
 
+/* mobile navigation info */
+.mobile-nav {
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.mobile-nav:hover {
+    cursor: pointer;
+}
+
+.mobile-nav:active {
+    cursor: pointer;
+    transform: translateY(2px);
+}
+
 .main-navigation {
     display: flex;
     justify-content: space-between;
