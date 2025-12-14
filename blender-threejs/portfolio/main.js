@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const scene = new THREE.Scene();
 const canvas = document.getElementById('experience-canvas');
@@ -19,7 +20,7 @@ console.log(`device pixel ratio is : ${window.devicePixelRatio}`);
 document.body.appendChild(renderer.domElement);
 
 // making the cube 
-const geometry = new THREE.BoxGeometry(1, 5,1);
+const geometry = new THREE.BoxGeometry(2, 2 ,2);
 const material = new THREE.MeshBasicMaterial({color : 0x810818 , wireframe : false});
 const cube = new THREE.Mesh(geometry,  material);
 scene.add(cube);
@@ -35,14 +36,24 @@ function handle_resize(){
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 }
 
+
 window.addEventListener('resize' , handle_resize);
 
 function animate(){
-    cube.rotation.x += .1;
-    cube.rotation.y += .1;
+    // cube.rotation.x += .1;
+    // cube.rotation.y += .1;
     
+    controls.update();
+	renderer.render( scene, camera );
+
     renderer.render(scene , camera);
 }
 
 renderer.setAnimationLoop( animate );
+
+
+const controls = new OrbitControls( camera, renderer.domElement );
+// controls.update() must be called after any manual changes to the camera's transform
+camera.position.set( 0, 20, 100 );
+controls.update();
 
