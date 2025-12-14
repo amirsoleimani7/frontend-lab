@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const scene = new THREE.Scene();
 const canvas = document.getElementById('experience-canvas');
@@ -9,23 +10,28 @@ const sizes = {
     height : window.innerHeight,
 }
 
+// const camera = new THREE.PerspectiveCamera(75 , sizes.width / sizes.height , 0.1 , 1000);
 
-const camera = new THREE.PerspectiveCamera(75 , sizes.width / sizes.height , 0.1 , 1000);
+let aspect_ratio = sizes.width / sizes.height;
 
-const renderer = new THREE.WebGLRenderer({canvas : canvas});
+const camera = new THREE.OrthographicCamera( - aspect_ratio * 50, aspect_ratio * 50, 50, -50, 1, 1000 );
+scene.add( camera );
+
+camera.position.x = -41.36600246337475
+camera.position.y = 12.99558009762036
+camera.position.z = -46.69256444177344
+
+const renderer = new THREE.WebGLRenderer({canvas : canvas,  antialias: true});
 renderer.setSize(sizes.width , sizes.height);
-console.log(`device pixel ratio is : ${window.devicePixelRatio}`);
-
 
 document.body.appendChild(renderer.domElement);
 
-// making the cube 
-const geometry = new THREE.BoxGeometry(2, 2 ,2);
-const material = new THREE.MeshBasicMaterial({color : 0x810818 , wireframe : false});
-const cube = new THREE.Mesh(geometry,  material);
-scene.add(cube);
+const controls = new OrbitControls( camera, renderer.domElement );
+controls.update();
 
-camera.position.z = 5;
+
+
+
 
 function handle_resize(){
     sizes.width = window.innerWidth;
@@ -34,26 +40,43 @@ function handle_resize(){
     camera.updateProjectionMatrix();
     renderer.setSize(sizes.width , sizes.height);    
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-}
 
+    
+    aspect_ratio = sizes.width / sizes.height;
+    camera.left = -aspect_ratio * 50;
+    camera.right = aspect_ratio * 50;
+    camera.top = 50;
+    camera.bottom = -50;
+
+}
 
 window.addEventListener('resize' , handle_resize);
 
 function animate(){
-    // cube.rotation.x += .1;
-    // cube.rotation.y += .1;
-    
-    controls.update();
-	renderer.render( scene, camera );
-
     renderer.render(scene , camera);
 }
 
 renderer.setAnimationLoop( animate );
 
 
-const controls = new OrbitControls( camera, renderer.domElement );
-// controls.update() must be called after any manual changes to the camera's transform
-camera.position.set( 0, 20, 100 );
-controls.update();
 
+
+
+
+const color = 0xffdd40;
+const intensity = 1;
+const light = new THREE.AmbientLight(color, intensity);
+scene.add(light);
+
+// loading my object
+const loader = new GLTFLoader();
+
+loader.load('./portfolio.glb', function ( glb ) {
+    console.log(glb);
+    scene.add( glb.scene );
+
+}, undefined, function ( error ) {
+
+  console.error( `error is : ${error}` );
+
+} );
