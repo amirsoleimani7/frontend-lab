@@ -23,6 +23,10 @@ camera.position.z = -46.69256444177344
 
 const renderer = new THREE.WebGLRenderer({canvas : canvas,  antialias: true});
 renderer.setSize(sizes.width , sizes.height);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.75;
 
 document.body.appendChild(renderer.domElement);
 
@@ -61,6 +65,29 @@ renderer.setAnimationLoop( animate );
 
 
 
+const sun = new THREE.DirectionalLight( 0xFFFFFF );
+sun.castShadow = true;
+
+sun.position.set(50,80,0);
+sun.target.position.set(0 , 0 ,0);
+sun.shadow.mapSize.width = 4096;
+sun.shadow.mapSize.height = 4096;
+sun.shadow.camera.left = -200;
+sun.shadow.camera.right = 200;
+sun.shadow.camera.top = 200;
+sun.shadow.camera.bottom = -200;
+sun.shadow.normalBias = -0.1;
+
+scene.add( sun );
+
+console.log(sun.shadow);
+
+const shadow_helper = new THREE.CameraHelper( sun.shadow.camera );
+scene.add( shadow_helper );
+
+const helper = new THREE.DirectionalLightHelper( sun, 5 );
+scene.add( helper );
+
 
 
 const color = 0xffdd40;
@@ -72,7 +99,19 @@ scene.add(light);
 const loader = new GLTFLoader();
 
 loader.load('./portfolio.glb', function ( glb ) {
-    console.log(glb);
+    
+    glb.scene.traverse((child) => {
+        if(child.isMesh){
+            child.castShadow = true;
+            child.receiveShadow = true;
+            child.material.metalness = .3;
+            if (child.material.name == "middle"){
+                child.material.color.setRGB(0 , 0, 0);
+            }
+            
+            console.log(child.material);
+        }    
+    })
     scene.add( glb.scene );
 
 }, undefined, function ( error ) {
