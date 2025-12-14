@@ -1,10 +1,21 @@
 import * as THREE from 'three';
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75 , window.innerWidth / window.innerHeight , 0.1 , 1000);
+const canvas = document.getElementById('experience-canvas');
 
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth , window.innerHeight);
+const sizes = {
+    width : window.innerWidth,
+    height : window.innerHeight,
+}
+
+
+const camera = new THREE.PerspectiveCamera(75 , sizes.width / sizes.height , 0.1 , 1000);
+
+const renderer = new THREE.WebGLRenderer({canvas : canvas});
+renderer.setSize(sizes.width , sizes.height);
+console.log(`device pixel ratio is : ${window.devicePixelRatio}`);
+
+
 document.body.appendChild(renderer.domElement);
 
 // making the cube 
@@ -15,12 +26,21 @@ scene.add(cube);
 
 camera.position.z = 5;
 
+function handle_resize(){
+    sizes.width = window.innerWidth;
+    sizes.height = window.innerHeight;
+    camera.aspect = sizes.width / sizes.height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(sizes.width , sizes.height);    
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+}
+
+window.addEventListener('resize' , handle_resize);
 
 function animate(){
     cube.rotation.x += .1;
     cube.rotation.y += .1;
     
-    camera.position.z += .1;
     renderer.render(scene , camera);
 }
 
