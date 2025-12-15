@@ -5,6 +5,49 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 const scene = new THREE.Scene();
 const canvas = document.getElementById('experience-canvas');
 
+const raycaster = new THREE.Raycaster();
+
+/*test for raycaster*/
+
+let intersect_objects = [
+    
+]
+
+const intersects_object_names = [
+    "project_1",
+    "project_2",
+    "project_3",
+    "ground" ,
+    "character",
+]
+
+document.addEventListener('mousedown' , onMouseDown);
+
+function onMouseDown(event){
+    
+    const coords = new THREE.Vector2(
+        (event.clientX  / renderer.domElement.clientWidth) * 2 -1,
+        -(event.clientY  / renderer.domElement.clientHeight) * 2 +1
+    )
+    
+    raycaster.setFromCamera(coords , camera);
+
+    const intersects = raycaster.intersectObjects(intersect_objects);
+    
+    if (intersects.length > 0 ){
+        let name = intersects[0].object.parent.name;
+        console.log(name);
+        const random_color = new THREE.Color(Math.random(),Math.random() ,Math.random());
+        // for (let i = 0; i < intersects.length;++i){
+        //     if (intersects[i].object.parent.name = name){
+        //         intersects[i].object.material.color = random_color;
+        //     }
+        // }        
+    }
+
+}
+
+
 const sizes = {
     width : window.innerWidth,
     height : window.innerHeight,
@@ -33,11 +76,7 @@ document.body.appendChild(renderer.domElement);
 const controls = new OrbitControls( camera, renderer.domElement );
 controls.update();
 
-
-
-
-
-function handle_resize(){
+function onResize(){
     sizes.width = window.innerWidth;
     sizes.height = window.innerHeight;
     camera.aspect = sizes.width / sizes.height;
@@ -51,19 +90,16 @@ function handle_resize(){
     camera.right = aspect_ratio * 50;
     camera.top = 50;
     camera.bottom = -50;
-
 }
 
-window.addEventListener('resize' , handle_resize);
+
+window.addEventListener('resize' , onResize);
 
 function animate(){
     renderer.render(scene , camera);
 }
 
 renderer.setAnimationLoop( animate );
-
-
-
 
 const sun = new THREE.DirectionalLight( 0xFFFFFF );
 sun.castShadow = true;
@@ -101,16 +137,17 @@ const loader = new GLTFLoader();
 loader.load('./portfolio.glb', function ( glb ) {
     
     glb.scene.traverse((child) => {
+        if (intersects_object_names.includes(child.name)){
+            intersect_objects.push(child); 
+        }
+        
         if(child.isMesh){
+            
             child.castShadow = true;
             child.receiveShadow = true;
             child.material.metalness = .3;
-            if (child.material.name == "middle"){
-                child.material.color.setRGB(0 , 0, 0);
-            }
-            
-            console.log(child.material);
         }    
+        // console.log(child);
     })
     scene.add( glb.scene );
 
