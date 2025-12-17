@@ -20,20 +20,17 @@ let submit_sound = new Audio('../../assets/audio/submit.wav');
 let close_sound = new Audio('../../assets/audio/close.mp3');
 
 
+// More efficient email validation using regex
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 form.addEventListener("submit" , function(e){
     e.preventDefault();
-    let user_query_email = submit_text.value;
+    let user_query_email = submit_text.value.trim();
     submit_sound.play();
-    if (
-        user_query_email.includes('@') && 
-        user_query_email.slice(-4) == '.com' && 
-        user_query_email.slice(user_query_email.indexOf('@') + 1 , -4) != '' &&
-        user_query_email.slice(0 ,user_query_email.indexOf('@')) != ''){
-
-        console.log(`user emails is : ${submit_text.value}`)
-
+    
+    if (emailRegex.test(user_query_email)){
         sign_up_page.style.display = 'none';
-        user_email_.innerText = submit_text.value;
+        user_email_.innerText = user_query_email;
         success_page.style.display = 'block';
     }
     
