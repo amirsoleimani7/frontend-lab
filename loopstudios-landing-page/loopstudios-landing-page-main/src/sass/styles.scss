@@ -53,27 +53,46 @@ a {
     border: 3px solid $primary-white;
 }
 
+
 // seocnd section styling (vr section)
 .vr-section {
     background-color: $primary-white;
     padding: 9vh 11vw;
     height: 700px;
-    position: relative;
     
-    .vr{
-        position: absolute;
-        background-color : $primary-white;
-        right: 30vw;
-        padding: 5rem;
-        bottom: 10vh;
-        height: fit-content;
-        width: 600px;  
-        
-        .vr-header {
-            text-transform: uppercase;
-            font-family: $font-family-2;
-            font-size: 4rem;
-            font-weight: 300;
+    .vr-image {
+        position: relative;
+        width: 50vw;
+
+        img {
+            width: 80%;
+        }   
+
+        .vr{
+            position: absolute;
+
+            // postioning 
+            right: -20%;
+            bottom: 0px;
+            background-color : $primary-white;
+            
+            padding: 4rem 0px 0px 4rem;
+            // height: fit-content;
+            width: 500px;
+            height: 300px;
+            
+            .vr-header {
+                text-transform: uppercase;
+                font-family: $font-family-2;
+                font-size: 3rem;
+                font-weight: 300;
+            }
+
+            .vr-description {
+                margin-top: 1rem ;
+                font-family: $font-family-1;
+                color : darken($primary-grey, 30%);
+            }
         }
     }
 }

@@ -46,20 +46,31 @@ a {
   background-color: hsl(0, 0%, 100%);
   padding: 9vh 11vw;
   height: 700px;
+}
+.vr-section .vr-image {
   position: relative;
+  width: 50vw;
 }
-.vr-section .vr {
+.vr-section .vr-image img {
+  width: 80%;
+}
+.vr-section .vr-image .vr {
   position: absolute;
+  right: -20%;
+  bottom: 0px;
   background-color: hsl(0, 0%, 100%);
-  right: 30vw;
-  padding: 5rem;
-  bottom: 10vh;
-  height: fit-content;
-  width: 600px;
+  padding: 4rem 0px 0px 4rem;
+  width: 500px;
+  height: 300px;
 }
-.vr-section .vr .vr-header {
+.vr-section .vr-image .vr .vr-header {
   text-transform: uppercase;
   font-family: Josefin Sans;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 300;
+}
+.vr-section .vr-image .vr .vr-description {
+  margin-top: 1rem;
+  font-family: Alata;
+  color: hsl(0, 0%, 55%);
 }/*# sourceMappingURL=styles.css.map */
