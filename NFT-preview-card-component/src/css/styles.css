@@ -13,15 +13,10 @@
 
 }
 
-
-
-
-
 /*  ===========================
     main body styling
     ===========================
 */
-
 body {
     font-family: var(--main-font-family);
     background-color: var(--main-background-color);
@@ -31,7 +26,7 @@ body {
     height: 90vh;
 }
 
-.card .product-image {
+.card .card__product-image {
     border-radius: 1rem;
     width: 100%;
     aspect-ratio: 1;
@@ -53,13 +48,13 @@ body {
     header and description
     ===========================
 */
-.header {
+.card__header {
     color: white ;
     font-size: var(--big-font-size);
 }
 
 
-.description {
+.card__description {
     color :var(--grey-text-color);
     font-size: var(--mid-font-size);
 }
@@ -69,6 +64,24 @@ body {
     extra info on the price and name
 ===========================
 */
+.timing-info {
+    display: flex;
+    align-items: baseline;
+    gap: .2rem;
+}
+
+.timing-info__timer-image {
+    margin: auto 0;
+}
+
+.timing-info__timer-left {
+    color :var(--grey-text-color);
+}
+
+.timing-info__timer-left {
+    align-self: center;
+}
+
 .extra-info { 
     display: flex;
     justify-content: space-between;
@@ -76,7 +89,7 @@ body {
     gap: 1rem;
 }
 
-.extra-info .price-info {
+.extra-info__price {
     display: flex;
     align-items: center;
     gap: .5rem;
@@ -85,7 +98,7 @@ body {
     font-weight: 600;
 }
 
-.extra-info .timing-info {
+.extra-info__coin-image {
     display: flex;
     align-items: center;
     color: var(--grey-text-color);
@@ -106,12 +119,12 @@ body {
     ===========================
 */
 
-.card .creator-info {
+.creator-info {
     display: flex;
     align-items: center;    
 }
 
-.card .creator-info .prof-image {
+.creator-info__prof-image {
     margin-right: 1rem;
     width: 32px;
     height: 32px;
@@ -119,7 +132,7 @@ body {
     border: 1px solid white;
 }
 
-.creator {
+.creator-info__creator {
     font-size: .875rem;
     color: var(--grey-text-color);
 }
@@ -134,6 +147,4 @@ body {
     .extra-info {
         justify-content: center;
     }
-
-
 }
