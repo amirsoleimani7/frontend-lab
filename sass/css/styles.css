@@ -1,3 +1,30 @@
+.container {
+  max-width: 1100px;
+  padding: 0 30px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.btn-secondary, .btn-primary {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin: 3px;
+}
+.btn-secondary:hover, .btn-primary:hover {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: rgb(65, 139.1078838174, 255);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #ff9f33;
+  color: white;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,4 +35,48 @@ body {
   background-color: #f4f4f4;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+.showcase {
+  background-color: #0e6cff;
+  color: white;
+  height: 600px;
+  width: 100%;
+}
+.showcase a {
+  color: white;
+  font-weight: 600;
+}
+.showcase nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.showcase nav ul {
+  display: flex;
+  list-style: none;
+}
+.showcase nav li {
+  padding: 15px;
+}
+.showcase nav a:hover {
+  color: #ff8700;
+}
+.showcase-content {
+  height: 100%;
+  display: flex;
+  margin-top: 10%;
+  align-items: center;
+  justify-content: center;
+}
+.showcase-content img {
+  width: 50%;
+}
+
+img {
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */
