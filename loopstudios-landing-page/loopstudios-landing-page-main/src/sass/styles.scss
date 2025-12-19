@@ -1,0 +1,57 @@
+@import "properties";
+
+// reseting stuff
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+       
+}
+
+.main-header {
+    height: 700px;
+    background-image: url("../../images/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem 10rem;
+}
+
+// reseting links default stuff
+a {
+    text-decoration: none;
+    color : $primary-white;
+}
+
+.main-navigation {
+    font-family: $font-family-1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+        list-style: none;
+        display: flex ;
+        gap: 1rem;       
+    }
+}
+
+// main-innner text for hero div
+.main-header-text{
+    font-family: $font-family-2;
+    color : $primary-white;
+    font-size: 5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    
+    padding: 2rem;
+    margin-top: 10%;
+    min-height: fit-content;
+    width: 700px ;
+    border: 3px solid $primary-white;
+}
+
+
+
