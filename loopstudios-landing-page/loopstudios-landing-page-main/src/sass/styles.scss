@@ -14,9 +14,9 @@ body {
 .main-header {
     height: 700px;
     background-image: url("../../images/desktop/image-hero.jpg");
-    background-repeat: no-repeat;
+    background-repeat : no-repeat;
     background-size: cover;
-    padding: 5rem 10rem;
+    padding: 9vh 11vw;
 }
 
 // reseting links default stuff
@@ -53,5 +53,28 @@ a {
     border: 3px solid $primary-white;
 }
 
-
+// seocnd section styling (vr section)
+.vr-section {
+    background-color: $primary-white;
+    padding: 9vh 11vw;
+    height: 700px;
+    position: relative;
+    
+    .vr{
+        position: absolute;
+        background-color : $primary-white;
+        right: 30vw;
+        padding: 5rem;
+        bottom: 10vh;
+        height: fit-content;
+        width: 600px;  
+        
+        .vr-header {
+            text-transform: uppercase;
+            font-family: $font-family-2;
+            font-size: 4rem;
+            font-weight: 300;
+        }
+    }
+}
 

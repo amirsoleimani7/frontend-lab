@@ -9,7 +9,7 @@
   background-image: url("../../images/desktop/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 5rem 10rem;
+  padding: 9vh 11vw;
 }
 
 a {
@@ -40,4 +40,26 @@ a {
   min-height: fit-content;
   width: 700px;
   border: 3px solid hsl(0, 0%, 100%);
+}
+
+.vr-section {
+  background-color: hsl(0, 0%, 100%);
+  padding: 9vh 11vw;
+  height: 700px;
+  position: relative;
+}
+.vr-section .vr {
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  right: 30vw;
+  padding: 5rem;
+  bottom: 10vh;
+  height: fit-content;
+  width: 600px;
+}
+.vr-section .vr .vr-header {
+  text-transform: uppercase;
+  font-family: Josefin Sans;
+  font-size: 4rem;
+  font-weight: 300;
 }/*# sourceMappingURL=styles.css.map */
