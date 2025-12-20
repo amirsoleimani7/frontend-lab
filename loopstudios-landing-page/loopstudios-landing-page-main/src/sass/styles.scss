@@ -7,8 +7,13 @@
     padding: 0;
 }
 
+// removing the scroll bar
+::-webkit-scrollbar {
+    display: none;   
+}
+
 body {
-       
+
 }
 
 .main-header {
@@ -69,9 +74,12 @@ a {
     padding: 9vh 11vw;
     height: 700px;
     
+    img {
+        display: none;
+    }
+
     .vr-image {
         position: relative;
-        width: 50vw;
         background-image : url("../../images/desktop/image-interactive.jpg");
         background-size : cover;
         background-repeat : no-repeat;
@@ -102,6 +110,7 @@ a {
                 font-family: $font-family-1;
                 color : darken($primary-grey, 30%);
             }
+            
         }
     }
 }
@@ -213,7 +222,8 @@ footer {
     #show-list {
         display: block;
     }
-
+    
+    // top navigation media query
     .main-header .main-navigation .links {
         display: none;    
     }
@@ -225,10 +235,47 @@ footer {
         margin-top: 40%;
     }
 
+    // vr part media query
+    .vr-section {
+        
+        img {
+            display: block;
+            width: 100%;    
+        }    
+
+        .vr-image {
+            
+            background-image : none;    
+            width: 100%;
+            height: fit-content;
+            aspect-ratio: 1;
+                        
+            .vr{
+                position: static;
+                width: 100%;
+                height: fit-content;
+                padding: 4rem 0px 0px 0px;
+                right: '';
+                bottom : '';
+                
+            }
+        }   
+    }    
+
+    .creation_items {
+        grid-template-areas:
+        ". ."
+        ". ."
+        ". ."
+        ". .";    
+    }
+        
     // changing images to mobile images 
     .main-header {
         background-image : url('../../images/mobile/image-hero.jpg');   
-    }
+    }   
+}
 
+@media (max-width: 500px){
 
 }
