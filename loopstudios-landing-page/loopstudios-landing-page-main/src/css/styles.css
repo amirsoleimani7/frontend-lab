@@ -189,6 +189,17 @@ footer .footer-bottom .rights {
   .main-header .main-navigation .links {
     display: none;
   }
+  .main-header .main-navigation .links.hidden {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-family: Josefin Sans;
+    text-transform: uppercase;
+    font-size: 2rem;
+    gap: 2rem;
+    top: 40vh;
+    left: 7vw;
+  }
   .main-header .main-header-text {
     width: 100%;
     font-size: 3rem;

@@ -50,6 +50,7 @@ a {
         display: flex ;
         gap: 1rem;       
     }
+
 }
 
 // main-innner text for hero div
@@ -239,6 +240,22 @@ footer {
     // top navigation media query
     .main-header .main-navigation .links {
         display: none;    
+    }
+    
+
+    .main-header .main-navigation .links.hidden {
+        
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        font-family: $font-family-2;
+        text-transform: uppercase;
+        font-size: 2rem;
+        gap: 2rem;
+
+        // position 
+        top: 40vh;
+        left: 7vw;
     }
     
     .main-header .main-header-text {
