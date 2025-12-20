@@ -35,14 +35,9 @@ function onMouseDown(event){
     const intersects = raycaster.intersectObjects(intersect_objects);
     
     if (intersects.length > 0 ){
+        // here we have mutiple mesh selected but the thing is that they are all from the same thing
         let name = intersects[0].object.parent.name;
         console.log(name);
-        const random_color = new THREE.Color(Math.random(),Math.random() ,Math.random());
-        // for (let i = 0; i < intersects.length;++i){
-        //     if (intersects[i].object.parent.name = name){
-        //         intersects[i].object.material.color = random_color;
-        //     }
-        // }        
     }
 
 }
