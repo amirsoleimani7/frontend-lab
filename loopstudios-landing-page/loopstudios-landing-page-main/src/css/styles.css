@@ -73,4 +73,28 @@ a {
   margin-top: 1rem;
   font-family: Alata;
   color: hsl(0, 0%, 55%);
+}
+
+.creations {
+  padding: 9vh 11vw;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Josefin Sans;
+}
+.top-bar .header {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 300;
+}
+.top-bar #see-all {
+  font-family: Josefin Sans;
+  border: none;
+  text-transform: uppercase;
+  outline: 2px solid black;
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
 }/*# sourceMappingURL=styles.css.map */
