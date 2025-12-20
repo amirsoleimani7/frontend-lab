@@ -50,9 +50,11 @@ a {
 .vr-section .vr-image {
   position: relative;
   width: 50vw;
-}
-.vr-section .vr-image img {
-  width: 80%;
+  background-image: url("../../images/desktop/image-interactive.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50vw;
+  height: 100%;
 }
 .vr-section .vr-image .vr {
   position: absolute;
@@ -123,7 +125,7 @@ a {
   left: 0;
   right: 0;
   margin-inline: auto;
-  width: 35%;
+  width: 40%;
   text-align: left;
   font-weight: 300;
   font-size: 1.5rem;
