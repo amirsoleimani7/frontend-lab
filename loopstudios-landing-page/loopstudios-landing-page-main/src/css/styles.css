@@ -12,6 +12,13 @@
   padding: 9vh 11vw;
 }
 
+.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: hsl(0, 0%, 100%);
@@ -156,4 +163,25 @@ footer .footer-bottom ul {
 }
 footer .footer-bottom .rights {
   color: hsl(0, 0%, 85%);
+}
+
+@media (max-width: 830px) {
+  :root {
+    font-size: 12px;
+  }
+  #show-list {
+    display: block;
+  }
+  .main-header .main-navigation .links {
+    display: none;
+  }
+  .main-header .main-header-text {
+    width: 100%;
+    font-size: 3rem;
+    padding: 1rem;
+    margin-top: 40%;
+  }
+  .main-header {
+    background-image: url("../../images/mobile/image-hero.jpg");
+  }
 }/*# sourceMappingURL=styles.css.map */

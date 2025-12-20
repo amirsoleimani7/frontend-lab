@@ -19,6 +19,15 @@ body {
     padding: 9vh 11vw;
 }
 
+// buttons styling 
+.btn {
+    background-color : transparent;
+    border : none;
+    outline: none;
+    display: none;
+}
+
+
 // reseting links default stuff
 a {
     text-decoration: none;
@@ -159,8 +168,6 @@ a {
     }
 }
 
-
-
 // footer styling 
 footer {
     padding: 5vh 11vw;
@@ -193,3 +200,35 @@ footer {
     }
 }
 
+
+
+
+// media queries 
+@media (max-width: 830px){
+
+    :root {
+        font-size: 12px ;
+    }
+    
+    #show-list {
+        display: block;
+    }
+
+    .main-header .main-navigation .links {
+        display: none;    
+    }
+    
+    .main-header .main-header-text {
+        width: 100%;
+        font-size: 3rem;
+        padding: 1rem;
+        margin-top: 40%;
+    }
+
+    // changing images to mobile images 
+    .main-header {
+        background-image : url('../../images/mobile/image-hero.jpg');   
+    }
+
+
+}
