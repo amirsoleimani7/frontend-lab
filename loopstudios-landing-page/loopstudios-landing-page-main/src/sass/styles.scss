@@ -24,13 +24,6 @@ body {
     padding: 9vh 11vw;
 }
 
-// buttons styling 
-.btn {
-    background-color : transparent;
-    border : none;
-    outline: none;
-    display: none;
-}
 
 
 // reseting links default stuff
@@ -44,6 +37,19 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    // position: fixed;
+    width: 78vw;
+    z-index: 2;
+
+    // z-index: 2;
+
+    img {
+        z-index: 2;
+    }
+
+    button {
+        z-index: 2;
+    }
 
     .links {
         list-style: none;
@@ -52,6 +58,15 @@ a {
     }
 
 }
+
+// buttons styling 
+.btn {
+    background-color : transparent;
+    border : none;
+    outline: none;
+    display: none;
+}
+
 
 // main-innner text for hero div
 .main-header-text{
@@ -224,9 +239,12 @@ footer {
     #see-all-bottom {
         display: none;
     }
-
+    
+    
     .btn.active {
         display: block;
+        // position: fixed;
+        // right: 7vw;
     }
     
     :root {
@@ -242,20 +260,26 @@ footer {
         display: none;    
     }
     
-
     .main-header .main-navigation .links.hidden {
-        
-        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color : $primary-black;
+        position: fixed;
         display: flex;
         flex-direction: column;
         font-family: $font-family-2;
         text-transform: uppercase;
         font-size: 2rem;
         gap: 2rem;
-
-        // position 
-        top: 40vh;
-        left: 7vw;
+        
+       // position 
+        left: 0;
+        top: 0;
+        padding-left: 11vw;
+        padding-top:40vh ;
+        // top: 40vh;
+        // left: 7vw;
     }
     
     .main-header .main-header-text {
@@ -312,8 +336,15 @@ footer {
         padding: 5vh 7vw;
     }
     
+    .main-navigation {
+        width: 86vw;
+    }
+
     .vr {
         text-align: center;
+    }
+    .main-header .main-navigation .links.hidden {
+        padding-left: 7vw; 
     }
 
     .top-bar {
