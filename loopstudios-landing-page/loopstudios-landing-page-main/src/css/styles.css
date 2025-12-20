@@ -97,4 +97,33 @@ a {
   outline: 2px solid black;
   background-color: transparent;
   padding: 0.5rem 1.5rem;
+}
+
+.creation_items {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-areas: ". . . ." ". . . .";
+  gap: 1rem;
+}
+
+.item {
+  position: relative;
+}
+.item img {
+  width: 100%;
+  height: 100%;
+}
+.item .item-name {
+  position: absolute;
+  font-family: Josefin Sans;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  bottom: 7%;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: 35%;
+  text-align: left;
+  font-weight: 300;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=styles.css.map */
