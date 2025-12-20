@@ -23,7 +23,7 @@ a {
   align-items: center;
   justify-content: space-between;
 }
-.main-navigation ul {
+.main-navigation .links {
   list-style: none;
   display: flex;
   gap: 1rem;
@@ -108,6 +108,7 @@ a {
 
 .item {
   position: relative;
+  overflow: hidden;
 }
 .item img {
   width: 100%;
@@ -126,4 +127,31 @@ a {
   text-align: left;
   font-weight: 300;
   font-size: 1.5rem;
+}
+
+footer {
+  padding: 5vh 11vw;
+  background-color: hsl(0, 0%, 0%);
+}
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-top .socials {
+  display: flex;
+  gap: 1rem;
+}
+footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  font-family: Alata;
+}
+footer .footer-bottom ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+footer .footer-bottom .rights {
+  color: hsl(0, 0%, 85%);
 }/*# sourceMappingURL=styles.css.map */

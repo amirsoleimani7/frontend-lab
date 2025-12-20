@@ -31,7 +31,7 @@ a {
     align-items: center;
     justify-content: space-between;
 
-    ul {
+    .links {
         list-style: none;
         display: flex ;
         gap: 1rem;       
@@ -137,13 +137,15 @@ a {
 
 .item {
     position: relative;
-
+    overflow: hidden;
+    
     img {
         width: 100%;
         height: 100%;
     }
+    
     .item-name {
-        
+            
         position: absolute;
         font-family: $font-family-2;
         text-transform: uppercase;
@@ -157,6 +159,41 @@ a {
         font-weight: 300;   
         font-size: 1.5rem;
     }
-    
 }
+
+
+
+// footer styling 
+footer {
+    padding: 5vh 11vw;
+    background-color : $primary-black;
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        
+        .socials{
+            display: flex;
+            gap: 1rem;
+        }
+    }  
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        font-family: $font-family-1;
+
+        ul{
+            list-style: none;
+            display: flex ;
+            gap: 1rem;       
+        }
+
+        .rights {
+            color : $primary-grey;
+        }
+        
+    }
+}
+
 
