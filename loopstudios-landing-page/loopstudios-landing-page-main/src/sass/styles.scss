@@ -67,7 +67,6 @@ a {
     border: 3px solid $primary-white;
 }
 
-
 // seocnd section styling (vr section)
 .vr-section {
     background-color: $primary-white;
@@ -131,17 +130,21 @@ a {
         font-size: 3rem;
         font-weight: 300;
     }
-    
-    #see-all {
-        font-family: $font-family-2;
-        border: none;
-        text-transform: uppercase;
-        outline: 2px solid black;
-        background-color : transparent;
-        padding: .5rem 1.5rem;
-    }
 }
 
+
+.see-all {
+    font-family: $font-family-2;
+    border: none;
+    text-transform: uppercase;
+    outline: 2px solid black;
+    background-color : transparent;
+    padding: .5rem 1.5rem;
+}
+
+#see-all-bottom {
+    display: none;    
+}
 
 .creation_items {
     margin-top: 2rem;
@@ -181,6 +184,7 @@ a {
 footer {
     padding: 5vh 11vw;
     background-color : $primary-black;
+
     .footer-top {
         display: flex;
         justify-content: space-between;
@@ -190,6 +194,7 @@ footer {
             gap: 1rem;
         }
     }  
+
     .footer-bottom {
         display: flex;
         justify-content: space-between;
@@ -214,14 +219,22 @@ footer {
 
 // media queries 
 @media (max-width: 830px){
+    
+    #see-all-bottom {
+        display: none;
+    }
 
+    .btn.active {
+        display: block;
+    }
+    
     :root {
         font-size: 12px ;
     }
-    
-    #show-list {
-        display: block;
-    }
+
+    // #show-list {
+    //     display: block;    
+    // }
     
     // top navigation media query
     .main-header .main-navigation .links {
@@ -278,4 +291,65 @@ footer {
 
 @media (max-width: 500px){
 
+    .main-header, .vr-section ,.creations{
+        padding: 5vh 7vw;
+    }
+    
+    .vr {
+        text-align: center;
+    }
+
+    .top-bar {
+        justify-content: center;    
+    }
+
+    .top-bar .header {
+        text-align: center;
+    }
+    
+    #see-all-top{
+        display: none;
+    }
+    
+    #see-all-bottom {
+        justify-self: center;
+        display: block;
+        margin-top: 2rem;
+    }
+    
+    
+    .creation_items {
+        grid-template-areas:
+        "."
+        "."
+        "."
+        "."
+        "."
+        ".";    
+    }
+    
+    .item{
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 200px;
+        }
+    }
+    
+    footer {
+        .footer-top {
+            flex-direction: column;
+            align-items: center;
+            
+            .socials {
+                margin-top: 2rem;
+                flex-direction: column;
+            }
+        }
+        
+        .footer-bottom {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
 }
