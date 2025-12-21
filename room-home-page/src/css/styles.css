@@ -1,0 +1,11 @@
+/* custom variables for ease  */
+:root {
+
+    /* primary colors */
+    --primary-color-gray-1 : hsl(0, 0%, 63%);
+    --primary-color-gray-2 : hsl(0, 0%, 27%); 
+
+    --primary-font-family : "League Spartan";
+}
+
+
