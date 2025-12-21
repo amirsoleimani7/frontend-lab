@@ -195,7 +195,13 @@ footer .footer-bottom .rights {
     font-size: 12px;
   }
   .main-header .main-navigation .links {
-    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0px;
+    height: 100%;
+    overflow: hidden;
+    transition: all 100ms ease-out;
   }
   .main-header .main-navigation .links.hidden {
     z-index: 1;
