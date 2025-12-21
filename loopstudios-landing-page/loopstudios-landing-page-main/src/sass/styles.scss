@@ -38,7 +38,13 @@ button:active {
 a {
     text-decoration: none;
     color : $primary-white;
+    transition: all .5s ease;
 }
+
+a:hover{
+    color:darken($primary-grey, 50%);    
+}
+
 
 .main-navigation {
     font-family: $font-family-1;

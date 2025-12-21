@@ -28,6 +28,11 @@ button:active {
 a {
   text-decoration: none;
   color: hsl(0, 0%, 100%);
+  transition: all 0.5s ease;
+}
+
+a:hover {
+  color: hsl(0, 0%, 35%);
 }
 
 .main-navigation {
