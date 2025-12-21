@@ -2,6 +2,8 @@
 
 | Project  |  code | live Preview |
 |----------|-------|--------|
+
+| loopstudios-landing-page | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/loopstudios-landing-page)|  [live](https://coruscating-youtiao-6c7d92.netlify.app/)|
 | ecommerece-prodcut-page | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/E-commerce-product-page/ecommerce-product-page-main)|  [live](https://chimerical-gingersnap-8452f1.netlify.app/)|
 | news-homepage-main   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/news-homepage-main)  | [live](https://news-homepage-main.onrender.com/)  |
 | contact-form   | [code](https://github.com/amirsoleimani7/frontend-lab/tree/main/contact-form)  | [live](https://contact-form-rlcc.onrender.com/)  |
