@@ -8,4 +8,45 @@
     --primary-font-family : "League Spartan";
 }
 
+body {
+    font-family: var(--primary-font-family);
+}
 
+/* reseting stuff */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* 
+===============================
+top navigation bar 
+===============================
+*/
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color :white;
+}
+
+.navigation-bar {
+    top: 2rem;
+    left: 3rem;
+    background-color: grey;
+    position: fixed;
+    width: 325px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation-bar .links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
