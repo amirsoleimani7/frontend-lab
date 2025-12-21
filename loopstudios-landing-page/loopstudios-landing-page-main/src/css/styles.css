@@ -16,6 +16,15 @@
   padding: 9vh 11vw;
 }
 
+button {
+  transition: all 200ms ease-in-out;
+}
+
+button:active {
+  scale: 1.02;
+  transform: translateY(3px);
+}
+
 a {
   text-decoration: none;
   color: hsl(0, 0%, 100%);

@@ -24,6 +24,14 @@ body {
     padding: 9vh 11vw;
 }
 
+button {
+    transition: all 200ms  ease-in-out;    
+}
+
+button:active {
+    scale: 1.02;
+    transform: translateY(3px);
+}
 
 
 // reseting links default stuff
@@ -259,7 +267,7 @@ footer {
         position: fixed;
         left: 0;
         top: 0;  
-        
+           
         width: 0px;
         height: 100%;
         overflow: hidden;
