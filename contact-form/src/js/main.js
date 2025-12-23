@@ -33,38 +33,30 @@ function radio_validation(radio_in){
     return selected_value;
 }
 
-// email validation
-function email_validation(email){
-    let is_valid = true;    
-    let index_alpha = email.indexOf('@');
+// More efficient email validation using regex
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // checking for the @ 
-    if(!email.includes('@')){
-        is_valid = false;
-    }
-    
-    // checking for stuff after/before the @ 
-    if((email.slice(index_alpha + 1)) == "" || email.slice(0 , index_alpha) == ""){ 
-        is_valid = false;
-    }
-    return is_valid;
+function email_validation(email){
+    return emailRegex.test(email);
 }
 
 
-for (let i = 0 ;i < querty_type_radio.length ;++i){
-    querty_type_radio[i].addEventListener('click' , (e)=>{
+// Use forEach for cleaner iteration
+querty_type_radio.forEach(radio => {
+    radio.addEventListener('click' , (e)=>{
         radio_error.style.display = 'none';
         e.target.parentElement.style.backgroundColor = "hsl(186, 15%, 59%)";
         e.target.parentElement.style.outline = "2px solid  hsl(169, 82%, 27%)";
         
-        for (let i = 0 ;i < querty_type_radio.length ;++i){
-            if (querty_type_radio[i] != e.target){
-                querty_type_radio[i].parentElement.style.backgroundColor = "";
-                querty_type_radio[i].parentElement.style.outline = "";
+        // Clear styles for other radios more efficiently
+        querty_type_radio.forEach(r => {
+            if (r != e.target){
+                r.parentElement.style.backgroundColor = "";
+                r.parentElement.style.outline = "";
             }
-        }
-    })
-}
+        });
+    });
+});
 
 
 
@@ -72,10 +64,8 @@ submit_button.addEventListener('click' , (e)=> {
     e.preventDefault();
     var valid_flag = true;
    
-   
     // check first_name and last_name
     if(first_name.value){
-        console.log(`first name is : ${first_name.value}`);
         first_name_error.style.display = 'none';
     }
     else{
@@ -84,10 +74,8 @@ submit_button.addEventListener('click' , (e)=> {
     }
     
     if(last_name.value){
-        console.log(`last name is : ${last_name.value}`);
         last_name_error.style.display = 'none';
     }
-    
     else{
         last_name_error.style.display = 'block'
         valid_flag = false;
@@ -95,7 +83,6 @@ submit_button.addEventListener('click' , (e)=> {
         
     //emails check 
     if(email.value){
-        console.log(`the email is : ${email.value}`);
         email_empty_error.style.display = 'none';
         if (!email_validation(email.value)){
             email_validattion_error.style.display = 'block';    
@@ -105,7 +92,6 @@ submit_button.addEventListener('click' , (e)=> {
             email_validattion_error.style.display = 'none';                
         }
     }
-    
     else{
         email_empty_error.style.display = 'block';
         email_validattion_error.style.display = 'none';    
@@ -114,7 +100,6 @@ submit_button.addEventListener('click' , (e)=> {
 
     // message_check 
     if(messsage.value == ''){
-        console.log(`message is : ${messsage.value}`);
         message_error.style.display = 'block';
         valid_flag = false;
     }
@@ -122,9 +107,9 @@ submit_button.addEventListener('click' , (e)=> {
         message_error.style.display = 'none';
     }
     
-    // radio check
-    if (radio_validation(querty_type_radio)){
-        console.log(`the selected value is : ${radio_validation(querty_type_radio)}`)
+    // radio check - Store result to avoid calling twice
+    const selectedRadio = radio_validation(querty_type_radio);
+    if (selectedRadio){
         radio_error.style.display = 'none';   
     }
     else{
@@ -132,30 +117,29 @@ submit_button.addEventListener('click' , (e)=> {
         valid_flag = false;
     }
 
-    // conseent check
+    // consent check
     if (!consent.checked){
         consent_error.style.display = 'block';
         valid_flag = false;
     }
-    else{        
-        console.log(`consent  is : ${consent.checked}`);
+    else{
         consent_error.style.display = 'none';
     }
 
     if(valid_flag){ 
         succ_msg.classList.add('forward');
-        let x = document.body.children;
-        for (let i =0 ;i < x.length; ++i ){
-            x[i].style.filter = x[i].id == succ_msg.id ? 'blur(0px)' : "blur(5px)";
-        }
+        // More efficient blur application using Array.from
+        Array.from(document.body.children).forEach(child => {
+            child.style.filter = child.id == succ_msg.id ? 'blur(0px)' : "blur(5px)";
+        });
     }
 })
 
 succ_msg.addEventListener('click' , () => {
     succ_msg.classList.remove('forward');
-    let x = document.body.children;
-    for (let i =0 ;i < x.length; ++i ){
-        x[i].style.filter = 'blur(0px)';
-    }    
+    // More efficient blur removal using Array.from
+    Array.from(document.body.children).forEach(child => {
+        child.style.filter = 'blur(0px)';
+    });    
 })
 

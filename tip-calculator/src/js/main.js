@@ -89,13 +89,15 @@ function clear_custom_button(button,option){
 custom_button.addEventListener('focus' , (e)=>{    
     curent_tip_percent = e.target.value;
     clear_custom_button(custom_button,1)
+    
+    // Clear all radio button styles at once
+    radios.forEach(radio => {
+        radio.parentElement.style.backgroundColor = '';
+        radio.parentElement.style.color = '';
+    });
+    
     bill_amount.dispatchEvent(event_1);
     people_amount.dispatchEvent(event_1);
-
-    for (let i = 0;i < radios.length ;++i){
-        radios[i].parentElement.style.backgroundColor = '';
-        radios[i].parentElement.style.color = '';
-    }
 })
 
 custom_button.addEventListener('input' , (e)=>{
@@ -120,33 +122,29 @@ custom_button.addEventListener('input' , (e)=>{
 })
 
 
-for (let i = 0; i <= radios.length ; ++i){
-    try { 
-        radios[i].addEventListener('click' , (e) => {
-            clear_custom_button(custom_button,0)
+// Use forEach instead of try-catch loop - more efficient and cleaner
+radios.forEach(radio => {
+    radio.addEventListener('click' , (e) => {
+        clear_custom_button(custom_button,0)
 
-            curent_tip_percent = e.target.value;
-            bill_amount.dispatchEvent(event_1);
-            people_amount.dispatchEvent(event_1);
-            
-            for (let i = 0;i < radios.length ;++i){
-                if (radios[i].checked){
-                    radios[i].parentElement.style.backgroundColor = "hsl(172, 67%, 45%)";
-                    radios[i].parentElement.style.color = "hsl(183, 100%, 15%)";    
-                }
-                else{
-                    radios[i].parentElement.style.backgroundColor = '';
-                    radios[i].parentElement.style.color = '';
-                }
+        curent_tip_percent = e.target.value;
+        
+        // Update styles more efficiently
+        radios.forEach(r => {
+            if (r.checked){
+                r.parentElement.style.backgroundColor = "hsl(172, 67%, 45%)";
+                r.parentElement.style.color = "hsl(183, 100%, 15%)";    
             }
-            current_selected = e.target.value;
-        })
-    }
-
-    catch (error){
-        console.log(`this error is there ${error}`);
-    }
-}
+            else{
+                r.parentElement.style.backgroundColor = '';
+                r.parentElement.style.color = '';
+            }
+        });
+        
+        bill_amount.dispatchEvent(event_1);
+        people_amount.dispatchEvent(event_1);
+    });
+});
 
 
 

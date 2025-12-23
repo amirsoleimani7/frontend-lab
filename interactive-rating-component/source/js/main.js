@@ -10,17 +10,14 @@ let tnq_span_ = document.getElementById('user-rating');
 
 
 submit_button.addEventListener('click' ,(e)=>{
-    console.log(`we are in the event`);    
-    for ( let i = 0 ; i < radio_buttons.length ;++i ){
-        if(radio_buttons[i].checked){
-            tnq_span_.innerText = radio_buttons[i].value;
-            is_cheacked = true;            
-        }
-    }
+    // Use querySelector with :checked pseudo-class for better performance
+    const checkedRadio = document.querySelector('input[name=rating]:checked');
     
-    if (is_cheacked){
+    if (checkedRadio){
+        tnq_span_.innerText = checkedRadio.value;
         rating_card.style.display = 'none';
         tnq_card.style.display = 'flex';
+        is_cheacked = true;
     }
     else{
         submit_button.style.backgroundColor = 'red';   
@@ -28,11 +25,11 @@ submit_button.addEventListener('click' ,(e)=>{
 });
 
 
-let elements = document.querySelectorAll('body *:not(.submit)');
-console.log(`elemts is : ${elements.length}`);
+// Removed inefficient querySelectorAll of all body elements
 
 document.addEventListener('click', function (e) {
-  if (!document.querySelector('.submit').contains(e.target) && tnq_card.style.display == 'flex') {
+  // Cache the submit button instead of querying on every click
+  if (!submit_button.contains(e.target) && tnq_card.style.display == 'flex') {
         tnq_card.style.display = 'none';
         rating_card.style.display = 'flex';    
         is_cheacked = false;
