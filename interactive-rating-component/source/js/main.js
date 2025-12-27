@@ -40,6 +40,9 @@ document.addEventListener('click', function (e) {
   }
 });
 
+
+
+
 // for (let i = 0;  elements.length ; ++i){
 //     try{
 //         elements[i].addEventListener('click',(e)=> {    
