@@ -127,7 +127,7 @@ a {
     font-size: .9rem;
     font-weight: 600;
 
-    color: var(--primary-color-gray-1);
+    /* color: var(--primary-color-gray-1); */
 }
 
 /* buttons styling */
@@ -151,11 +151,6 @@ a {
     align-items: center;
     background-color: black;
 }
-
-.navigation-buttons button:hover{
-    background-color: gray;    
-}
-
 /* 
 ===============================
 about section styling 
