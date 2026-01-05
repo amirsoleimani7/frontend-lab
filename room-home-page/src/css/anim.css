@@ -1,26 +1,26 @@
-@import url('styles.css');
+@import url("styles.css");
 
 button {
-    transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 button:hover {
-    scale: 1.01;
-    cursor: pointer;
+  scale: 1.01;
+  cursor: pointer;
 }
 
 button img {
-    transition: all 300ms ease;
+  transition: all 300ms ease;
 }
-button:hover img{
-    scale: 1.25;
+
+button:hover img {
+  scale: 1.25;
 }
 
 .links a {
-    transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 .links a:hover {
-    
-    color: var(--primary-color-gray-2);
+  color: var(--primary-color-gray-2);
 }

@@ -1,27 +1,25 @@
 /* reseting stuff */
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    border: none;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none;
 }
 
 /* custom variables for ease  */
 :root {
-    /* primary colors */
-    --primary-color-gray-1 : hsl(0, 0%, 63%);
-    --primary-color-gray-2 : hsl(0, 0%, 27%); 
+  /* primary colors */
+  --primary-color-gray-1: hsl(0, 0%, 63%);
+  --primary-color-gray-2: hsl(0, 0%, 27%);
 
-    --primary-font-family : "League Spartan";
+  --primary-font-family: "League Spartan";
 }
 
 body {
-    font-family: var(--primary-font-family);
-    height: 100vh;
-
-    overflow: hidden;
+  font-family: var(--primary-font-family);
+  height: 100vh;
+  overflow: hidden;
 }
-
 
 /* 
 ===============================
@@ -29,32 +27,31 @@ unselectable text
 ===============================
 */
 * {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-
 
 /* 
 ===============================
 main wrapper syling 
 ===============================
 */
-.main-wrapper{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .main-wrapper .top-hero {
-    height: 60%;
+  height: 60%;
 }
 
 .main-wrapper .about {
-    height: 40%;
+  height: 40%;
 }
 
 /* 
@@ -64,108 +61,105 @@ top navigation bar
 */
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color :white;
+  text-decoration: none;
+  color: white;
 }
 
 .navigation-bar {
-    z-index: 1;
-    top: 8vh;
-    left: 5vw;
-    font-size: 1.125rem;
-    position: fixed;
-    /* width: 325px; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  z-index: 1;
+  top: 8vh;
+  left: 5vw;
+  font-size: 1.125rem;
+  position: fixed;
+  /* width: 325px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navigation-bar .links {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 2rem;
 }
 
 /* upper hero styling  */
 .top-hero {
-    display: flex;
+  display: flex;
 }
 
-
 .top-hero .upper-left {
-    position: relative;
-    width: 55%;
+  position: relative;
+  width: 55%;
 }
 
 .top-hero .upper-left img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-
-.top-hero .upper-right {    
-    width: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.top-hero .upper-right {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item {
-    width: 60%;
+  width: 60%;
 }
 
-.item .item-header{
-    font-size: 3rem   
+.item .item-header {
+  font-size: 3rem;
 }
 
 .item .item-description {
-    margin-top: 1.5rem;
-    color : var(--primary-color-gray-1);
-    font-size: 1.25rem;
-    line-height: 1.25;
+  margin-top: 1.5rem;
+  color: var(--primary-color-gray-1);
+  font-size: 1.25rem;
+  line-height: 1.25;
 }
 
 .shop-now {
-    
-    margin-top: 1.5rem;
-    background-color: transparent;
-    border: none;
-    outline: none;
+  margin-top: 1.5rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
 
-    text-transform: uppercase;
-    letter-spacing: .5rem ;
-    font-size: .9rem;
-    font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
 
-    /* color: var(--primary-color-gray-1); */
+  /* color: var(--primary-color-gray-1); */
 }
 
 /* buttons styling */
 .navigation-buttons {
-    position: absolute;
-    display: flex;
-    width: 150px;
-    height: 80px;
-    right: -150px;
-    bottom: 0px;
-    /* border: 1px solid red; */
+  position: absolute;
+  display: flex;
+  width: 150px;
+  height: 80px;
+  right: -150px;
+  bottom: 0px;
+  /* border: 1px solid red; */
 }
 
 .navigation-buttons button {
-    width:50%;
-    height:100%;    
-    padding: 20%;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
+  width: 50%;
+  height: 100%;
+  padding: 20%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 /* 
 ===============================
@@ -173,40 +167,40 @@ about section styling
 ===============================
 */
 .about {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .container {
-    height: 100%;
+  height: 100%;
 }
 
-.container img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover   ;
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about * {
-    flex : 1 1 0px;
+  flex: 1 1 0px;
 }
 
 .inner-about {
-    display: flex;
-    flex-direction: column;
-    padding: 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 3rem;
 }
 
 .inner-about .about-header {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
-.about-description{
-    text-justify: distribute;
-    color : var(--primary-color-gray-1);
-    font-size: 1.25rem;
-    line-height: 1.25;
+.about-description {
+  text-justify: distribute;
+  color: var(--primary-color-gray-1);
+  font-size: 1.25rem;
+  line-height: 1.25;
 }

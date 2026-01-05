@@ -1,0 +1,31 @@
+@media (max-width : 1250px) {
+    :root {
+        font-size:14px;
+        transition: all 200ms ease;
+    }
+}
+
+@media (max-width : 800px) {
+    
+    body {
+        height: initial;
+        overflow: auto;
+    }
+    
+    .top-hero {
+        flex-direction: column;
+    }
+    
+    .upper-left, .upper-right {
+        min-width: 100%;
+    }
+
+    .upper-right {
+        margin-top: 3rem;    
+    }
+    
+    .navigation-buttons {
+        right: 0px;    
+    }
+    
+}
