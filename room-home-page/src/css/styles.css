@@ -134,9 +134,9 @@ a {
 .navigation-buttons {
     position: absolute;
     display: flex;
-    width: 100px;
-    height: 60px;
-    right: -100px;
+    width: 150px;
+    height: 80px;
+    right: -150px;
     bottom: 0px;
     /* border: 1px solid red; */
 }
@@ -146,9 +146,15 @@ a {
     height:100%;    
     padding: 20%;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
 }
 
+.navigation-buttons button:hover{
+    background-color: gray;    
+}
 
 /* 
 ===============================
