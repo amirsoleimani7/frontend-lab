@@ -20,6 +20,27 @@ body {
     box-sizing: border-box;
 }
 
+
+/* 
+===============================
+main wrapper syling 
+===============================
+*/
+
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-wrapper .top-hero {
+    height: 50%;
+}
+
+.main-wrapper .about {
+    height: 50%;
+}
+
 /* 
 ===============================
 top navigation bar 
@@ -34,6 +55,8 @@ a {
     text-decoration: none;
     color :white;
 }
+
+
 
 .navigation-bar {
     z-index: 1;
