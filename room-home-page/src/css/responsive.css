@@ -18,14 +18,17 @@
     
     .upper-left, .upper-right {
         min-width: 100%;
+
     }
 
     .upper-right {
-        margin-top: 3rem;    
+        margin-top: 3rem;        
     }
     
+
     .navigation-buttons {
-        right: 0px;    
+        right: 0px;
+        bottom: 3px;
     }
     
 }

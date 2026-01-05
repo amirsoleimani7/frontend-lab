@@ -109,6 +109,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .item {
@@ -148,7 +149,6 @@ a {
   height: 80px;
   right: -150px;
   bottom: 0px;
-  /* border: 1px solid red; */
 }
 
 .navigation-buttons button {
