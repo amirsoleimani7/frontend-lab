@@ -49,11 +49,24 @@
 
     .container{
         min-width: 100%;
+    }    
+}
+
+@media (max-width : 425px) {
+    
+    .navigation-bar .links {
+        display: none;
     }
 
-
-
+    .navigation-bar {
+        width: calc(100vw - 10vw);
+    }
+    
+    .navigation-bar .logo {
+        margin-right: auto;
+        margin-left: auto;
+    }
 
     
-    
+
 }
