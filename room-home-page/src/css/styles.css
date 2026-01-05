@@ -1,6 +1,13 @@
+/* reseting stuff */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+}
+
 /* custom variables for ease  */
 :root {
-
     /* primary colors */
     --primary-color-gray-1 : hsl(0, 0%, 63%);
     --primary-color-gray-2 : hsl(0, 0%, 27%); 
@@ -10,13 +17,9 @@
 
 body {
     font-family: var(--primary-font-family);
-}
+    height: 100vh;
 
-/* reseting stuff */
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
 
@@ -28,15 +31,15 @@ main wrapper syling
 .main-wrapper{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 .main-wrapper .top-hero {
-    height: 60vh;
+    height: 60%;
 }
 
 .main-wrapper .about {
-    height: 40vh;
+    height: 40%;
 }
 
 /* 
@@ -87,7 +90,7 @@ a {
 .top-hero .upper-left img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 
@@ -127,7 +130,6 @@ a {
     color: var(--primary-color-gray-1);
 }
 
-
 /* buttons styling */
 .navigation-buttons {
     position: absolute;
@@ -165,7 +167,7 @@ about section styling
 .container img{
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover   ;
 }
 
 .about * {
