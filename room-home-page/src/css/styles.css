@@ -56,10 +56,11 @@ a {
 
 .navigation-bar {
     z-index: 1;
-    top: 2rem;
-    left: 3rem;
+    top: 8vh;
+    left: 5vw;
+    font-size: 1.125rem;
     position: fixed;
-    width: 325px;
+    /* width: 325px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,7 +69,8 @@ a {
 .navigation-bar .links {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
+    margin-left: 2rem;
 }
 
 /* upper hero styling  */
