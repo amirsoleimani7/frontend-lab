@@ -53,6 +53,10 @@
 }
 
 @media (max-width : 425px) {
+
+    #show-menu.active,#close-menu.active {
+        display: flex;
+    }
     
     .navigation-bar .links {
         display: none;
@@ -66,7 +70,5 @@
         margin-right: auto;
         margin-left: auto;
     }
-
-    
 
 }

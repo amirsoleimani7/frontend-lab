@@ -28,3 +28,20 @@ right_button.addEventListener('click' , ()=> {
 })
 
 
+
+
+// showing and clsoing menu
+let show_menu = document.querySelector('#show-menu');
+let close_menu = document.querySelector('#close-menu');
+show_menu.classList.add('active');
+
+
+show_menu.addEventListener('click', () => {
+  close_menu.classList.add('active');
+  show_menu.classList.remove('active');
+});
+
+close_menu.addEventListener('click', () => {
+  show_menu.classList.add('active');
+  close_menu.classList.remove('active');
+});

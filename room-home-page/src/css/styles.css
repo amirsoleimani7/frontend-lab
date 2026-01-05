@@ -80,19 +80,22 @@ a {
   justify-content: space-between;
 }
 
-#show-menu {
+#show-menu, #close-menu{
     background-color: transparent;
+    display: none;
     border: none;
-    display: flex;
-    justify-content: center ;
+    justify-content: center;
     align-items: center;
 }
 
-#show-menu img {
+#show-menu img{
     width: 100%;
     height: 100%;    
 }
-
+#close_menu img{
+    width: 100%;
+    height: 100%;
+}
 
 .navigation-bar .links {
   display: flex;
