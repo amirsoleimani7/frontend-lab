@@ -7,6 +7,12 @@
 
 @media (max-width : 800px) {
     
+
+    /* 
+    =========================
+    upper part responsive
+    =========================
+    */
     body {
         height: initial;
         overflow: auto;
@@ -22,7 +28,7 @@
     }
 
     .upper-right {
-        margin-top: 3rem;        
+        margin: 3rem 0rem;
     }
     
 
@@ -30,5 +36,24 @@
         right: 0px;
         bottom: 3px;
     }
+    
+    /* 
+    =========================
+    bottom part styling
+    =========================
+    */
+
+    .about {
+        flex-direction: column;    
+    }
+
+    .container{
+        min-width: 100%;
+    }
+
+
+
+
+    
     
 }
