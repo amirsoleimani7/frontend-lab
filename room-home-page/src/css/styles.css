@@ -10,7 +10,6 @@
 
 body {
     font-family: var(--primary-font-family);
-
 }
 
 /* reseting stuff */
@@ -26,7 +25,6 @@ body {
 main wrapper syling 
 ===============================
 */
-
 .main-wrapper{
     display: flex;
     flex-direction: column;
@@ -55,8 +53,6 @@ a {
     text-decoration: none;
     color :white;
 }
-
-
 
 .navigation-bar {
     z-index: 1;
@@ -125,8 +121,9 @@ a {
     letter-spacing: .5rem ;
     font-size: .9rem;
     font-weight: 600;
-}
 
+    color: var(--primary-color-gray-1);
+}
 
 
 /* buttons styling */
