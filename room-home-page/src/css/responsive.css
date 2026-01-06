@@ -60,9 +60,9 @@
     }
 
     .hidden-background.active {
-        display: flex;    
+        width: 100vw;
     }
-
+    
     .navigation-bar .links {
         display: none;
     }
@@ -84,11 +84,10 @@
     .links.active a{
         color: black;
         font-weight: 500;
+    
     }
     
     .logo.active{
         display: none;
     }
-    
-
 }
