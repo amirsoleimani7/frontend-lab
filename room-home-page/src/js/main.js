@@ -36,6 +36,7 @@ let logo = document.querySelector('.logo');
 
 // hidden background 
 let hidden_background = document.querySelector('.hidden-background');
+let gray_background = document.querySelector('.gray-background');
 
 // initial showing
 show_menu.classList.add('active');
@@ -47,7 +48,9 @@ show_menu.addEventListener('click', () => {
     
     // toggleting hidden-background 
     hidden_background.classList.add('active');
+    
 
+    gray_background.classList.add('active');
 });
 
 close_menu.addEventListener('click', () => {
@@ -59,5 +62,8 @@ close_menu.addEventListener('click', () => {
 
 
     hidden_background.classList.remove('active');
+    gray_background.classList.remove('active');
+
+
 });
 

@@ -90,4 +90,10 @@
     .logo.active{
         display: none;
     }
+
+    .gray-background.active {
+        height: 100vh;
+    }
+
+
 }

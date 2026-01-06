@@ -226,7 +226,7 @@ hidden background styling
 =====================
 */
 .hidden-background {
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   width: 0vw;
   height: 150px;
@@ -234,6 +234,26 @@ hidden background styling
   z-index: 1;
   left: 0px;
   background-color: white;
-
   transition: all 200ms  ease;
 }
+
+/* 
+=====================
+gray background styling 
+=====================
+*/
+.gray-background {
+  position: fixed;
+  top: 150px;
+  left: 0px;
+  width: 100vw;
+  height: 0vh;
+  overflow: hidden;
+  opacity: .5;
+  z-index: 1;
+  background-color: var(--primary-color-gray-2);
+  
+  transition: all 200ms  ease;  
+}
+
+
