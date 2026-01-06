@@ -4,3 +4,21 @@
 body {
     background-color: #10172a;
 }
+
+@theme {
+    --color-test : red;
+}
+
+@layer base {
+    h1{
+        @apply text-base font-medium tracking-tight text-slate-100;
+    }
+}
+
+
+@layer components {
+    
+    .card{
+        @apply m-10 rounded-b-lg bg-white;
+    }
+}
