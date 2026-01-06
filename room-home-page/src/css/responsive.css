@@ -56,6 +56,7 @@
 
     #show-menu.active,#close-menu.active {
         display: flex;
+        opacity: 1;
     }
     
     .navigation-bar .links {
@@ -70,5 +71,15 @@
         margin-right: auto;
         margin-left: auto;
     }
+
+    .links.active {
+        display: flex;
+    }
+    
+    .logo.active{
+        display: none;
+    }
+
+
 
 }
