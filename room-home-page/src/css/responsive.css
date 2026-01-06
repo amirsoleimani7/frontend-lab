@@ -58,7 +58,11 @@
         display: flex;
         opacity: 1;
     }
-    
+
+    .hidden-background.active {
+        display: flex;    
+    }
+
     .navigation-bar .links {
         display: none;
     }
@@ -74,12 +78,17 @@
 
     .links.active {
         display: flex;
+        color: black;
+    }
+    
+    .links.active a{
+        color: black;
+        font-weight: 500;
     }
     
     .logo.active{
         display: none;
     }
-
-
+    
 
 }

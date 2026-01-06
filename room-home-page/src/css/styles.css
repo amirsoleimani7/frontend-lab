@@ -218,3 +218,20 @@ about section styling
   font-size: 1.25rem;
   line-height: 1.25;
 }
+
+
+/* 
+=====================
+hidden background styling 
+=====================
+*/
+.hidden-background {
+  position: absolute;
+  display: none;
+  width: 100vw;
+  height: 150px;
+  top: 0px;
+  z-index: 1;
+  left: 0px;
+  background-color: white;
+}

@@ -34,6 +34,9 @@ let close_menu = document.querySelector('#close-menu');
 let links = document.querySelector('.links');
 let logo = document.querySelector('.logo');
 
+// hidden background 
+let hidden_background = document.querySelector('.hidden-background');
+
 // initial showing
 show_menu.classList.add('active');
 show_menu.addEventListener('click', () => {
@@ -41,6 +44,10 @@ show_menu.addEventListener('click', () => {
     show_menu.classList.remove('active');
     links.classList.add('active');
     logo.classList.add('active');
+    
+    // toggleting hidden-background 
+    hidden_background.classList.add('active');
+
 });
 
 close_menu.addEventListener('click', () => {
@@ -49,4 +56,8 @@ close_menu.addEventListener('click', () => {
     links.classList.remove('active');
     links.classList.remove('active');
     logo.classList.remove('active');
+
+
+    hidden_background.classList.remove('active');
 });
+
